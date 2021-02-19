@@ -1,6 +1,6 @@
 $SKIP
 ;;*******************************************************************************
-;; EnergyMonthly FBox | v0.0.7 | 19.02.2021 21:46Z
+;; EnergyMonthly FBox | v0.1.0 | 19.02.2021 22:32Z
 ;; Copyright (C) 2020 Marina Egner <info@sheepindustries.de>
 ;; Author: Marina Egner
 ;;
@@ -43,12 +43,12 @@ dResult       LEQU   dynRegister                 ; Temp Var for Result
 ;             ------------------------------------ Init dynamic Flags
 ;;sReset        LEQU   stc_Flags                 ; Trigger to Reset Batt Max Limit (224)
 ;             ------------------------------------ Init static Register
-sActualYear   LEQU   _HEAVAC._CLOCK._YEAR        ; Actual Year
-sActualMonth  LEQU   _HEAVAC._CLOCK._MONTH       ; Actual Month
-sLastMonth    LEQU   stcRegister                 ; Last Month
-sLastYear     LEQU   stcRegister+1               ; Last Year
-sLastTotalEnergy LEQU stcRegister+2              ; Total Energy Last Year
-sLastTotalCost LEQU  stcRegister+3               ; Total Cost Last Year
+sActualYear   LEQU   stcRegister                 ; Actual Year
+sActualMonth  LEQU   stcRegister+1               ; Actual Month
+sLastMonth    LEQU   stcRegister+2               ; Last Month
+sLastYear     LEQU   stcRegister+3               ; Last Year
+sLastTotalEnergy LEQU stcRegister+4              ; Total Energy Last Year
+sLastTotalCost LEQU  stcRegister+5               ; Total Cost Last Year
 ;            ###################################################################
 
 
@@ -165,13 +165,18 @@ INIT:
               LD     stcLastEnergy               ;
                      adjLastEnergy               ;
 ;             ------------------------------------
-              COPY   sActualYear                 ;
+              SYSRD  K 7062                      ;
                      sLastYear                   ;
-              COPY   sActualMonth                ;
+              SYSRD  K 7061                      ;
                      sLastMonth                  ;
 ;             ------------------------------------
 RUN:
 ;             ==================================== FBox Code
+              SYSRD  K 7062                      ;
+                     sActualYear                 ;
+              SYSRD  K 7061                      ;
+                     sActualMonth                ;
+;             ------------------------------------
               CMP    sActualYear                 ;
                      sLastYear                   ;
               JR     EQ lNothingYear             ;

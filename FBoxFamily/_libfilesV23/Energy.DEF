@@ -1,6 +1,6 @@
 [SIND_ENGYMONTH]
 Width=12
-Vers=000007
+Vers=001003
 Face=EngyMonthly
 IntNames=
 IntRefs=
@@ -8,7 +8,7 @@ FacePosi=l
 In=kWh_I  
 Out=EngyLasY_I EngyActY_I CostLasY_I CostActY_I 
 D=dynReg_R  
-S=Price_R actJan_R actFeb_R actMar_R actApr_R actMay_R actJun_R actJul_R actAug_R actSep_R actOct_R actNov_R actDec_R LastJan_R LastFeb_R LastMar_R LastApr_R LastMay_R LastJun_R LastJul_R LastAug_R LastSep_R LastOct_R LastNov_R LastDec_R aCostJan_R aCostFeb_R aCostMar_R aCostApr_R aCostMay_R aCostJun_R aCostJul_R aCostAug_R aCostSep_R aCostOct_R aCostNov_R aCostDec_R lCostJan_R lCostFeb_R lCostMar_R lCostApr_R lCostMay_R lCostJun_R lCostJul_R lCostAug_R lCostOct_R lCostSep_R lCostNov_R lCostDec_R sReg_4R lEnergy_R  
+S=Price_R actJan_R actFeb_R actMar_R actApr_R actMay_R actJun_R actJul_R actAug_R actSep_R actOct_R actNov_R actDec_R LastJan_R LastFeb_R LastMar_R LastApr_R LastMay_R LastJun_R LastJul_R LastAug_R LastSep_R LastOct_R LastNov_R LastDec_R aCostJan_R aCostFeb_R aCostMar_R aCostApr_R aCostMay_R aCostJun_R aCostJul_R aCostAug_R aCostSep_R aCostOct_R aCostNov_R aCostDec_R lCostJan_R lCostFeb_R lCostMar_R lCostApr_R lCostMay_R lCostJun_R lCostJul_R lCostAug_R lCostOct_R lCostSep_R lCostNov_R lCostDec_R sReg_6R lEnergy_R  
 av0=c Option
 av1=a Price 0 %2p =20:20  \wax=0
 av2=c ActVal

@@ -1,4 +1,4 @@
-<LIB LANGUAGES="1" STRINGS="464" LANGSTR="LANG" ACTLANG="English" VERSION="2">
+<LIB LANGUAGES="1" STRINGS="465" LANGSTR="LANG" ACTLANG="English" VERSION="2">
 <REC ID="1">
  <LANG ID="0">
 English
@@ -46,22 +46,22 @@ kWh
 </REC>
 <REC ID="10">
  <LANG ID="0">
---- Options ---
+[--- Options ---]
  </LANG>
 </REC>
 <REC ID="11">
  <LANG ID="0">
---- Options ---
+[--- Options ---]
  </LANG>
 </REC>
 <REC ID="12">
  <LANG ID="0">
---- (C) by Marina Egner, Sheep Industries ---
+[--- (C) by Marina Egner, Sheep Industries ---]
  </LANG>
 </REC>
 <REC ID="13">
  <LANG ID="0">
---- (C) by Marina Egner, Sheep Industries ---
+[--- (C) by Marina Egner, Sheep Industries ---]
  </LANG>
 </REC>
 <REC ID="19">
@@ -116,12 +116,12 @@ kWh Price
 </REC>
 <REC ID="33">
  <LANG ID="0">
---- Actual Year Values ---
+[--- Actual Year Values ---]
  </LANG>
 </REC>
 <REC ID="34">
  <LANG ID="0">
---- Actual Year Values ---
+[--- Actual Year Values ---]
  </LANG>
 </REC>
 <REC ID="35">
@@ -441,12 +441,12 @@ Counter December
 </REC>
 <REC ID="99">
  <LANG ID="0">
---- Last Year Values ---
+[--- Last Year Values ---]
  </LANG>
 </REC>
 <REC ID="100">
  <LANG ID="0">
---- Last Year Values ---
+[--- Last Year Values ---]
  </LANG>
 </REC>
 <REC ID="101">
@@ -936,12 +936,12 @@ LastDec
 </REC>
 <REC ID="199">
  <LANG ID="0">
---- Actual Year Cost ---
+[--- Actual Year Cost ---]
  </LANG>
 </REC>
 <REC ID="200">
  <LANG ID="0">
---- Actual Year Cost ---
+[--- Actual Year Cost ---]
  </LANG>
 </REC>
 <REC ID="201">
@@ -1391,12 +1391,12 @@ Cost December
 </REC>
 <REC ID="290">
  <LANG ID="0">
---- Last Year Cost ---
+[--- Last Year Cost ---]
  </LANG>
 </REC>
 <REC ID="291">
  <LANG ID="0">
---- Last Year Cost ---
+[--- Last Year Cost ---]
  </LANG>
 </REC>
 <REC ID="292">
@@ -2051,12 +2051,12 @@ sReg
 </REC>
 <REC ID="449">
  <LANG ID="0">
---- Last Energy Counter ---
+[--- Last Energy Counter ---]
  </LANG>
 </REC>
 <REC ID="450">
  <LANG ID="0">
---- Last Energy Counter ---
+[--- Last Energy Counter ---]
  </LANG>
 </REC>
 <REC ID="451">
@@ -2317,6 +2317,11 @@ Cost.LastYear.November
 <REC ID="502">
  <LANG ID="0">
 Cost.LastYear.December
+ </LANG>
+</REC>
+<REC ID="503">
+ <LANG ID="0">
+
  </LANG>
 </REC>
 </LIB>

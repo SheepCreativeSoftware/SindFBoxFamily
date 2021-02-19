@@ -60,7 +60,7 @@ SIND_ENGYMONTHstcLastYearCostOct    EQU    R [1]
 SIND_ENGYMONTHstcLastYearCostSep    EQU    R [1]
 SIND_ENGYMONTHstcLastYearCostNov    EQU    R [1]
 SIND_ENGYMONTHstcLastYearCostDec    EQU    R [1]
-SIND_ENGYMONTHstcRegister    EQU    R [4]
+SIND_ENGYMONTHstcRegister    EQU    R [6]
 SIND_ENGYMONTHstcLastEnergy    EQU    R [1]
 
 ;;__END_DECLARATION_SECTION_
@@ -72,7 +72,7 @@ COB _TESTCOB
 
 ;;__BEGIN_CODE_SECTION_
 __fbl_C000001_00_000___SG_COB_0 EQU $ ;Mark FBox
-SIND_ENGYMONTH(7,
+SIND_ENGYMONTH(1003,
     SIND_ENGYMONTHinEnergy,    ;; inEnergy
     SIND_ENGYMONTHoutLastYearEnergy, ;; outLastYearEnergy
     SIND_ENGYMONTHoutActualYearEnergy, ;; outActualYearEnergy

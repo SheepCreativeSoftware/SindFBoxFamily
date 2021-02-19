@@ -1,6 +1,6 @@
 [BlockStatus]
 Enabled=-1
-Version=7
+Version=1003
 Status=0
 HMIObject=0
 Type=0
@@ -614,7 +614,7 @@ DisplayedName=448
 DefaultNameID=0
 Comment=0
 State=0
-ArraySize=4
+ArraySize=6
 Media=8
 Type=0
 
@@ -2142,7 +2142,7 @@ CategoryValue=5
 
 [Adjust56]
 Visible=-1
-DINR=78673255
+DINR=0
 Type=0
 Label=CopyR
 Index=0
@@ -2165,5 +2165,5 @@ SymbolName=
 DefaultSymID=0
 HMIProp=0
 CategorySymbol=
-CategoryValue=5
+CategoryValue=0
 
