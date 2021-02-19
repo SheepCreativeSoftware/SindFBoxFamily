@@ -1,6 +1,6 @@
 $SKIP
 ;;*******************************************************************************
-;; Energy MACRO Library | v0.0.1 | 07.02.2021 16:38Z
+;; Energy MACRO Library | v0.0.2 | 19.02.2021 19:52Z
 ;; Copyright (C) 2020 Marina Egner <info@sheepindustries.de>
 ;; Author: Marina Egner
 ;;
@@ -39,6 +39,7 @@ SIND_CopyActualToLast MACRO dActualVal,          ; Actual Val
 ;             ==================================== 
               COPY   dActualVal                  ; Copy Actual
                      dLastVal                    ; to Last Value
+              ACC    H
               LD     dActualVal                  ; Set Actual
                      K 0                         ; to Zero
 ;             ------------------------------------
@@ -51,11 +52,11 @@ $SKIP
 ;; ****************************************************************************
 $ENDSKIP
 ;;macro definition
-SIND_CalcMonthEnergy MACRO inEnergy,             ; Actual Val
-                     stcLastEnergy,              ; Last Value
+SIND_CalcMonthEnergy MACRO inEnergy,             ; Actual Energy Val
+                     stcLastEnergy,              ; Last Energy Value
                      stcActualMonthEnergy,       ; Energy of the Month
                      stcPrice,                   ; Actual Price
-                     stcActualMonthCost           ; Cost of the Month
+                     stcActualMonthCost          ; Cost of the Month
 
 ;; ****************************************************************************
 ;; Declarations/Definitions
@@ -79,6 +80,76 @@ dRemainder    LEQU R
               DIV    dResult                     ; Divide Cost
                      K 10                        ; by 10
                      stcActualMonthCost          ; to get DEC.2 Value
+                     dRemainder                  ;
+;             ------------------------------------
+;             ====================================
+              ENDM
+
+$SKIP
+;; ****************************************************************************
+;; Description:  
+;; ****************************************************************************
+$ENDSKIP
+;;macro definition
+SIND_MonthAddition MACRO stcActualYearJan,       ;
+              stcActualYearFeb,                  ;
+              stcActualYearMar,                  ;
+              stcActualYearApr,                  ;
+              stcActualYearMay,                  ;
+              stcActualYearJun,                  ;
+              stcActualYearJul,                  ;
+              stcActualYearAug,                  ;
+              stcActualYearSep,                  ;
+              stcActualYearOct,                  ;
+              stcActualYearNov,                  ;
+              stcActualYearDec,                  ;
+              outActualYearTotal                 ; Total
+
+;; ****************************************************************************
+;; Declarations/Definitions
+;; ****************************************************************************
+;             ====================================
+dResult       LEQU R
+;             ====================================
+
+;; ****************************************************************************
+;; MACRO code
+;; ****************************************************************************
+
+;             ==================================== 
+              ADD    stcActualYearJan            ;
+                     stcActualYearFeb            ;
+                     dResult                     ;
+              ADD    dResult                     ;
+                     stcActualYearMar            ;
+                     dResult                     ;
+              ADD    dResult                     ;
+                     stcActualYearApr            ;
+                     dResult                     ;
+              ADD    dResult                     ;
+                     stcActualYearMay            ;
+                     dResult                     ;
+              ADD    dResult                     ;
+                     stcActualYearJun            ;
+                     dResult                     ;
+              ADD    dResult                     ;
+                     stcActualYearJul            ;
+                     dResult                     ;
+              ADD    dResult                     ;
+                     stcActualYearAug            ;
+                     dResult                     ;
+              ADD    dResult                     ;
+                     stcActualYearSep            ;
+                     dResult                     ;
+              ADD    dResult                     ;
+                     stcActualYearOct            ;
+                     dResult                     ;
+              ADD    dResult                     ;
+                     stcActualYearNov            ;
+                     dResult                     ;
+              ADD    dResult                     ;
+                     stcActualYearDec            ;
+                     outActualYearTotal          ;
 ;             ------------------------------------
 ;             ====================================
               ENDM

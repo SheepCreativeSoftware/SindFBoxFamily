@@ -1,4 +1,4 @@
-<LIB LANGUAGES="1" STRINGS="410" LANGSTR="LANG" ACTLANG="English" VERSION="2">
+<LIB LANGUAGES="1" STRINGS="464" LANGSTR="LANG" ACTLANG="English" VERSION="2">
 <REC ID="1">
  <LANG ID="0">
 English
@@ -1974,11 +1974,6 @@ lCostMay
 dynReg
  </LANG>
 </REC>
-<REC ID="433">
- <LANG ID="0">
-dynFlag
- </LANG>
-</REC>
 <REC ID="434">
  <LANG ID="0">
 EngyActY
@@ -2047,6 +2042,281 @@ Energy.ActualYear.February
 <REC ID="447">
  <LANG ID="0">
 Sind Family.Energy
+ </LANG>
+</REC>
+<REC ID="448">
+ <LANG ID="0">
+sReg
+ </LANG>
+</REC>
+<REC ID="449">
+ <LANG ID="0">
+--- Last Energy Counter ---
+ </LANG>
+</REC>
+<REC ID="450">
+ <LANG ID="0">
+--- Last Energy Counter ---
+ </LANG>
+</REC>
+<REC ID="451">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="452">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="453">
+ <LANG ID="0">
+Last Energy Counter
+ </LANG>
+</REC>
+<REC ID="454">
+ <LANG ID="0">
+lEnergy
+ </LANG>
+</REC>
+<REC ID="455">
+ <LANG ID="0">
+Last Energy Counter
+ </LANG>
+</REC>
+<REC ID="456">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="457">
+ <LANG ID="0">
+Energy.ActualYear.March
+ </LANG>
+</REC>
+<REC ID="458">
+ <LANG ID="0">
+Energy.ActualYear.April
+ </LANG>
+</REC>
+<REC ID="459">
+ <LANG ID="0">
+Energy.ActualYear.May
+ </LANG>
+</REC>
+<REC ID="460">
+ <LANG ID="0">
+Energy.ActualYear.June
+ </LANG>
+</REC>
+<REC ID="461">
+ <LANG ID="0">
+Energy.ActualYear.July
+ </LANG>
+</REC>
+<REC ID="462">
+ <LANG ID="0">
+Energy.ActualYear.August
+ </LANG>
+</REC>
+<REC ID="463">
+ <LANG ID="0">
+Energy.ActualYear.September
+ </LANG>
+</REC>
+<REC ID="464">
+ <LANG ID="0">
+Energy.ActualYear.October
+ </LANG>
+</REC>
+<REC ID="465">
+ <LANG ID="0">
+Energy.ActualYear.November
+ </LANG>
+</REC>
+<REC ID="466">
+ <LANG ID="0">
+Energy.ActualYear.December
+ </LANG>
+</REC>
+<REC ID="467">
+ <LANG ID="0">
+Energy.LastYear.January
+ </LANG>
+</REC>
+<REC ID="468">
+ <LANG ID="0">
+Energy.LastYear.February
+ </LANG>
+</REC>
+<REC ID="469">
+ <LANG ID="0">
+Energy.LastYear.March
+ </LANG>
+</REC>
+<REC ID="470">
+ <LANG ID="0">
+Energy.LastYear.April
+ </LANG>
+</REC>
+<REC ID="471">
+ <LANG ID="0">
+Energy.LastYear.May
+ </LANG>
+</REC>
+<REC ID="472">
+ <LANG ID="0">
+Energy.LastYear.June
+ </LANG>
+</REC>
+<REC ID="473">
+ <LANG ID="0">
+Energy.LastYear.July
+ </LANG>
+</REC>
+<REC ID="474">
+ <LANG ID="0">
+Energy.LastYear.August
+ </LANG>
+</REC>
+<REC ID="475">
+ <LANG ID="0">
+Energy.LastYear.September
+ </LANG>
+</REC>
+<REC ID="476">
+ <LANG ID="0">
+Energy.LastYear.October
+ </LANG>
+</REC>
+<REC ID="477">
+ <LANG ID="0">
+Energy.LastYear.November
+ </LANG>
+</REC>
+<REC ID="478">
+ <LANG ID="0">
+Energy.LastYear.December
+ </LANG>
+</REC>
+<REC ID="479">
+ <LANG ID="0">
+Cost.ActualYear.January
+ </LANG>
+</REC>
+<REC ID="480">
+ <LANG ID="0">
+Cost.ActualYear.February
+ </LANG>
+</REC>
+<REC ID="481">
+ <LANG ID="0">
+Cost.ActualYear.March
+ </LANG>
+</REC>
+<REC ID="482">
+ <LANG ID="0">
+Cost.ActualYear.April
+ </LANG>
+</REC>
+<REC ID="483">
+ <LANG ID="0">
+Cost.ActualYear.May
+ </LANG>
+</REC>
+<REC ID="484">
+ <LANG ID="0">
+Cost.ActualYear.June
+ </LANG>
+</REC>
+<REC ID="485">
+ <LANG ID="0">
+Cost.ActualYear.July
+ </LANG>
+</REC>
+<REC ID="486">
+ <LANG ID="0">
+Cost.ActualYear.August
+ </LANG>
+</REC>
+<REC ID="487">
+ <LANG ID="0">
+Cost.ActualYear.September
+ </LANG>
+</REC>
+<REC ID="488">
+ <LANG ID="0">
+Cost.ActualYear.October
+ </LANG>
+</REC>
+<REC ID="489">
+ <LANG ID="0">
+Cost.ActualYear.November
+ </LANG>
+</REC>
+<REC ID="490">
+ <LANG ID="0">
+Cost.ActualYear.December
+ </LANG>
+</REC>
+<REC ID="491">
+ <LANG ID="0">
+Cost.LastYear.January
+ </LANG>
+</REC>
+<REC ID="492">
+ <LANG ID="0">
+Cost.LastYear.February
+ </LANG>
+</REC>
+<REC ID="493">
+ <LANG ID="0">
+Cost.LastYear.March
+ </LANG>
+</REC>
+<REC ID="494">
+ <LANG ID="0">
+Cost.LastYear.April
+ </LANG>
+</REC>
+<REC ID="495">
+ <LANG ID="0">
+Cost.LastYear.May
+ </LANG>
+</REC>
+<REC ID="496">
+ <LANG ID="0">
+Cost.LastYear.June
+ </LANG>
+</REC>
+<REC ID="497">
+ <LANG ID="0">
+Cost.LastYear.July
+ </LANG>
+</REC>
+<REC ID="498">
+ <LANG ID="0">
+Cost.LastYear.August
+ </LANG>
+</REC>
+<REC ID="499">
+ <LANG ID="0">
+Cost.LastYear.October
+ </LANG>
+</REC>
+<REC ID="500">
+ <LANG ID="0">
+Cost.LastYear.September
+ </LANG>
+</REC>
+<REC ID="501">
+ <LANG ID="0">
+Cost.LastYear.November
+ </LANG>
+</REC>
+<REC ID="502">
+ <LANG ID="0">
+Cost.LastYear.December
  </LANG>
 </REC>
 </LIB>

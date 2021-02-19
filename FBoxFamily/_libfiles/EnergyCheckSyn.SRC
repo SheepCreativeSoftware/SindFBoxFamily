@@ -10,8 +10,7 @@ SIND_ENGYMONTHoutLastYearEnergy    EQU    R
 SIND_ENGYMONTHoutActualYearEnergy    EQU    R
 SIND_ENGYMONTHoutLastYearCost    EQU    R
 SIND_ENGYMONTHoutActualYearCost    EQU    R
-SIND_ENGYMONTHdynRegister    EQU    R [10]
-SIND_ENGYMONTHdynFlag    EQU    F [10]
+SIND_ENGYMONTHdynRegister    EQU    R [1]
 SIND_ENGYMONTHstcPrice    EQU    R [1]
 SIND_ENGYMONTHstcActualYearEnergyJan    EQU    R [1]
 SIND_ENGYMONTHstcActualYearEnergyFeb    EQU    R [1]
@@ -61,6 +60,8 @@ SIND_ENGYMONTHstcLastYearCostOct    EQU    R [1]
 SIND_ENGYMONTHstcLastYearCostSep    EQU    R [1]
 SIND_ENGYMONTHstcLastYearCostNov    EQU    R [1]
 SIND_ENGYMONTHstcLastYearCostDec    EQU    R [1]
+SIND_ENGYMONTHstcRegister    EQU    R [4]
+SIND_ENGYMONTHstcLastEnergy    EQU    R [1]
 
 ;;__END_DECLARATION_SECTION_
 
@@ -71,14 +72,13 @@ COB _TESTCOB
 
 ;;__BEGIN_CODE_SECTION_
 __fbl_C000001_00_000___SG_COB_0 EQU $ ;Mark FBox
-SIND_ENGYMONTH(2,
+SIND_ENGYMONTH(7,
     SIND_ENGYMONTHinEnergy,    ;; inEnergy
     SIND_ENGYMONTHoutLastYearEnergy, ;; outLastYearEnergy
     SIND_ENGYMONTHoutActualYearEnergy, ;; outActualYearEnergy
     SIND_ENGYMONTHoutLastYearCost, ;; outLastYearCost
     SIND_ENGYMONTHoutActualYearCost, ;; outActualYearCost
     SIND_ENGYMONTHdynRegister, ;; dynRegister
-    SIND_ENGYMONTHdynFlag,     ;; dynFlag
     SIND_ENGYMONTHstcPrice,    ;; stcPrice
     SIND_ENGYMONTHstcActualYearEnergyJan, ;; stcActualYearEnergyJan
     SIND_ENGYMONTHstcActualYearEnergyFeb, ;; stcActualYearEnergyFeb
@@ -128,6 +128,8 @@ SIND_ENGYMONTH(2,
     SIND_ENGYMONTHstcLastYearCostSep, ;; stcLastYearCostSep
     SIND_ENGYMONTHstcLastYearCostNov, ;; stcLastYearCostNov
     SIND_ENGYMONTHstcLastYearCostDec, ;; stcLastYearCostDec
+    SIND_ENGYMONTHstcRegister, ;; stcRegister
+    SIND_ENGYMONTHstcLastEnergy, ;; stcLastEnergy
      20,                       ;; Price 0
      0,                        ;; actJan 0
      0,                        ;; actFeb 0
@@ -177,6 +179,7 @@ SIND_ENGYMONTH(2,
      0,                        ;; lCostOct 0
      0,                        ;; lCostNov 0
      0,                        ;; lCostDec 0
+     0,                        ;; lEnergy 0
     GiveNameSIND_ENGYMONTH)    ;; Name
 
 ;;__END_CODE_SECTION_

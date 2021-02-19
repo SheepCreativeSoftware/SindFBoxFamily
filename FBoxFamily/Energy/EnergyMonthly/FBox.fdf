@@ -1,6 +1,6 @@
 [BlockStatus]
 Enabled=-1
-Version=2
+Version=7
 Status=0
 HMIObject=0
 Type=0
@@ -54,9 +54,9 @@ TopicID=0
 Inputs=1
 Outputs=4
 Constants=0
-Dynamics=2
-Statics=49
-Adjusts=55
+Dynamics=1
+Statics=51
+Adjusts=57
 
 [Input0]
 SymbolName=inEnergy
@@ -114,18 +114,8 @@ DisplayedName=432
 DefaultNameID=0
 Comment=0
 State=0
-ArraySize=10
+ArraySize=1
 Media=8
-Type=0
-
-[Dynamic1]
-SymbolName=dynFlag
-DisplayedName=433
-DefaultNameID=0
-Comment=0
-State=0
-ArraySize=10
-Media=4
 Type=0
 
 [Static0]
@@ -161,7 +151,7 @@ Type=0
 [Static3]
 SymbolName=stcActualYearEnergyMar
 DisplayedName=52
-DefaultNameID=0
+DefaultNameID=457
 Comment=0
 State=0
 ArraySize=1
@@ -171,7 +161,7 @@ Type=0
 [Static4]
 SymbolName=stcActualYearEnergyApr
 DisplayedName=57
-DefaultNameID=0
+DefaultNameID=458
 Comment=0
 State=0
 ArraySize=1
@@ -181,7 +171,7 @@ Type=0
 [Static5]
 SymbolName=stcActualYearEnergyMay
 DisplayedName=62
-DefaultNameID=0
+DefaultNameID=459
 Comment=0
 State=0
 ArraySize=1
@@ -191,7 +181,7 @@ Type=0
 [Static6]
 SymbolName=stcActualYearEnergyJun
 DisplayedName=67
-DefaultNameID=0
+DefaultNameID=460
 Comment=0
 State=0
 ArraySize=1
@@ -201,7 +191,7 @@ Type=0
 [Static7]
 SymbolName=stcActualYearEnergyJul
 DisplayedName=72
-DefaultNameID=0
+DefaultNameID=461
 Comment=0
 State=0
 ArraySize=1
@@ -211,7 +201,7 @@ Type=0
 [Static8]
 SymbolName=stcActualYearEnergyAug
 DisplayedName=77
-DefaultNameID=0
+DefaultNameID=462
 Comment=0
 State=0
 ArraySize=1
@@ -221,7 +211,7 @@ Type=0
 [Static9]
 SymbolName=stcActualYearEnergySep
 DisplayedName=82
-DefaultNameID=0
+DefaultNameID=463
 Comment=0
 State=0
 ArraySize=1
@@ -231,7 +221,7 @@ Type=0
 [Static10]
 SymbolName=stcActualYearEnergyOct
 DisplayedName=195
-DefaultNameID=0
+DefaultNameID=464
 Comment=0
 State=0
 ArraySize=1
@@ -241,7 +231,7 @@ Type=0
 [Static11]
 SymbolName=stcActualYearEnergyNov
 DisplayedName=92
-DefaultNameID=0
+DefaultNameID=465
 Comment=0
 State=0
 ArraySize=1
@@ -251,7 +241,7 @@ Type=0
 [Static12]
 SymbolName=stcActualYearEnergyDec
 DisplayedName=97
-DefaultNameID=0
+DefaultNameID=466
 Comment=0
 State=0
 ArraySize=1
@@ -261,7 +251,7 @@ Type=0
 [Static13]
 SymbolName=stcLastYearEnergyJan
 DisplayedName=418
-DefaultNameID=0
+DefaultNameID=467
 Comment=0
 State=0
 ArraySize=1
@@ -271,7 +261,7 @@ Type=0
 [Static14]
 SymbolName=stcLastYearEnergyFeb
 DisplayedName=186
-DefaultNameID=0
+DefaultNameID=468
 Comment=0
 State=0
 ArraySize=1
@@ -281,7 +271,7 @@ Type=0
 [Static15]
 SymbolName=stcLastYearEnergyMar
 DisplayedName=187
-DefaultNameID=0
+DefaultNameID=469
 Comment=0
 State=0
 ArraySize=1
@@ -291,7 +281,7 @@ Type=0
 [Static16]
 SymbolName=stcLastYearEnergyApr
 DisplayedName=188
-DefaultNameID=0
+DefaultNameID=470
 Comment=0
 State=0
 ArraySize=1
@@ -301,7 +291,7 @@ Type=0
 [Static17]
 SymbolName=stcLastYearEnergyMay
 DisplayedName=189
-DefaultNameID=0
+DefaultNameID=471
 Comment=0
 State=0
 ArraySize=1
@@ -311,7 +301,7 @@ Type=0
 [Static18]
 SymbolName=stcLastYearEnergyJun
 DisplayedName=190
-DefaultNameID=0
+DefaultNameID=472
 Comment=0
 State=0
 ArraySize=1
@@ -321,7 +311,7 @@ Type=0
 [Static19]
 SymbolName=stcLastYearEnergyJul
 DisplayedName=191
-DefaultNameID=0
+DefaultNameID=473
 Comment=0
 State=0
 ArraySize=1
@@ -331,7 +321,7 @@ Type=0
 [Static20]
 SymbolName=stcLastYearEnergyAug
 DisplayedName=192
-DefaultNameID=0
+DefaultNameID=474
 Comment=0
 State=0
 ArraySize=1
@@ -341,7 +331,7 @@ Type=0
 [Static21]
 SymbolName=stcLastYearEnergySep
 DisplayedName=193
-DefaultNameID=0
+DefaultNameID=475
 Comment=0
 State=0
 ArraySize=1
@@ -351,7 +341,7 @@ Type=0
 [Static22]
 SymbolName=stcLastYearEnergyOct
 DisplayedName=194
-DefaultNameID=0
+DefaultNameID=476
 Comment=0
 State=0
 ArraySize=1
@@ -361,7 +351,7 @@ Type=0
 [Static23]
 SymbolName=stcLastYearEnergyNov
 DisplayedName=196
-DefaultNameID=0
+DefaultNameID=477
 Comment=0
 State=0
 ArraySize=1
@@ -371,7 +361,7 @@ Type=0
 [Static24]
 SymbolName=stcLastYearEnergyDec
 DisplayedName=197
-DefaultNameID=0
+DefaultNameID=478
 Comment=0
 State=0
 ArraySize=1
@@ -381,7 +371,7 @@ Type=0
 [Static25]
 SymbolName=stcActualYearCostJan
 DisplayedName=404
-DefaultNameID=0
+DefaultNameID=479
 Comment=0
 State=0
 ArraySize=1
@@ -391,7 +381,7 @@ Type=0
 [Static26]
 SymbolName=stcActualYearCostFeb
 DisplayedName=405
-DefaultNameID=0
+DefaultNameID=480
 Comment=0
 State=0
 ArraySize=1
@@ -401,7 +391,7 @@ Type=0
 [Static27]
 SymbolName=stcActualYearCostMar
 DisplayedName=406
-DefaultNameID=0
+DefaultNameID=481
 Comment=0
 State=0
 ArraySize=1
@@ -411,7 +401,7 @@ Type=0
 [Static28]
 SymbolName=stcActualYearCostApr
 DisplayedName=407
-DefaultNameID=0
+DefaultNameID=482
 Comment=0
 State=0
 ArraySize=1
@@ -421,7 +411,7 @@ Type=0
 [Static29]
 SymbolName=stcActualYearCostMay
 DisplayedName=408
-DefaultNameID=0
+DefaultNameID=483
 Comment=0
 State=0
 ArraySize=1
@@ -431,7 +421,7 @@ Type=0
 [Static30]
 SymbolName=stcActualYearCostJun
 DisplayedName=409
-DefaultNameID=0
+DefaultNameID=484
 Comment=0
 State=0
 ArraySize=1
@@ -441,7 +431,7 @@ Type=0
 [Static31]
 SymbolName=stcActualYearCostJul
 DisplayedName=410
-DefaultNameID=0
+DefaultNameID=485
 Comment=0
 State=0
 ArraySize=1
@@ -451,7 +441,7 @@ Type=0
 [Static32]
 SymbolName=stcActualYearCostAug
 DisplayedName=411
-DefaultNameID=0
+DefaultNameID=486
 Comment=0
 State=0
 ArraySize=1
@@ -461,7 +451,7 @@ Type=0
 [Static33]
 SymbolName=stcActualYearCostSep
 DisplayedName=412
-DefaultNameID=0
+DefaultNameID=487
 Comment=0
 State=0
 ArraySize=1
@@ -471,7 +461,7 @@ Type=0
 [Static34]
 SymbolName=stcActualYearCostOct
 DisplayedName=413
-DefaultNameID=0
+DefaultNameID=488
 Comment=0
 State=0
 ArraySize=1
@@ -481,7 +471,7 @@ Type=0
 [Static35]
 SymbolName=stcActualYearCostNov
 DisplayedName=414
-DefaultNameID=0
+DefaultNameID=489
 Comment=0
 State=0
 ArraySize=1
@@ -491,7 +481,7 @@ Type=0
 [Static36]
 SymbolName=stcActualYearCostDec
 DisplayedName=415
-DefaultNameID=0
+DefaultNameID=490
 Comment=0
 State=0
 ArraySize=1
@@ -501,7 +491,7 @@ Type=0
 [Static37]
 SymbolName=stcLastYearCostJan
 DisplayedName=419
-DefaultNameID=0
+DefaultNameID=491
 Comment=0
 State=0
 ArraySize=1
@@ -511,7 +501,7 @@ Type=0
 [Static38]
 SymbolName=stcLastYearCostFeb
 DisplayedName=420
-DefaultNameID=0
+DefaultNameID=492
 Comment=0
 State=0
 ArraySize=1
@@ -521,7 +511,7 @@ Type=0
 [Static39]
 SymbolName=stcLastYearCostMar
 DisplayedName=421
-DefaultNameID=0
+DefaultNameID=493
 Comment=0
 State=0
 ArraySize=1
@@ -531,7 +521,7 @@ Type=0
 [Static40]
 SymbolName=stcLastYearCostApr
 DisplayedName=422
-DefaultNameID=0
+DefaultNameID=494
 Comment=0
 State=0
 ArraySize=1
@@ -541,7 +531,7 @@ Type=0
 [Static41]
 SymbolName=stcLastYearCostMay
 DisplayedName=430
-DefaultNameID=0
+DefaultNameID=495
 Comment=0
 State=0
 ArraySize=1
@@ -551,7 +541,7 @@ Type=0
 [Static42]
 SymbolName=stcLastYearCostJun
 DisplayedName=429
-DefaultNameID=0
+DefaultNameID=496
 Comment=0
 State=0
 ArraySize=1
@@ -561,7 +551,7 @@ Type=0
 [Static43]
 SymbolName=stcLastYearCostJul
 DisplayedName=428
-DefaultNameID=0
+DefaultNameID=497
 Comment=0
 State=0
 ArraySize=1
@@ -571,7 +561,7 @@ Type=0
 [Static44]
 SymbolName=stcLastYearCostAug
 DisplayedName=427
-DefaultNameID=0
+DefaultNameID=498
 Comment=0
 State=0
 ArraySize=1
@@ -581,7 +571,7 @@ Type=0
 [Static45]
 SymbolName=stcLastYearCostOct
 DisplayedName=425
-DefaultNameID=0
+DefaultNameID=499
 Comment=0
 State=0
 ArraySize=1
@@ -591,7 +581,7 @@ Type=0
 [Static46]
 SymbolName=stcLastYearCostSep
 DisplayedName=426
-DefaultNameID=0
+DefaultNameID=500
 Comment=0
 State=0
 ArraySize=1
@@ -601,7 +591,7 @@ Type=0
 [Static47]
 SymbolName=stcLastYearCostNov
 DisplayedName=424
-DefaultNameID=0
+DefaultNameID=501
 Comment=0
 State=0
 ArraySize=1
@@ -611,6 +601,26 @@ Type=0
 [Static48]
 SymbolName=stcLastYearCostDec
 DisplayedName=423
+DefaultNameID=502
+Comment=0
+State=0
+ArraySize=1
+Media=8
+Type=0
+
+[Static49]
+SymbolName=stcRegister
+DisplayedName=448
+DefaultNameID=0
+Comment=0
+State=0
+ArraySize=4
+Media=8
+Type=0
+
+[Static50]
+SymbolName=stcLastEnergy
+DisplayedName=454
 DefaultNameID=0
 Comment=0
 State=0
@@ -1233,7 +1243,7 @@ ViewIndex=0
 ViewFormat=1
 ViewUValue=0
 CommentID=148
-SymbolName=adLastYearEnergyJul
+SymbolName=adjLastYearEnergyJul
 DefaultSymID=149
 HMIProp=0
 CategorySymbol=
@@ -1773,7 +1783,7 @@ ViewIndex=0
 ViewFormat=1
 ViewUValue=0
 CommentID=301
-SymbolName=adj_LastYearCostJan
+SymbolName=adjLastYearCostJan
 DefaultSymID=302
 HMIProp=0
 CategorySymbol=
@@ -2051,7 +2061,7 @@ CategoryValue=0
 
 [Adjust53]
 Visible=-1
-DINR=87061863
+DINR=0
 Type=2
 Label=lCostDec
 Index=0
@@ -2077,6 +2087,60 @@ CategorySymbol=
 CategoryValue=0
 
 [Adjust54]
+Visible=-1
+DINR=78411111
+Type=0
+Label=ADJ0
+Index=0
+Format=1
+Uvalue=0
+InitValueID=0
+Ranges=
+AccesLevel=0
+CannotLocked=0
+TestNameID=449
+DescriptionID=450
+ValueListID=0
+DefaultValueID=0
+ViewLabel=
+ViewIndex=0
+ViewFormat=1
+ViewUValue=0
+CommentID=0
+SymbolName=
+DefaultSymID=0
+HMIProp=0
+CategorySymbol=
+CategoryValue=5
+
+[Adjust55]
+Visible=-1
+DINR=78411111
+Type=2
+Label=lEnergy
+Index=0
+Format=5
+Uvalue=1
+InitValueID=451
+Ranges=
+AccesLevel=0
+CannotLocked=0
+TestNameID=453
+DescriptionID=455
+ValueListID=0
+DefaultValueID=452
+ViewLabel=
+ViewIndex=0
+ViewFormat=1
+ViewUValue=0
+CommentID=0
+SymbolName=adjLastEnergy
+DefaultSymID=0
+HMIProp=0
+CategorySymbol=
+CategoryValue=5
+
+[Adjust56]
 Visible=-1
 DINR=78673255
 Type=0

@@ -1,14 +1,14 @@
 [SIND_ENGYMONTH]
 Width=12
-Vers=000002
+Vers=000007
 Face=EngyMonthly
 IntNames=
 IntRefs=
 FacePosi=l
 In=kWh_I  
 Out=EngyLasY_I EngyActY_I CostLasY_I CostActY_I 
-D=dynReg_10R dynFlag_10F  
-S=Price_R actJan_R actFeb_R actMar_R actApr_R actMay_R actJun_R actJul_R actAug_R actSep_R actOct_R actNov_R actDec_R LastJan_R LastFeb_R LastMar_R LastApr_R LastMay_R LastJun_R LastJul_R LastAug_R LastSep_R LastOct_R LastNov_R LastDec_R aCostJan_R aCostFeb_R aCostMar_R aCostApr_R aCostMay_R aCostJun_R aCostJul_R aCostAug_R aCostSep_R aCostOct_R aCostNov_R aCostDec_R lCostJan_R lCostFeb_R lCostMar_R lCostApr_R lCostMay_R lCostJun_R lCostJul_R lCostAug_R lCostOct_R lCostSep_R lCostNov_R lCostDec_R  
+D=dynReg_R  
+S=Price_R actJan_R actFeb_R actMar_R actApr_R actMay_R actJun_R actJul_R actAug_R actSep_R actOct_R actNov_R actDec_R LastJan_R LastFeb_R LastMar_R LastApr_R LastMay_R LastJun_R LastJul_R LastAug_R LastSep_R LastOct_R LastNov_R LastDec_R aCostJan_R aCostFeb_R aCostMar_R aCostApr_R aCostMay_R aCostJun_R aCostJul_R aCostAug_R aCostSep_R aCostOct_R aCostNov_R aCostDec_R lCostJan_R lCostFeb_R lCostMar_R lCostApr_R lCostMay_R lCostJun_R lCostJul_R lCostAug_R lCostOct_R lCostSep_R lCostNov_R lCostDec_R sReg_4R lEnergy_R  
 av0=c Option
 av1=a Price 0 %2p =20:20  \wax=0
 av2=c ActVal
@@ -63,7 +63,9 @@ av50=a lCostSep 0 %2p =0:0  \wax=0
 av51=a lCostOct 0 %2p =0:0  \wax=0
 av52=a lCostNov 0 %2p =0:0  \wax=0
 av53=a lCostDec 0 %2p =0:0  \wax=0
-av54=c CopyR
+av54=c ADJ0
+av55=a lEnergy 0 %1p =0:0  \wax=0
+av56=c CopyR
 Init=y
 AcceptName=1
 aRef=0
@@ -71,4 +73,50 @@ Folder=Energy.Monthly
 VariableSta0=Price ActualPrice;
 VariableSta1=actJan Energy.ActualYear.January;
 VariableSta2=actFeb Energy.ActualYear.February;
+VariableSta3=actMar Energy.ActualYear.March;
+VariableSta4=actApr Energy.ActualYear.April;
+VariableSta5=actMay Energy.ActualYear.May;
+VariableSta6=actJun Energy.ActualYear.June;
+VariableSta7=actJul Energy.ActualYear.July;
+VariableSta8=actAug Energy.ActualYear.August;
+VariableSta9=actSep Energy.ActualYear.September;
+VariableSta10=actOct Energy.ActualYear.October;
+VariableSta11=actNov Energy.ActualYear.November;
+VariableSta12=actDec Energy.ActualYear.December;
+VariableSta13=LastJan Energy.LastYear.January;
+VariableSta14=LastFeb Energy.LastYear.February;
+VariableSta15=LastMar Energy.LastYear.March;
+VariableSta16=LastApr Energy.LastYear.April;
+VariableSta17=LastMay Energy.LastYear.May;
+VariableSta18=LastJun Energy.LastYear.June;
+VariableSta19=LastJul Energy.LastYear.July;
+VariableSta20=LastAug Energy.LastYear.August;
+VariableSta21=LastSep Energy.LastYear.September;
+VariableSta22=LastOct Energy.LastYear.October;
+VariableSta23=LastNov Energy.LastYear.November;
+VariableSta24=LastDec Energy.LastYear.December;
+VariableSta25=aCostJan Cost.ActualYear.January;
+VariableSta26=aCostFeb Cost.ActualYear.February;
+VariableSta27=aCostMar Cost.ActualYear.March;
+VariableSta28=aCostApr Cost.ActualYear.April;
+VariableSta29=aCostMay Cost.ActualYear.May;
+VariableSta30=aCostJun Cost.ActualYear.June;
+VariableSta31=aCostJul Cost.ActualYear.July;
+VariableSta32=aCostAug Cost.ActualYear.August;
+VariableSta33=aCostSep Cost.ActualYear.September;
+VariableSta34=aCostOct Cost.ActualYear.October;
+VariableSta35=aCostNov Cost.ActualYear.November;
+VariableSta36=aCostDec Cost.ActualYear.December;
+VariableSta37=lCostJan Cost.LastYear.January;
+VariableSta38=lCostFeb Cost.LastYear.February;
+VariableSta39=lCostMar Cost.LastYear.March;
+VariableSta40=lCostApr Cost.LastYear.April;
+VariableSta41=lCostMay Cost.LastYear.May;
+VariableSta42=lCostJun Cost.LastYear.June;
+VariableSta43=lCostJul Cost.LastYear.July;
+VariableSta44=lCostAug Cost.LastYear.August;
+VariableSta45=lCostOct Cost.LastYear.October;
+VariableSta46=lCostSep Cost.LastYear.September;
+VariableSta47=lCostNov Cost.LastYear.November;
+VariableSta48=lCostDec Cost.LastYear.December;
 
