@@ -1,0 +1,17 @@
+[FAMILY]
+Name=3
+Enabled=0
+Status=0
+Version=0
+Opened=1
+HelpID=0
+HelpTopicID=0
+Internal=0
+Shared=0
+TargetFile=Energy
+DescID=0
+
+[BLOCKS]
+COUNT=1
+Block1=EnergyMonthly
+

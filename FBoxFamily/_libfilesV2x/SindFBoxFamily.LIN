@@ -1,0 +1,38 @@
+[ID]
+ID=SIND_FBoxFamily
+Prt=0
+
+[About]
+Name=SindFBoxFamily
+Version=$0.0.001,00001
+Distributed=Schäfer GmbH Anlagentechnik
+Author=Schäfer GmbH Anlagentechnik
+Picture=
+
+[LIBRARY]
+Type=FBox
+Delivery=Third Party
+Hierarchy=Single
+
+[Main]
+ID=SIND_FBoxFamily
+Name=SindFBoxFamily
+
+[PG]
+PG5Libs=Usr
+PG5_13=No
+PG5_14=No
+PG5_20=Yes
+PG5_21=No
+PG5_22=No
+PG5_23=No
+
+[Dependencies]
+Count=0
+
+[License]
+
+[FAMILIES]
+Count=1
+Fam0=Energy
+

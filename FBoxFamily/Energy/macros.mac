@@ -1,0 +1,84 @@
+$SKIP
+;;*******************************************************************************
+;; Energy MACRO Library | v0.0.1 | 07.02.2021 16:38Z
+;; Copyright (C) 2020 Marina Egner <info@sheepindustries.de>
+;; Author: Marina Egner
+;;
+;; This program is free software: you can redistribute it and/or modify it
+;; under the terms of the GNU General Public License as published by the
+;; Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+;;
+;; This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+;; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+;; See the GNU General Public License for more details.
+;;
+;; You should have received a copy of the GNU General Public License along with this program.
+;; If not, see <https://www.gnu.org/licenses/>.
+;; *******************************************************************************
+;;
+;; REVISION HISTORY
+;; v0.0.1  07.02.2021 - M.Egner | Initial edit;
+;;
+;; DESCRIPTION
+;; EnergyLibrary.
+$ENDSKIP
+
+$SKIP
+;; ****************************************************************************
+;; Description:  
+;; ****************************************************************************
+$ENDSKIP
+;;macro definition
+SIND_CopyActualToLast MACRO dActualVal,          ; Actual Val
+                     dLastVal                    ; Last Value
+
+;; ****************************************************************************
+;; MACRO code
+;; ****************************************************************************
+
+;             ==================================== 
+              COPY   dActualVal                  ; Copy Actual
+                     dLastVal                    ; to Last Value
+              LD     dActualVal                  ; Set Actual
+                     K 0                         ; to Zero
+;             ------------------------------------
+;             ====================================
+              ENDM
+
+$SKIP
+;; ****************************************************************************
+;; Description:  
+;; ****************************************************************************
+$ENDSKIP
+;;macro definition
+SIND_CalcMonthEnergy MACRO inEnergy,             ; Actual Val
+                     stcLastEnergy,              ; Last Value
+                     stcActualMonthEnergy,       ; Energy of the Month
+                     stcPrice,                   ; Actual Price
+                     stcActualMonthCost           ; Cost of the Month
+
+;; ****************************************************************************
+;; Declarations/Definitions
+;; ****************************************************************************
+;             ====================================
+dResult       LEQU R
+dRemainder    LEQU R
+;             ====================================
+
+;; ****************************************************************************
+;; MACRO code
+;; ****************************************************************************
+
+;             ==================================== 
+              SUB    inEnergy                    ; Subtract actual Energy in DEC.1
+                     stcLastEnergy               ; from the Energy of the last Month
+                     stcActualMonthEnergy        ; Energy of the Month
+              MUL    stcActualMonthEnergy        ; Multiply Energy DEC.1
+                     stcPrice                    ; with Price DEC.2
+                     dResult                     ; to get Total Cost in DEC.3
+              DIV    dResult                     ; Divide Cost
+                     K 10                        ; by 10
+                     stcActualMonthCost          ; to get DEC.2 Value
+;             ------------------------------------
+;             ====================================
+              ENDM

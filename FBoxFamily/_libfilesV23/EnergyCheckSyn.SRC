@@ -1,0 +1,187 @@
+
+;;__BEGIN_INCLUDE_SECTION_
+
+$Include "F:\Google Drive\Coding\SBC\FBox\SindFboxFamily\FBoxFamily\_libfiles\Energy.lib"
+;;__END_INCLUDE_SECTION_
+
+;;__BEGIN_DECLARATION_SECTION_
+SIND_ENGYMONTHinEnergy    EQU    R
+SIND_ENGYMONTHoutLastYearEnergy    EQU    R
+SIND_ENGYMONTHoutActualYearEnergy    EQU    R
+SIND_ENGYMONTHoutLastYearCost    EQU    R
+SIND_ENGYMONTHoutActualYearCost    EQU    R
+SIND_ENGYMONTHdynRegister    EQU    R [10]
+SIND_ENGYMONTHdynFlag    EQU    F [10]
+SIND_ENGYMONTHstcPrice    EQU    R [1]
+SIND_ENGYMONTHstcActualYearEnergyJan    EQU    R [1]
+SIND_ENGYMONTHstcActualYearEnergyFeb    EQU    R [1]
+SIND_ENGYMONTHstcActualYearEnergyMar    EQU    R [1]
+SIND_ENGYMONTHstcActualYearEnergyApr    EQU    R [1]
+SIND_ENGYMONTHstcActualYearEnergyMay    EQU    R [1]
+SIND_ENGYMONTHstcActualYearEnergyJun    EQU    R [1]
+SIND_ENGYMONTHstcActualYearEnergyJul    EQU    R [1]
+SIND_ENGYMONTHstcActualYearEnergyAug    EQU    R [1]
+SIND_ENGYMONTHstcActualYearEnergySep    EQU    R [1]
+SIND_ENGYMONTHstcActualYearEnergyOct    EQU    R [1]
+SIND_ENGYMONTHstcActualYearEnergyNov    EQU    R [1]
+SIND_ENGYMONTHstcActualYearEnergyDec    EQU    R [1]
+SIND_ENGYMONTHstcLastYearEnergyJan    EQU    R [1]
+SIND_ENGYMONTHstcLastYearEnergyFeb    EQU    R [1]
+SIND_ENGYMONTHstcLastYearEnergyMar    EQU    R [1]
+SIND_ENGYMONTHstcLastYearEnergyApr    EQU    R [1]
+SIND_ENGYMONTHstcLastYearEnergyMay    EQU    R [1]
+SIND_ENGYMONTHstcLastYearEnergyJun    EQU    R [1]
+SIND_ENGYMONTHstcLastYearEnergyJul    EQU    R [1]
+SIND_ENGYMONTHstcLastYearEnergyAug    EQU    R [1]
+SIND_ENGYMONTHstcLastYearEnergySep    EQU    R [1]
+SIND_ENGYMONTHstcLastYearEnergyOct    EQU    R [1]
+SIND_ENGYMONTHstcLastYearEnergyNov    EQU    R [1]
+SIND_ENGYMONTHstcLastYearEnergyDec    EQU    R [1]
+SIND_ENGYMONTHstcActualYearCostJan    EQU    R [1]
+SIND_ENGYMONTHstcActualYearCostFeb    EQU    R [1]
+SIND_ENGYMONTHstcActualYearCostMar    EQU    R [1]
+SIND_ENGYMONTHstcActualYearCostApr    EQU    R [1]
+SIND_ENGYMONTHstcActualYearCostMay    EQU    R [1]
+SIND_ENGYMONTHstcActualYearCostJun    EQU    R [1]
+SIND_ENGYMONTHstcActualYearCostJul    EQU    R [1]
+SIND_ENGYMONTHstcActualYearCostAug    EQU    R [1]
+SIND_ENGYMONTHstcActualYearCostSep    EQU    R [1]
+SIND_ENGYMONTHstcActualYearCostOct    EQU    R [1]
+SIND_ENGYMONTHstcActualYearCostNov    EQU    R [1]
+SIND_ENGYMONTHstcActualYearCostDec    EQU    R [1]
+SIND_ENGYMONTHstcLastYearCostJan    EQU    R [1]
+SIND_ENGYMONTHstcLastYearCostFeb    EQU    R [1]
+SIND_ENGYMONTHstcLastYearCostMar    EQU    R [1]
+SIND_ENGYMONTHstcLastYearCostApr    EQU    R [1]
+SIND_ENGYMONTHstcLastYearCostMay    EQU    R [1]
+SIND_ENGYMONTHstcLastYearCostJun    EQU    R [1]
+SIND_ENGYMONTHstcLastYearCostJul    EQU    R [1]
+SIND_ENGYMONTHstcLastYearCostAug    EQU    R [1]
+SIND_ENGYMONTHstcLastYearCostOct    EQU    R [1]
+SIND_ENGYMONTHstcLastYearCostSep    EQU    R [1]
+SIND_ENGYMONTHstcLastYearCostNov    EQU    R [1]
+SIND_ENGYMONTHstcLastYearCostDec    EQU    R [1]
+
+;;__END_DECLARATION_SECTION_
+
+;;__BEGIN_BLOCK_SECTION_
+_TESTCOB EQU COB 
+COB _TESTCOB
+    0
+
+;;__BEGIN_CODE_SECTION_
+__fbl_C000001_00_000___SG_COB_0 EQU $ ;Mark FBox
+SIND_ENGYMONTH(2,
+    SIND_ENGYMONTHinEnergy,    ;; inEnergy
+    SIND_ENGYMONTHoutLastYearEnergy, ;; outLastYearEnergy
+    SIND_ENGYMONTHoutActualYearEnergy, ;; outActualYearEnergy
+    SIND_ENGYMONTHoutLastYearCost, ;; outLastYearCost
+    SIND_ENGYMONTHoutActualYearCost, ;; outActualYearCost
+    SIND_ENGYMONTHdynRegister, ;; dynRegister
+    SIND_ENGYMONTHdynFlag,     ;; dynFlag
+    SIND_ENGYMONTHstcPrice,    ;; stcPrice
+    SIND_ENGYMONTHstcActualYearEnergyJan, ;; stcActualYearEnergyJan
+    SIND_ENGYMONTHstcActualYearEnergyFeb, ;; stcActualYearEnergyFeb
+    SIND_ENGYMONTHstcActualYearEnergyMar, ;; stcActualYearEnergyMar
+    SIND_ENGYMONTHstcActualYearEnergyApr, ;; stcActualYearEnergyApr
+    SIND_ENGYMONTHstcActualYearEnergyMay, ;; stcActualYearEnergyMay
+    SIND_ENGYMONTHstcActualYearEnergyJun, ;; stcActualYearEnergyJun
+    SIND_ENGYMONTHstcActualYearEnergyJul, ;; stcActualYearEnergyJul
+    SIND_ENGYMONTHstcActualYearEnergyAug, ;; stcActualYearEnergyAug
+    SIND_ENGYMONTHstcActualYearEnergySep, ;; stcActualYearEnergySep
+    SIND_ENGYMONTHstcActualYearEnergyOct, ;; stcActualYearEnergyOct
+    SIND_ENGYMONTHstcActualYearEnergyNov, ;; stcActualYearEnergyNov
+    SIND_ENGYMONTHstcActualYearEnergyDec, ;; stcActualYearEnergyDec
+    SIND_ENGYMONTHstcLastYearEnergyJan, ;; stcLastYearEnergyJan
+    SIND_ENGYMONTHstcLastYearEnergyFeb, ;; stcLastYearEnergyFeb
+    SIND_ENGYMONTHstcLastYearEnergyMar, ;; stcLastYearEnergyMar
+    SIND_ENGYMONTHstcLastYearEnergyApr, ;; stcLastYearEnergyApr
+    SIND_ENGYMONTHstcLastYearEnergyMay, ;; stcLastYearEnergyMay
+    SIND_ENGYMONTHstcLastYearEnergyJun, ;; stcLastYearEnergyJun
+    SIND_ENGYMONTHstcLastYearEnergyJul, ;; stcLastYearEnergyJul
+    SIND_ENGYMONTHstcLastYearEnergyAug, ;; stcLastYearEnergyAug
+    SIND_ENGYMONTHstcLastYearEnergySep, ;; stcLastYearEnergySep
+    SIND_ENGYMONTHstcLastYearEnergyOct, ;; stcLastYearEnergyOct
+    SIND_ENGYMONTHstcLastYearEnergyNov, ;; stcLastYearEnergyNov
+    SIND_ENGYMONTHstcLastYearEnergyDec, ;; stcLastYearEnergyDec
+    SIND_ENGYMONTHstcActualYearCostJan, ;; stcActualYearCostJan
+    SIND_ENGYMONTHstcActualYearCostFeb, ;; stcActualYearCostFeb
+    SIND_ENGYMONTHstcActualYearCostMar, ;; stcActualYearCostMar
+    SIND_ENGYMONTHstcActualYearCostApr, ;; stcActualYearCostApr
+    SIND_ENGYMONTHstcActualYearCostMay, ;; stcActualYearCostMay
+    SIND_ENGYMONTHstcActualYearCostJun, ;; stcActualYearCostJun
+    SIND_ENGYMONTHstcActualYearCostJul, ;; stcActualYearCostJul
+    SIND_ENGYMONTHstcActualYearCostAug, ;; stcActualYearCostAug
+    SIND_ENGYMONTHstcActualYearCostSep, ;; stcActualYearCostSep
+    SIND_ENGYMONTHstcActualYearCostOct, ;; stcActualYearCostOct
+    SIND_ENGYMONTHstcActualYearCostNov, ;; stcActualYearCostNov
+    SIND_ENGYMONTHstcActualYearCostDec, ;; stcActualYearCostDec
+    SIND_ENGYMONTHstcLastYearCostJan, ;; stcLastYearCostJan
+    SIND_ENGYMONTHstcLastYearCostFeb, ;; stcLastYearCostFeb
+    SIND_ENGYMONTHstcLastYearCostMar, ;; stcLastYearCostMar
+    SIND_ENGYMONTHstcLastYearCostApr, ;; stcLastYearCostApr
+    SIND_ENGYMONTHstcLastYearCostMay, ;; stcLastYearCostMay
+    SIND_ENGYMONTHstcLastYearCostJun, ;; stcLastYearCostJun
+    SIND_ENGYMONTHstcLastYearCostJul, ;; stcLastYearCostJul
+    SIND_ENGYMONTHstcLastYearCostAug, ;; stcLastYearCostAug
+    SIND_ENGYMONTHstcLastYearCostOct, ;; stcLastYearCostOct
+    SIND_ENGYMONTHstcLastYearCostSep, ;; stcLastYearCostSep
+    SIND_ENGYMONTHstcLastYearCostNov, ;; stcLastYearCostNov
+    SIND_ENGYMONTHstcLastYearCostDec, ;; stcLastYearCostDec
+     20,                       ;; Price 0
+     0,                        ;; actJan 0
+     0,                        ;; actFeb 0
+     0,                        ;; actMar 0
+     0,                        ;; actApr 0
+     0,                        ;; actMay 0
+     0,                        ;; actJun 0
+     0,                        ;; actJul 0
+     0,                        ;; actAug 0
+     0,                        ;; actSep 0
+     0,                        ;; actOct 0
+     0,                        ;; actNov 0
+     0,                        ;; actDec 0
+     0,                        ;; LastJan 0
+     0,                        ;; LastFeb 0
+     0,                        ;; LastMar 0
+     0,                        ;; LastApr 0
+     0,                        ;; LastMay 0
+     0,                        ;; LastJun 0
+     0,                        ;; LastJul 0
+     0,                        ;; LastAug 0
+     0,                        ;; LastSep 0
+     0,                        ;; LastOct 0
+     0,                        ;; LastNov 0
+     0,                        ;; LastDec 0
+     0,                        ;; aCostJan 0
+     0,                        ;; aCostFeb 0
+     0,                        ;; aCostMar 0
+     0,                        ;; aCostApr 0
+     0,                        ;; aCostMay 0
+     0,                        ;; aCostJun 0
+     0,                        ;; aCostJul 0
+     0,                        ;; aCostAug 0
+     0,                        ;; aCostSep 0
+     0,                        ;; aCostOct 0
+     0,                        ;; aCostNov 0
+     0,                        ;; aCostDec 0
+     0,                        ;; lCostJan 0
+     0,                        ;; lCostFeb 0
+     0,                        ;; lCostMar 0
+     0,                        ;; lCostApr 0
+     0,                        ;; lCostMay 0
+     0,                        ;; lCostJun 0
+     0,                        ;; lCostJul 0
+     0,                        ;; lCostAug 0
+     0,                        ;; lCostSep 0
+     0,                        ;; lCostOct 0
+     0,                        ;; lCostNov 0
+     0,                        ;; lCostDec 0
+    GiveNameSIND_ENGYMONTH)    ;; Name
+
+;;__END_CODE_SECTION_
+ECOB
+
+;;__END_BLOCK_SECTION_
+
+

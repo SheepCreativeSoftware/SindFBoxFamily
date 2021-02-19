@@ -1,0 +1,74 @@
+[SIND_ENGYMONTH]
+Width=12
+Vers=000002
+Face=EngyMonthly
+IntNames=
+IntRefs=
+FacePosi=l
+In=kWh_I  
+Out=EngyLasY_I EngyActY_I CostLasY_I CostActY_I 
+D=dynReg_10R dynFlag_10F  
+S=Price_R actJan_R actFeb_R actMar_R actApr_R actMay_R actJun_R actJul_R actAug_R actSep_R actOct_R actNov_R actDec_R LastJan_R LastFeb_R LastMar_R LastApr_R LastMay_R LastJun_R LastJul_R LastAug_R LastSep_R LastOct_R LastNov_R LastDec_R aCostJan_R aCostFeb_R aCostMar_R aCostApr_R aCostMay_R aCostJun_R aCostJul_R aCostAug_R aCostSep_R aCostOct_R aCostNov_R aCostDec_R lCostJan_R lCostFeb_R lCostMar_R lCostApr_R lCostMay_R lCostJun_R lCostJul_R lCostAug_R lCostOct_R lCostSep_R lCostNov_R lCostDec_R  
+av0=c Option
+av1=a Price 0 %2p =20:20  \wax=0
+av2=c ActVal
+av3=a actJan 0 %1p =0:0  \wax=0
+av4=a actFeb 0 %1p =0:0  \wax=0
+av5=a actMar 0 %1p =0:0  \wax=0
+av6=a actApr 0 %1p =0:0  \wax=0
+av7=a actMay 0 %1p =0:0  \wax=0
+av8=a actJun 0 %1p =0:0  \wax=0
+av9=a actJul 0 %1p =0:0  \wax=0
+av10=a actAug 0 %1p =0:0  \wax=0
+av11=a actSep 0 %1p =0:0  \wax=0
+av12=a actOct 0 %1p =0:0  \wax=0
+av13=a actNov 0 %1p =0:0  \wax=0
+av14=a actDec 0 %1p =0:0  \wax=0
+av15=c LasVal
+av16=a LastJan 0 %1p =0:0  \wax=0
+av17=a LastFeb 0 %1p =0:0  \wax=0
+av18=a LastMar 0 %1p =0:0  \wax=0
+av19=a LastApr 0 %1p =0:0  \wax=0
+av20=a LastMay 0 %1p =0:0  \wax=0
+av21=a LastJun 0 %1p =0:0  \wax=0
+av22=a LastJul 0 %1p =0:0  \wax=0
+av23=a LastAug 0 %1p =0:0  \wax=0
+av24=a LastSep 0 %1p =0:0  \wax=0
+av25=a LastOct 0 %1p =0:0  \wax=0
+av26=a LastNov 0 %1p =0:0  \wax=0
+av27=a LastDec 0 %1p =0:0  \wax=0
+av28=c ActCost
+av29=a aCostJan 0 %2p =0:0  \wax=0
+av30=a aCostFeb 0 %2p =0:0  \wax=0
+av31=a aCostMar 0 %2p =0:0  \wax=0
+av32=a aCostApr 0 %2p =0:0  \wax=0
+av33=a aCostMay 0 %2p =0:0  \wax=0
+av34=a aCostJun 0 %2p =0:0  \wax=0
+av35=a aCostJul 0 %2p =0:0  \wax=0
+av36=a aCostAug 0 %2p =0:0  \wax=0
+av37=a aCostSep 0 %2p =0:0  \wax=0
+av38=a aCostOct 0 %2p =0:0  \wax=0
+av39=a aCostNov 0 %2p =0:0  \wax=0
+av40=a aCostDec 0 %2p =0:0  \wax=0
+av41=c LasCost
+av42=a lCostJan 0 %2p =0:0  \wax=0
+av43=a lCostFeb 0 %2p =0:0  \wax=0
+av44=a lCostMar 0 %2p =0:0  \wax=0
+av45=a lCostApr 0 %2p =0:0  \wax=0
+av46=a lCostMay 0 %2p =0:0  \wax=0
+av47=a lCostJun 0 %2p =0:0  \wax=0
+av48=a lCostJul 0 %2p =0:0  \wax=0
+av49=a lCostAug 0 %2p =0:0  \wax=0
+av50=a lCostSep 0 %2p =0:0  \wax=0
+av51=a lCostOct 0 %2p =0:0  \wax=0
+av52=a lCostNov 0 %2p =0:0  \wax=0
+av53=a lCostDec 0 %2p =0:0  \wax=0
+av54=c CopyR
+Init=y
+AcceptName=1
+aRef=0
+Folder=Energy.Monthly
+VariableSta0=Price ActualPrice;
+VariableSta1=actJan Energy.ActualYear.January;
+VariableSta2=actFeb Energy.ActualYear.February;
+

@@ -1,0 +1,2052 @@
+<LIB LANGUAGES="1" STRINGS="410" LANGSTR="LANG" ACTLANG="English" VERSION="2">
+<REC ID="1">
+ <LANG ID="0">
+English
+ </LANG>
+</REC>
+<REC ID="2">
+ <LANG ID="0">
+SindFBoxFamily
+ </LANG>
+</REC>
+<REC ID="3">
+ <LANG ID="0">
+Energy
+ </LANG>
+</REC>
+<REC ID="4">
+ <LANG ID="0">
+EngyMonthly
+ </LANG>
+</REC>
+<REC ID="5">
+ <LANG ID="0">
+EnergyMonthly
+ </LANG>
+</REC>
+<REC ID="6">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="7">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="8">
+ <LANG ID="0">
+Energy.Monthly
+ </LANG>
+</REC>
+<REC ID="9">
+ <LANG ID="0">
+kWh
+ </LANG>
+</REC>
+<REC ID="10">
+ <LANG ID="0">
+--- Options ---
+ </LANG>
+</REC>
+<REC ID="11">
+ <LANG ID="0">
+--- Options ---
+ </LANG>
+</REC>
+<REC ID="12">
+ <LANG ID="0">
+--- (C) by Marina Egner, Sheep Industries ---
+ </LANG>
+</REC>
+<REC ID="13">
+ <LANG ID="0">
+--- (C) by Marina Egner, Sheep Industries ---
+ </LANG>
+</REC>
+<REC ID="19">
+ <LANG ID="0">
+20
+ </LANG>
+</REC>
+<REC ID="20">
+ <LANG ID="0">
+20
+ </LANG>
+</REC>
+<REC ID="21">
+ <LANG ID="0">
+kWh Price
+ </LANG>
+</REC>
+<REC ID="22">
+ <LANG ID="0">
+Price
+ </LANG>
+</REC>
+<REC ID="23">
+ <LANG ID="0">
+kWh Price
+ </LANG>
+</REC>
+<REC ID="24">
+ <LANG ID="0">
+30
+ </LANG>
+</REC>
+<REC ID="27">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="28">
+ <LANG ID="0">
+30
+ </LANG>
+</REC>
+<REC ID="30">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="32">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="33">
+ <LANG ID="0">
+--- Actual Year Values ---
+ </LANG>
+</REC>
+<REC ID="34">
+ <LANG ID="0">
+--- Actual Year Values ---
+ </LANG>
+</REC>
+<REC ID="35">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="36">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="37">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="38">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="39">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="40">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="41">
+ <LANG ID="0">
+Counter January
+ </LANG>
+</REC>
+<REC ID="42">
+ <LANG ID="0">
+actJan
+ </LANG>
+</REC>
+<REC ID="43">
+ <LANG ID="0">
+Counter January
+ </LANG>
+</REC>
+<REC ID="44">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="45">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="46">
+ <LANG ID="0">
+Counter February
+ </LANG>
+</REC>
+<REC ID="47">
+ <LANG ID="0">
+actFeb
+ </LANG>
+</REC>
+<REC ID="48">
+ <LANG ID="0">
+Counter February
+ </LANG>
+</REC>
+<REC ID="49">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="50">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="51">
+ <LANG ID="0">
+Counter March
+ </LANG>
+</REC>
+<REC ID="52">
+ <LANG ID="0">
+actMar
+ </LANG>
+</REC>
+<REC ID="53">
+ <LANG ID="0">
+Counter March
+ </LANG>
+</REC>
+<REC ID="54">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="55">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="56">
+ <LANG ID="0">
+Counter April
+ </LANG>
+</REC>
+<REC ID="57">
+ <LANG ID="0">
+actApr
+ </LANG>
+</REC>
+<REC ID="58">
+ <LANG ID="0">
+Counter April
+ </LANG>
+</REC>
+<REC ID="59">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="60">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="61">
+ <LANG ID="0">
+Counter May
+ </LANG>
+</REC>
+<REC ID="62">
+ <LANG ID="0">
+actMay
+ </LANG>
+</REC>
+<REC ID="63">
+ <LANG ID="0">
+Counter May
+ </LANG>
+</REC>
+<REC ID="64">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="65">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="66">
+ <LANG ID="0">
+Counter June
+ </LANG>
+</REC>
+<REC ID="67">
+ <LANG ID="0">
+actJun
+ </LANG>
+</REC>
+<REC ID="68">
+ <LANG ID="0">
+Counter June
+ </LANG>
+</REC>
+<REC ID="69">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="70">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="71">
+ <LANG ID="0">
+Counter July
+ </LANG>
+</REC>
+<REC ID="72">
+ <LANG ID="0">
+actJul
+ </LANG>
+</REC>
+<REC ID="73">
+ <LANG ID="0">
+Counter July
+ </LANG>
+</REC>
+<REC ID="74">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="75">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="76">
+ <LANG ID="0">
+Counter August
+ </LANG>
+</REC>
+<REC ID="77">
+ <LANG ID="0">
+actAug
+ </LANG>
+</REC>
+<REC ID="78">
+ <LANG ID="0">
+Counter August
+ </LANG>
+</REC>
+<REC ID="79">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="80">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="81">
+ <LANG ID="0">
+Counter September
+ </LANG>
+</REC>
+<REC ID="82">
+ <LANG ID="0">
+actSep
+ </LANG>
+</REC>
+<REC ID="83">
+ <LANG ID="0">
+Counter September
+ </LANG>
+</REC>
+<REC ID="84">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="85">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="86">
+ <LANG ID="0">
+Counter October
+ </LANG>
+</REC>
+<REC ID="88">
+ <LANG ID="0">
+Counter October
+ </LANG>
+</REC>
+<REC ID="89">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="90">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="91">
+ <LANG ID="0">
+Counter November
+ </LANG>
+</REC>
+<REC ID="92">
+ <LANG ID="0">
+actNov
+ </LANG>
+</REC>
+<REC ID="93">
+ <LANG ID="0">
+Counter November
+ </LANG>
+</REC>
+<REC ID="94">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="95">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="96">
+ <LANG ID="0">
+Counter December
+ </LANG>
+</REC>
+<REC ID="97">
+ <LANG ID="0">
+actDec
+ </LANG>
+</REC>
+<REC ID="98">
+ <LANG ID="0">
+Counter December
+ </LANG>
+</REC>
+<REC ID="99">
+ <LANG ID="0">
+--- Last Year Values ---
+ </LANG>
+</REC>
+<REC ID="100">
+ <LANG ID="0">
+--- Last Year Values ---
+ </LANG>
+</REC>
+<REC ID="101">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="102">
+ <LANG ID="0">
+Counter January
+ </LANG>
+</REC>
+<REC ID="103">
+ <LANG ID="0">
+Counter January
+ </LANG>
+</REC>
+<REC ID="104">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="105">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="106">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="107">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="108">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="109">
+ <LANG ID="0">
+Counter February
+ </LANG>
+</REC>
+<REC ID="110">
+ <LANG ID="0">
+Counter February
+ </LANG>
+</REC>
+<REC ID="111">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="112">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="113">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="114">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="115">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="116">
+ <LANG ID="0">
+Counter March
+ </LANG>
+</REC>
+<REC ID="117">
+ <LANG ID="0">
+Counter March
+ </LANG>
+</REC>
+<REC ID="118">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="119">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="120">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="121">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="122">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="123">
+ <LANG ID="0">
+Counter April
+ </LANG>
+</REC>
+<REC ID="124">
+ <LANG ID="0">
+Counter April
+ </LANG>
+</REC>
+<REC ID="125">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="126">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="127">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="128">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="129">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="130">
+ <LANG ID="0">
+Counter May
+ </LANG>
+</REC>
+<REC ID="131">
+ <LANG ID="0">
+Counter May
+ </LANG>
+</REC>
+<REC ID="132">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="133">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="134">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="135">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="136">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="137">
+ <LANG ID="0">
+Counter June
+ </LANG>
+</REC>
+<REC ID="138">
+ <LANG ID="0">
+Counter June
+ </LANG>
+</REC>
+<REC ID="139">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="140">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="141">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="142">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="143">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="144">
+ <LANG ID="0">
+Counter July
+ </LANG>
+</REC>
+<REC ID="145">
+ <LANG ID="0">
+Counter July
+ </LANG>
+</REC>
+<REC ID="146">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="147">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="148">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="149">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="150">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="151">
+ <LANG ID="0">
+Counter August
+ </LANG>
+</REC>
+<REC ID="152">
+ <LANG ID="0">
+Counter August
+ </LANG>
+</REC>
+<REC ID="153">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="154">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="155">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="156">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="157">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="158">
+ <LANG ID="0">
+Counter September
+ </LANG>
+</REC>
+<REC ID="159">
+ <LANG ID="0">
+Counter September
+ </LANG>
+</REC>
+<REC ID="160">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="161">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="162">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="163">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="164">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="165">
+ <LANG ID="0">
+Counter October
+ </LANG>
+</REC>
+<REC ID="166">
+ <LANG ID="0">
+Counter October
+ </LANG>
+</REC>
+<REC ID="167">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="168">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="169">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="170">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="171">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="172">
+ <LANG ID="0">
+Counter November
+ </LANG>
+</REC>
+<REC ID="173">
+ <LANG ID="0">
+Counter November
+ </LANG>
+</REC>
+<REC ID="174">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="175">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="176">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="177">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="178">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="179">
+ <LANG ID="0">
+Counter December
+ </LANG>
+</REC>
+<REC ID="180">
+ <LANG ID="0">
+Counter December
+ </LANG>
+</REC>
+<REC ID="181">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="182">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="183">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="184">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="186">
+ <LANG ID="0">
+LastFeb
+ </LANG>
+</REC>
+<REC ID="187">
+ <LANG ID="0">
+LastMar
+ </LANG>
+</REC>
+<REC ID="188">
+ <LANG ID="0">
+LastApr
+ </LANG>
+</REC>
+<REC ID="189">
+ <LANG ID="0">
+LastMay
+ </LANG>
+</REC>
+<REC ID="190">
+ <LANG ID="0">
+LastJun
+ </LANG>
+</REC>
+<REC ID="191">
+ <LANG ID="0">
+LastJul
+ </LANG>
+</REC>
+<REC ID="192">
+ <LANG ID="0">
+LastAug
+ </LANG>
+</REC>
+<REC ID="193">
+ <LANG ID="0">
+LastSep
+ </LANG>
+</REC>
+<REC ID="194">
+ <LANG ID="0">
+LastOct
+ </LANG>
+</REC>
+<REC ID="195">
+ <LANG ID="0">
+actOct
+ </LANG>
+</REC>
+<REC ID="196">
+ <LANG ID="0">
+LastNov
+ </LANG>
+</REC>
+<REC ID="197">
+ <LANG ID="0">
+LastDec
+ </LANG>
+</REC>
+<REC ID="198">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="199">
+ <LANG ID="0">
+--- Actual Year Cost ---
+ </LANG>
+</REC>
+<REC ID="200">
+ <LANG ID="0">
+--- Actual Year Cost ---
+ </LANG>
+</REC>
+<REC ID="201">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="202">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="203">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="204">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="205">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="206">
+ <LANG ID="0">
+Cost January
+ </LANG>
+</REC>
+<REC ID="207">
+ <LANG ID="0">
+Cost January
+ </LANG>
+</REC>
+<REC ID="208">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="209">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="210">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="211">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="212">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="213">
+ <LANG ID="0">
+Cost February
+ </LANG>
+</REC>
+<REC ID="214">
+ <LANG ID="0">
+Cost February
+ </LANG>
+</REC>
+<REC ID="215">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="216">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="217">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="218">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="219">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="220">
+ <LANG ID="0">
+Cost March
+ </LANG>
+</REC>
+<REC ID="221">
+ <LANG ID="0">
+Cost March
+ </LANG>
+</REC>
+<REC ID="222">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="223">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="224">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="225">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="226">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="227">
+ <LANG ID="0">
+Cost April
+ </LANG>
+</REC>
+<REC ID="228">
+ <LANG ID="0">
+Cost April
+ </LANG>
+</REC>
+<REC ID="229">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="230">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="231">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="232">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="233">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="234">
+ <LANG ID="0">
+Cost May
+ </LANG>
+</REC>
+<REC ID="235">
+ <LANG ID="0">
+Cost May
+ </LANG>
+</REC>
+<REC ID="236">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="237">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="238">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="239">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="240">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="241">
+ <LANG ID="0">
+Cost June
+ </LANG>
+</REC>
+<REC ID="242">
+ <LANG ID="0">
+Cost June
+ </LANG>
+</REC>
+<REC ID="243">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="244">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="245">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="246">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="247">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="248">
+ <LANG ID="0">
+Cost July
+ </LANG>
+</REC>
+<REC ID="249">
+ <LANG ID="0">
+Cost July
+ </LANG>
+</REC>
+<REC ID="250">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="251">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="252">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="253">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="254">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="255">
+ <LANG ID="0">
+Cost August
+ </LANG>
+</REC>
+<REC ID="256">
+ <LANG ID="0">
+Cost August
+ </LANG>
+</REC>
+<REC ID="257">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="258">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="259">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="260">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="261">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="262">
+ <LANG ID="0">
+Cost September
+ </LANG>
+</REC>
+<REC ID="263">
+ <LANG ID="0">
+Cost September
+ </LANG>
+</REC>
+<REC ID="264">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="265">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="266">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="267">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="268">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="269">
+ <LANG ID="0">
+Cost October
+ </LANG>
+</REC>
+<REC ID="270">
+ <LANG ID="0">
+Cost October
+ </LANG>
+</REC>
+<REC ID="271">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="272">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="273">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="274">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="275">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="276">
+ <LANG ID="0">
+Cost November
+ </LANG>
+</REC>
+<REC ID="277">
+ <LANG ID="0">
+Cost November
+ </LANG>
+</REC>
+<REC ID="278">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="279">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="280">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="281">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="282">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="283">
+ <LANG ID="0">
+Cost December
+ </LANG>
+</REC>
+<REC ID="284">
+ <LANG ID="0">
+Cost December
+ </LANG>
+</REC>
+<REC ID="285">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="286">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="287">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="288">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="289">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="290">
+ <LANG ID="0">
+--- Last Year Cost ---
+ </LANG>
+</REC>
+<REC ID="291">
+ <LANG ID="0">
+--- Last Year Cost ---
+ </LANG>
+</REC>
+<REC ID="292">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="293">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="294">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="295">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="296">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="297">
+ <LANG ID="0">
+Cost January
+ </LANG>
+</REC>
+<REC ID="298">
+ <LANG ID="0">
+Cost January
+ </LANG>
+</REC>
+<REC ID="299">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="300">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="301">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="302">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="303">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="304">
+ <LANG ID="0">
+Cost February
+ </LANG>
+</REC>
+<REC ID="305">
+ <LANG ID="0">
+Cost February
+ </LANG>
+</REC>
+<REC ID="306">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="307">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="308">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="309">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="310">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="311">
+ <LANG ID="0">
+Cost March
+ </LANG>
+</REC>
+<REC ID="312">
+ <LANG ID="0">
+Cost March
+ </LANG>
+</REC>
+<REC ID="313">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="314">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="315">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="316">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="317">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="318">
+ <LANG ID="0">
+Cost April
+ </LANG>
+</REC>
+<REC ID="319">
+ <LANG ID="0">
+Cost April
+ </LANG>
+</REC>
+<REC ID="320">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="321">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="322">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="323">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="324">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="325">
+ <LANG ID="0">
+Cost May
+ </LANG>
+</REC>
+<REC ID="326">
+ <LANG ID="0">
+Cost May
+ </LANG>
+</REC>
+<REC ID="327">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="328">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="329">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="330">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="331">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="332">
+ <LANG ID="0">
+Cost June
+ </LANG>
+</REC>
+<REC ID="333">
+ <LANG ID="0">
+Cost June
+ </LANG>
+</REC>
+<REC ID="334">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="335">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="336">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="337">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="338">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="339">
+ <LANG ID="0">
+Cost July
+ </LANG>
+</REC>
+<REC ID="340">
+ <LANG ID="0">
+Cost July
+ </LANG>
+</REC>
+<REC ID="341">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="342">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="343">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="344">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="345">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="346">
+ <LANG ID="0">
+Cost August
+ </LANG>
+</REC>
+<REC ID="347">
+ <LANG ID="0">
+Cost August
+ </LANG>
+</REC>
+<REC ID="348">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="349">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="350">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="351">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="352">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="353">
+ <LANG ID="0">
+Cost September
+ </LANG>
+</REC>
+<REC ID="354">
+ <LANG ID="0">
+Cost September
+ </LANG>
+</REC>
+<REC ID="355">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="356">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="357">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="358">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="359">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="360">
+ <LANG ID="0">
+Cost October
+ </LANG>
+</REC>
+<REC ID="361">
+ <LANG ID="0">
+Cost October
+ </LANG>
+</REC>
+<REC ID="362">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="363">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="364">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="365">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="366">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="367">
+ <LANG ID="0">
+Cost November
+ </LANG>
+</REC>
+<REC ID="368">
+ <LANG ID="0">
+Cost November
+ </LANG>
+</REC>
+<REC ID="369">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="370">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="371">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="372">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="373">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="374">
+ <LANG ID="0">
+Cost December
+ </LANG>
+</REC>
+<REC ID="375">
+ <LANG ID="0">
+Cost December
+ </LANG>
+</REC>
+<REC ID="376">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="377">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="378">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="379">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="404">
+ <LANG ID="0">
+aCostJan
+ </LANG>
+</REC>
+<REC ID="405">
+ <LANG ID="0">
+aCostFeb
+ </LANG>
+</REC>
+<REC ID="406">
+ <LANG ID="0">
+aCostMar
+ </LANG>
+</REC>
+<REC ID="407">
+ <LANG ID="0">
+aCostApr
+ </LANG>
+</REC>
+<REC ID="408">
+ <LANG ID="0">
+aCostMay
+ </LANG>
+</REC>
+<REC ID="409">
+ <LANG ID="0">
+aCostJun
+ </LANG>
+</REC>
+<REC ID="410">
+ <LANG ID="0">
+aCostJul
+ </LANG>
+</REC>
+<REC ID="411">
+ <LANG ID="0">
+aCostAug
+ </LANG>
+</REC>
+<REC ID="412">
+ <LANG ID="0">
+aCostSep
+ </LANG>
+</REC>
+<REC ID="413">
+ <LANG ID="0">
+aCostOct
+ </LANG>
+</REC>
+<REC ID="414">
+ <LANG ID="0">
+aCostNov
+ </LANG>
+</REC>
+<REC ID="415">
+ <LANG ID="0">
+aCostDec
+ </LANG>
+</REC>
+<REC ID="418">
+ <LANG ID="0">
+LastJan
+ </LANG>
+</REC>
+<REC ID="419">
+ <LANG ID="0">
+lCostJan
+ </LANG>
+</REC>
+<REC ID="420">
+ <LANG ID="0">
+lCostFeb
+ </LANG>
+</REC>
+<REC ID="421">
+ <LANG ID="0">
+lCostMar
+ </LANG>
+</REC>
+<REC ID="422">
+ <LANG ID="0">
+lCostApr
+ </LANG>
+</REC>
+<REC ID="423">
+ <LANG ID="0">
+lCostDec
+ </LANG>
+</REC>
+<REC ID="424">
+ <LANG ID="0">
+lCostNov
+ </LANG>
+</REC>
+<REC ID="425">
+ <LANG ID="0">
+lCostOct
+ </LANG>
+</REC>
+<REC ID="426">
+ <LANG ID="0">
+lCostSep
+ </LANG>
+</REC>
+<REC ID="427">
+ <LANG ID="0">
+lCostAug
+ </LANG>
+</REC>
+<REC ID="428">
+ <LANG ID="0">
+lCostJul
+ </LANG>
+</REC>
+<REC ID="429">
+ <LANG ID="0">
+lCostJun
+ </LANG>
+</REC>
+<REC ID="430">
+ <LANG ID="0">
+lCostMay
+ </LANG>
+</REC>
+<REC ID="431">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="432">
+ <LANG ID="0">
+dynReg
+ </LANG>
+</REC>
+<REC ID="433">
+ <LANG ID="0">
+dynFlag
+ </LANG>
+</REC>
+<REC ID="434">
+ <LANG ID="0">
+EngyActY
+ </LANG>
+</REC>
+<REC ID="435">
+ <LANG ID="0">
+EngyLasY
+ </LANG>
+</REC>
+<REC ID="436">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="437">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="438">
+ <LANG ID="0">
+CostActY
+ </LANG>
+</REC>
+<REC ID="439">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="440">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="441">
+ <LANG ID="0">
+CostLasY
+ </LANG>
+</REC>
+<REC ID="442">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="443">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="444">
+ <LANG ID="0">
+ActualPrice
+ </LANG>
+</REC>
+<REC ID="445">
+ <LANG ID="0">
+Energy.ActualYear.January
+ </LANG>
+</REC>
+<REC ID="446">
+ <LANG ID="0">
+Energy.ActualYear.February
+ </LANG>
+</REC>
+<REC ID="447">
+ <LANG ID="0">
+Sind Family.Energy
+ </LANG>
+</REC>
+</LIB>
