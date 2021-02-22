@@ -62,6 +62,22 @@ SIND_ENGYMONTHstcLastYearCostNov    EQU    R [1]
 SIND_ENGYMONTHstcLastYearCostDec    EQU    R [1]
 SIND_ENGYMONTHstcRegister    EQU    R [6]
 SIND_ENGYMONTHstcLastEnergy    EQU    R [1]
+SIND_WORKHOURSinEnable    EQU    F
+SIND_WORKHOURSoutHours    EQU    R
+SIND_WORKHOURSoutCount    EQU    R
+SIND_WORKHOURSdynRegister    EQU    R [1]
+SIND_WORKHOURSstcHours    EQU    R [1]
+SIND_WORKHOURSstcCount    EQU    R [1]
+SIND_WORKHOURSstcRegister    EQU    R [2]
+SIND_WORKHOURSstcFlags    EQU    F [1]
+SIND_ENERGYDAILYinTotalEnergy    EQU    R
+SIND_ENERGYDAILYoutActDayEnergy    EQU    R
+SIND_ENERGYDAILYoutLastDayEnergy    EQU    R
+SIND_ENERGYDAILYstcFlags    EQU    F [1]
+SIND_ENERGYDAILYstcRegister    EQU    R [1]
+SIND_ENERGYDAILYstcActDayEnergy    EQU    R [1]
+SIND_ENERGYDAILYstcLastDayEnergy    EQU    R [1]
+SIND_ENERGYDAILYstcLastTotalEnergy    EQU    R [1]
 
 ;;__END_DECLARATION_SECTION_
 
@@ -72,7 +88,7 @@ COB _TESTCOB
 
 ;;__BEGIN_CODE_SECTION_
 __fbl_C000001_00_000___SG_COB_0 EQU $ ;Mark FBox
-SIND_ENGYMONTH(1003,
+SIND_ENGYMONTH(1001,
     SIND_ENGYMONTHinEnergy,    ;; inEnergy
     SIND_ENGYMONTHoutLastYearEnergy, ;; outLastYearEnergy
     SIND_ENGYMONTHoutActualYearEnergy, ;; outActualYearEnergy
@@ -130,7 +146,7 @@ SIND_ENGYMONTH(1003,
     SIND_ENGYMONTHstcLastYearCostDec, ;; stcLastYearCostDec
     SIND_ENGYMONTHstcRegister, ;; stcRegister
     SIND_ENGYMONTHstcLastEnergy, ;; stcLastEnergy
-     20,                       ;; Price 0
+     30,                       ;; Price 0
      0,                        ;; actJan 0
      0,                        ;; actFeb 0
      0,                        ;; actMar 0
@@ -181,10 +197,38 @@ SIND_ENGYMONTH(1003,
      0,                        ;; lCostDec 0
      0,                        ;; lEnergy 0
     GiveNameSIND_ENGYMONTH)    ;; Name
+__fbl_C000001_00_001___SG_COB_0 EQU $ ;Mark FBox
+SIND_WORKHOURS(1001,
+    SIND_WORKHOURSinEnable,    ;; inEnable
+    SIND_WORKHOURSoutHours,    ;; outHours
+    SIND_WORKHOURSoutCount,    ;; outCount
+    SIND_WORKHOURSdynRegister, ;; dynRegister
+    SIND_WORKHOURSstcHours,    ;; stcHours
+    SIND_WORKHOURSstcCount,    ;; stcCount
+    SIND_WORKHOURSstcRegister, ;; stcRegister
+    SIND_WORKHOURSstcFlags,    ;; stcFlags
+     0,                        ;; sCount 0
+     0,                        ;; sHours 0
+    GiveNameSIND_WORKHOURS)    ;; Name
+__fbl_C000001_00_002___SG_COB_0 EQU $ ;Mark FBox
+SIND_ENERGYDAILY(2,
+    SIND_ENERGYDAILYinTotalEnergy, ;; inTotalEnergy
+    SIND_ENERGYDAILYoutActDayEnergy, ;; outActDayEnergy
+    SIND_ENERGYDAILYoutLastDayEnergy, ;; outLastDayEnergy
+    SIND_ENERGYDAILYstcFlags,  ;; stcFlags
+    SIND_ENERGYDAILYstcRegister, ;; stcRegister
+    SIND_ENERGYDAILYstcActDayEnergy, ;; stcActDayEnergy
+    SIND_ENERGYDAILYstcLastDayEnergy, ;; stcLastDayEnergy
+    SIND_ENERGYDAILYstcLastTotalEnergy, ;; stcLastTotalEnergy
+     0,                        ;; lastDay 0
+     0,                        ;; lasTotal 0
+    GiveNameSIND_ENERGYDAILY)  ;; Name
 
 ;;__END_CODE_SECTION_
 ECOB
 
 ;;__END_BLOCK_SECTION_
+
+
 
 

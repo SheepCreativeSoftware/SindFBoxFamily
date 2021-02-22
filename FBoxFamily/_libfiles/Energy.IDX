@@ -71,7 +71,7 @@ lCostNov 0=Cost November
 lCostDec 0=Cost December
 ADJ0=[--- Last Energy Counter ---]
 lEnergy 0=Last Energy Counter
-CopyR=[--- (C) by Marina Egner, Sheep Industries ---]
+CopyR=[--- Copyright by Marina Egner, Sheep Industries ---]
 VariableSta0=Price ActualPrice;
 VariableSta1=actJan Energy.ActualYear.January;
 VariableSta2=actFeb Energy.ActualYear.February;
@@ -121,4 +121,44 @@ VariableSta45=lCostOct Cost.LastYear.October;
 VariableSta46=lCostSep Cost.LastYear.September;
 VariableSta47=lCostNov Cost.LastYear.November;
 VariableSta48=lCostDec Cost.LastYear.December;
+
+[SIND_WORKHOURS]
+Name=WorkHours
+.Name=WorkHours
+.Info=
+.Topic=
+.Face=Work
+.Group=Sind Family.Energy
+.uName=
+.Ref=
+.Folder=Working
+.In=En  
+.Out=Hrs Cnt 
+Label1=[--- Working Counter ---]
+sCount 0=Counter On/Off
+sHours 0=Working Hours\R)in 1/10 Hours
+CopyE=[--- Copyright by Marina Egner, Sheep Industries ---]
+VariableSta0=sHours Hours;
+VariableSta1=sCount Count;
+
+[SIND_ENERGYDAILY]
+Name=EnergyDaily
+.Name=EnergyDaily
+.Info=
+.Topic=
+.Face=EngyDaily
+.Group=Sind Family.Energy
+.uName=
+.Ref=
+.Folder=Energy.Daily
+.In=Total  
+.Out=actDay lastDay 
+Label1=[--- Energy ---]
+actDay 0=Actual Day Energy\R)1/10 kWh
+lastDay 0=Last Day Energy
+lasTotal 0=Last Total Energy
+CopyR=[--- Copyright by Marina Egner, Sheep Industries ---]
+VariableSta0=actDay ActualDay;
+VariableSta1=lastDay LastDay;
+VariableSta2=lasTotal LastTotal;
 

@@ -2,3 +2,9 @@
 COUNT=1
 Lib1=FBoxFamily\
 
+[Opened]
+Block0=257001
+Block1=257002
+Block2=257003
+Number=3
+

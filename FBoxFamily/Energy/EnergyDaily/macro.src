@@ -1,6 +1,6 @@
 $SKIP
 ;;*******************************************************************************
-;; WorkingHour FBox | v0.1.1 | 22.02.2021 20:59Z
+;; EnergyDaily FBox | v0.0.2 | 22.02.2021 22:01Z
 ;; Copyright (C) 2020 Marina Egner <info@sheepindustries.de>
 ;; Author: Marina Egner
 ;;
@@ -18,10 +18,9 @@ $SKIP
 ;;
 ;; REVISION HISTORY
 ;; v0.1.0  22.02.2021 - M.Egner | Initial edit;
-;; v0.1.1  22.02.2021 - M.Egner | Skip Program after Init;
 ;;
 ;; DESCRIPTION
-;; The Fbox counts every switch on and counts the working time
+;; The Fbox outputs the Energy of the actual and the last Day
 $ENDSKIP
 
 ; Check if Firmware version in DC is new enought, cause special condition codes where in use
@@ -44,8 +43,7 @@ $ENDIF
 ;             ------------------------------------ Init dynamic Flags
 sDynEdge      LEQU   stcFlags                    ; Flag for rising Edge detektion
 ;             ------------------------------------ Init static Register
-sStartTime    LEQU   stcRegister                 ; Time since enable has set
-sWaitingTime  LEQU   stcRegister+1               ; Time of 1/10 Hour
+sHourMinute   LEQU   stcRegister                 ; Time Hour and Minutes HHMM
 ;             ------------------------------------
 ;            ###################################################################
 
@@ -57,42 +55,36 @@ sWaitingTime  LEQU   stcRegister+1               ; Time of 1/10 Hour
 INIT:
 ;             ==================================== Init Vars
               ACC    H                           ;
-              RES    sDynEdge                    ;
+              RES    sDynEdge                    ; Reset Value
 ;             ------------------------------------ 
-              LD     stcHours                    ;
-                     adjHours                    ;
-              LD     stcCount                    ;
-                     adjCount                    ;
-              LD     sWaitingTime                ;
-                     360000                      ;
+              LD     stcLastDayEnergy            ;
+                     adjLastDayEnergy            ;
+              LD     stcLastTotalEnergy          ;
+                     adjLastTotalEnergy          ;
               JR     lEnd                        ; End Init Skip Program                     
 ;             ------------------------------------
 RUN:
-;             ------------------------------------
-              STH    inEnable                    ; if Input is high
-              DYN    sDynEdge                    ; and is rising edge
-              JR     L lNext                     ; else go next 
-              INC    stcCount                    ; then increment counter
-;             ------------------------------------
-lStartTimer:
-;             ------------------------------------ after edge detection or timer is elapsed
-              SYSRD  K 7000                      ; Read System Counter
-                     sStartTime                  ;
-;             ------------------------------------
-lNext:
-;             ------------------------------------
-              STL    inEnable                    ; if Input is low
-              JR     H lEnd                      ; then nothing to do
-              SYSCMP sStartTime                  ; compare System Counter to StartTime
-                     sWaitingTime                ; + Waiting Time
-              JR     H lEnd                      ; if lower the goto the end
-              INC    stcHours                    ; else increment Hour counter
-              JR     lStartTimer                 ; then start timer again
-;             ------------------------------------
+;             ------------------------------------ Calculate Day Consumtion
+              SUB    inTotalEnergy               ; Subtract Total Energy
+                     stcLastTotalEnergy          ; from Last total Energy
+                     stcActDayEnergy             ; to get day consumtion
+              SYSRD  K 7054                      ; Read actual Hour and Minute
+                     sHourMinute                 ;        
+              CMP    sHourMinute                 ; if Minute is
+                     K 0                         ; Zero
+              ACC    Z                           ; then detecting Edge
+              DYN    sDynEdge                    ; store and compare last state
+              JR     L lEnd                      ; if no rising edge goto end
+;             ------------------------------------ else save last Energy values
+              COPY   stcActDayEnergy             ; copy Day Energy
+                     stcLastDayEnergy            ; to last Day Energy
+              COPY   inTotalEnergy               ; copy total Energy
+                     stcLastTotalEnergy          ; to last total Energy    
+;             ------------------------------------                     
 lEnd:
 ;             ------------------------------------
-              COPY   stcHours                    ; copy hours
-                     outHours                    ; to output
-              COPY   stcCount                    ; copy counter
-                     outCount                    ; to output
+              COPY   stcActDayEnergy             ; copy Energy
+                     outActDayEnergy             ; to output
+              COPY   stcLastDayEnergy            ; copy Energy
+                     outLastDayEnergy            ; to output
 ;             ====================================              

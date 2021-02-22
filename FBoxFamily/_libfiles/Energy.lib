@@ -7,7 +7,7 @@ $skip
           PROGRAM         Macro Library for the Energy Family
           FILENAME        Energy
           AUTHOR          Schäfer GmbH Anlagentechnik , Schäfer GmbH Anlagentechnik
-          VERSION         18
+          VERSION         2006
 
 ************************************************************
 
@@ -17,12 +17,14 @@ SHORT DESCRIPTION
 
 FBOX MACROS IN THIS FILE
    SIND_ENGYMONTH      EnergyMonthly
+   SIND_WORKHOURS      WorkHours
+   SIND_ENERGYDAILY    EnergyDaily
 
 HISTORY
 $endskip
 
 $IFNDEF _LIBVERS_.SIND_FBoxFamily
-   _LIBVERS_.SIND_FBoxFamily EQU 0000019 ;SindFBoxFamily Library Version
+   _LIBVERS_.SIND_FBoxFamily EQU 0002007 ;SindFBoxFamily Library Version
 $ENDIF
 
 $SKIP
@@ -298,7 +300,7 @@ SIND_ENGYMONTH MACRO  Vers,                 ; Version number
 
 $SKIP
 ;;*******************************************************************************
-;; EnergyMonthly FBox | v0.1.0 | 19.02.2021 22:32Z
+;; EnergyMonthly FBox | v0.1.0 | 19.02.2021 22:59Z
 ;; Copyright (C) 2020 Marina Egner <info@sheepindustries.de>
 ;; Author: Marina Egner
 ;;
@@ -315,7 +317,8 @@ $SKIP
 ;; *******************************************************************************
 ;;
 ;; REVISION HISTORY
-;; v0.0.1  07.02.2021 - M.Egner | Initial edit;
+;; v0.1.0  19.02.2021 - M.Egner | Initial edit;
+;; v0.1.1  22.02.2021 - M.Egner | Skip Program after Init;
 ;;
 ;; DESCRIPTION
 ;; EnergyMonthly saves the monthly consumption of ernegy and show it.
@@ -337,416 +340,648 @@ $ENDIF
 ;             ------------------------------------
 ;;dNeedModify   LEQU   dyn_Flag                  ; Indicate if Modify need to be Change
 ;             ------------------------------------ Init dynamic Register
-dResult      LEQU   dynRegister         ; Temp Var for Result
+dResult       LEQU   dynRegister                 ; Temp Var for Result
 ;             ------------------------------------ Init dynamic Flags
 ;;sReset        LEQU   stc_Flags                 ; Trigger to Reset Batt Max Limit (224)
 ;             ------------------------------------ Init static Register
-sActualYear  LEQU   stcRegister         ; Actual Year
-sActualMonth LEQU   stcRegister+1       ; Actual Month
-sLastMonth   LEQU   stcRegister+2       ; Last Month
-sLastYear    LEQU   stcRegister+3       ; Last Year
-sLastTotalEnergy LEQU stcRegister+4     ; Total Energy Last Year
-sLastTotalCost LEQU stcRegister+5       ; Total Cost Last Year
+sActualYear   LEQU   stcRegister                 ; Actual Year
+sActualMonth  LEQU   stcRegister+1               ; Actual Month
+sLastMonth    LEQU   stcRegister+2               ; Last Month
+sLastYear     LEQU   stcRegister+3               ; Last Year
+sLastTotalEnergy LEQU stcRegister+4              ; Total Energy Last Year
+sLastTotalCost LEQU  stcRegister+5               ; Total Cost Last Year
 ;            ###################################################################
 
 
 ;             ==================================== Init if Heavac Init is activ
-             STH    _HEAVAC._RESET._EXEC ;
-             JR     L RUN               ;
-;             ------------------------------------
+              STH    _HEAVAC._RESET._EXEC        ;
+              JR     L RUN                       ;
+;             ------------------------------------              
 INIT:
 ;             ==================================== Init Vars
-             ACC    H
-             LD     stcPrice            ;
-                    adjPrice            ;
+              ACC    H
+              LD     stcPrice                    ;
+                     adjPrice                    ;
 ;             ------------------------------------ Energy Actual Year
-             LD     stcActualYearEnergyJan ;
-                    adjActualYearEnergyJan ;
-             LD     stcActualYearEnergyFeb ;
-                    adjActualYearEnergyFeb ;
-             LD     stcActualYearEnergyMar ;
-                    adjActualYearEnergyMar ;
-             LD     stcActualYearEnergyApr ;
-                    adjActualYearEnergyApr ;
-             LD     stcActualYearEnergyMay ;
-                    adjActualYearEnergyMay ;
-             LD     stcActualYearEnergyJun ;
-                    adjActualYearEnergyJun ;
-             LD     stcActualYearEnergyJul ;
-                    adjActualYearEnergyJul ;
-             LD     stcActualYearEnergyAug ;
-                    adjActualYearEnergyAug ;
-             LD     stcActualYearEnergySep ;
-                    adjActualYearEnergySep ;
-             LD     stcActualYearEnergyOct ;
-                    adjActualYearEnergyOct ;
-             LD     stcActualYearEnergyNov ;
-                    adjActualYearEnergyNov ;
-             LD     stcActualYearEnergyDec ;
-                    adjActualYearEnergyDec ;
+              LD     stcActualYearEnergyJan      ;
+                     adjActualYearEnergyJan      ;
+              LD     stcActualYearEnergyFeb      ;
+                     adjActualYearEnergyFeb      ;
+              LD     stcActualYearEnergyMar      ;
+                     adjActualYearEnergyMar      ;
+              LD     stcActualYearEnergyApr      ;
+                     adjActualYearEnergyApr      ;
+              LD     stcActualYearEnergyMay      ;
+                     adjActualYearEnergyMay      ;
+              LD     stcActualYearEnergyJun      ;
+                     adjActualYearEnergyJun      ;
+              LD     stcActualYearEnergyJul      ;
+                     adjActualYearEnergyJul      ;
+              LD     stcActualYearEnergyAug      ;
+                     adjActualYearEnergyAug      ;
+              LD     stcActualYearEnergySep      ;
+                     adjActualYearEnergySep      ;
+              LD     stcActualYearEnergyOct      ;
+                     adjActualYearEnergyOct      ;
+              LD     stcActualYearEnergyNov      ;
+                     adjActualYearEnergyNov      ;
+              LD     stcActualYearEnergyDec      ;
+                     adjActualYearEnergyDec      ;
 ;             ------------------------------------ Energy Last Year
-             LD     stcLastYearEnergyJan ;
-                    adjLastYearEnergyJan ;
-             LD     stcLastYearEnergyFeb ;
-                    adjLastYearEnergyFeb ;
-             LD     stcLastYearEnergyMar ;
-                    adjLastYearEnergyMar ;
-             LD     stcLastYearEnergyApr ;
-                    adjLastYearEnergyApr ;
-             LD     stcLastYearEnergyMay ;
-                    adjLastYearEnergyMay ;
-             LD     stcLastYearEnergyJun ;
-                    adjLastYearEnergyJun ;
-             LD     stcLastYearEnergyJul ;
-                    adjLastYearEnergyJul ;
-             LD     stcLastYearEnergyAug ;
-                    adjLastYearEnergyAug ;
-             LD     stcLastYearEnergySep ;
-                    adjLastYearEnergySep ;
-             LD     stcLastYearEnergyOct ;
-                    adjLastYearEnergyOct ;
-             LD     stcLastYearEnergyNov ;
-                    adjLastYearEnergyNov ;
-             LD     stcLastYearEnergyDec ;
-                    adjLastYearEnergyDec ;
+              LD     stcLastYearEnergyJan        ;
+                     adjLastYearEnergyJan        ;
+              LD     stcLastYearEnergyFeb        ;
+                     adjLastYearEnergyFeb        ;
+              LD     stcLastYearEnergyMar        ;
+                     adjLastYearEnergyMar        ;
+              LD     stcLastYearEnergyApr        ;
+                     adjLastYearEnergyApr        ;
+              LD     stcLastYearEnergyMay        ;
+                     adjLastYearEnergyMay        ;
+              LD     stcLastYearEnergyJun        ;
+                     adjLastYearEnergyJun        ;
+              LD     stcLastYearEnergyJul        ;
+                     adjLastYearEnergyJul        ;
+              LD     stcLastYearEnergyAug        ;
+                     adjLastYearEnergyAug        ;
+              LD     stcLastYearEnergySep        ;
+                     adjLastYearEnergySep        ;
+              LD     stcLastYearEnergyOct        ;
+                     adjLastYearEnergyOct        ;
+              LD     stcLastYearEnergyNov        ;
+                     adjLastYearEnergyNov        ;
+              LD     stcLastYearEnergyDec        ;
+                     adjLastYearEnergyDec        ;              
 ;             ------------------------------------ Cost Actual Year
-             LD     stcActualYearCostJan ;
-                    adjActualYearCostJan ;
-             LD     stcActualYearCostFeb ;
-                    adjActualYearCostFeb ;
-             LD     stcActualYearCostMar ;
-                    adjActualYearCostMar ;
-             LD     stcActualYearCostApr ;
-                    adjActualYearCostApr ;
-             LD     stcActualYearCostMay ;
-                    adjActualYearCostMay ;
-             LD     stcActualYearCostJun ;
-                    adjActualYearCostJun ;
-             LD     stcActualYearCostJul ;
-                    adjActualYearCostJul ;
-             LD     stcActualYearCostAug ;
-                    adjActualYearCostAug ;
-             LD     stcActualYearCostSep ;
-                    adjActualYearCostSep ;
-             LD     stcActualYearCostOct ;
-                    adjActualYearCostOct ;
-             LD     stcActualYearCostNov ;
-                    adjActualYearCostNov ;
-             LD     stcActualYearCostDec ;
-                    adjActualYearCostDec ;
+              LD     stcActualYearCostJan        ;
+                     adjActualYearCostJan        ;
+              LD     stcActualYearCostFeb        ;
+                     adjActualYearCostFeb        ;
+              LD     stcActualYearCostMar        ;
+                     adjActualYearCostMar        ;
+              LD     stcActualYearCostApr        ;
+                     adjActualYearCostApr        ;
+              LD     stcActualYearCostMay        ;
+                     adjActualYearCostMay        ;
+              LD     stcActualYearCostJun        ;
+                     adjActualYearCostJun        ;
+              LD     stcActualYearCostJul        ;
+                     adjActualYearCostJul        ;
+              LD     stcActualYearCostAug        ;
+                     adjActualYearCostAug        ;
+              LD     stcActualYearCostSep        ;
+                     adjActualYearCostSep        ;
+              LD     stcActualYearCostOct        ;
+                     adjActualYearCostOct        ;
+              LD     stcActualYearCostNov        ;
+                     adjActualYearCostNov        ;
+              LD     stcActualYearCostDec        ;
+                     adjActualYearCostDec        ;
 ;             ------------------------------------ Cost Last Year
-             LD     stcLastYearCostJan  ;
-                    adjLastYearCostJan  ;
-             LD     stcLastYearCostFeb  ;
-                    adjLastYearCostFeb  ;
-             LD     stcLastYearCostMar  ;
-                    adjLastYearCostMar  ;
-             LD     stcLastYearCostApr  ;
-                    adjLastYearCostApr  ;
-             LD     stcLastYearCostMay  ;
-                    adjLastYearCostMay  ;
-             LD     stcLastYearCostJun  ;
-                    adjLastYearCostJun  ;
-             LD     stcLastYearCostJul  ;
-                    adjLastYearCostJul  ;
-             LD     stcLastYearCostAug  ;
-                    adjLastYearCostAug  ;
-             LD     stcLastYearCostSep  ;
-                    adjLastYearCostSep  ;
-             LD     stcLastYearCostOct  ;
-                    adjLastYearCostOct  ;
-             LD     stcLastYearCostNov  ;
-                    adjLastYearCostNov  ;
-             LD     stcLastYearCostDec  ;
-                    adjLastYearCostDec  ;
+              LD     stcLastYearCostJan          ;
+                     adjLastYearCostJan          ;
+              LD     stcLastYearCostFeb          ;
+                     adjLastYearCostFeb          ;
+              LD     stcLastYearCostMar          ;
+                     adjLastYearCostMar          ;
+              LD     stcLastYearCostApr          ;
+                     adjLastYearCostApr          ;
+              LD     stcLastYearCostMay          ;
+                     adjLastYearCostMay          ;
+              LD     stcLastYearCostJun          ;
+                     adjLastYearCostJun          ;
+              LD     stcLastYearCostJul          ;
+                     adjLastYearCostJul          ;
+              LD     stcLastYearCostAug          ;
+                     adjLastYearCostAug          ;
+              LD     stcLastYearCostSep          ;
+                     adjLastYearCostSep          ;
+              LD     stcLastYearCostOct          ;
+                     adjLastYearCostOct          ;
+              LD     stcLastYearCostNov          ;
+                     adjLastYearCostNov          ;
+              LD     stcLastYearCostDec          ;
+                     adjLastYearCostDec          ;              
 ;             ------------------------------------
-             LD     stcLastEnergy       ;
-                    adjLastEnergy       ;
+              LD     stcLastEnergy               ;
+                     adjLastEnergy               ;
 ;             ------------------------------------
-             SYSRD  K 7062              ;
-                    sLastYear           ;
-             SYSRD  K 7061              ;
-                    sLastMonth          ;
+              SYSRD  K 7062                      ;
+                     sLastYear                   ;
+              SYSRD  K 7061                      ;
+                     sLastMonth                  ;
+              JR     lEnd                        ; End Init Skip Program
 ;             ------------------------------------
 RUN:
 ;             ==================================== FBox Code
-             SYSRD  K 7062              ;
-                    sActualYear         ;
-             SYSRD  K 7061              ;
-                    sActualMonth        ;
+              SYSRD  K 7062                      ;
+                     sActualYear                 ;
+              SYSRD  K 7061                      ;
+                     sActualMonth                ;
 ;             ------------------------------------
-             CMP    sActualYear         ;
-                    sLastYear           ;
-             JR     EQ lNothingYear     ;
-             COPY   sActualYear         ;
-                    sLastYear           ;
+              CMP    sActualYear                 ;
+                     sLastYear                   ;
+              JR     EQ lNothingYear             ;
+              COPY   sActualYear                 ;
+                     sLastYear                   ;
 ;             ------------------------------------ Copy Actual to Last Value
-                    SIND_CopyActualToLast (stcActualYearEnergyJan , ; Actual Value
-                    stcLastYearEnergyJan) ; Last Value
-                    SIND_CopyActualToLast (stcActualYearEnergyFeb , ;
-                    stcLastYearEnergyFeb) ;
-                    SIND_CopyActualToLast (stcActualYearEnergyMar , ;
-                    stcLastYearEnergyMar) ;
-                    SIND_CopyActualToLast (stcActualYearEnergyApr , ;
-                    stcLastYearEnergyApr) ;
-                    SIND_CopyActualToLast (stcActualYearEnergyMay , ;
-                    stcLastYearEnergyMay) ;
-                    SIND_CopyActualToLast (stcActualYearEnergyJun , ;
-                    stcLastYearEnergyJun) ;
-                    SIND_CopyActualToLast (stcActualYearEnergyJul , ;
-                    stcLastYearEnergyJul) ;
-                    SIND_CopyActualToLast (stcActualYearEnergyAug , ;
-                    stcLastYearEnergyAug) ;
-                    SIND_CopyActualToLast (stcActualYearEnergySep , ;
-                    stcLastYearEnergySep) ;
-                    SIND_CopyActualToLast (stcActualYearEnergyOct , ;
-                    stcLastYearEnergyOct) ;
-                    SIND_CopyActualToLast (stcActualYearEnergyNov , ;
-                    stcLastYearEnergyNov) ;
-                    SIND_CopyActualToLast (stcActualYearEnergyDec , ;
-                    stcLastYearEnergyDec) ;
+              SIND_CopyActualToLast (stcActualYearEnergyJan, ; Actual Value
+                     stcLastYearEnergyJan)       ; Last Value
+              SIND_CopyActualToLast (stcActualYearEnergyFeb, ;
+                     stcLastYearEnergyFeb)       ;
+              SIND_CopyActualToLast (stcActualYearEnergyMar, ;
+                     stcLastYearEnergyMar)       ;
+              SIND_CopyActualToLast (stcActualYearEnergyApr, ;
+                     stcLastYearEnergyApr)       ;
+              SIND_CopyActualToLast (stcActualYearEnergyMay, ;
+                     stcLastYearEnergyMay)       ;
+              SIND_CopyActualToLast (stcActualYearEnergyJun, ;
+                     stcLastYearEnergyJun)       ;
+              SIND_CopyActualToLast (stcActualYearEnergyJul, ;
+                     stcLastYearEnergyJul)       ;
+              SIND_CopyActualToLast (stcActualYearEnergyAug, ;
+                     stcLastYearEnergyAug)       ;
+              SIND_CopyActualToLast (stcActualYearEnergySep, ;
+                     stcLastYearEnergySep)       ;
+              SIND_CopyActualToLast (stcActualYearEnergyOct, ;
+                     stcLastYearEnergyOct)       ;
+              SIND_CopyActualToLast (stcActualYearEnergyNov, ;
+                     stcLastYearEnergyNov)       ;
+              SIND_CopyActualToLast (stcActualYearEnergyDec, ;
+                     stcLastYearEnergyDec)       ;
 ;             ------------------------------------
-                    SIND_CopyActualToLast (stcActualYearCostJan , ; Actual Value
-                    stcLastYearCostJan) ; Last Value
-                    SIND_CopyActualToLast (stcActualYearCostFeb , ;
-                    stcLastYearCostFeb) ;
-                    SIND_CopyActualToLast (stcActualYearCostMar , ;
-                    stcLastYearCostMar) ;
-                    SIND_CopyActualToLast (stcActualYearCostApr , ;
-                    stcLastYearCostApr) ;
-                    SIND_CopyActualToLast (stcActualYearCostMay , ;
-                    stcLastYearCostMay) ;
-                    SIND_CopyActualToLast (stcActualYearCostJun , ;
-                    stcLastYearCostJun) ;
-                    SIND_CopyActualToLast (stcActualYearCostJul , ;
-                    stcLastYearCostJul) ;
-                    SIND_CopyActualToLast (stcActualYearCostAug , ;
-                    stcLastYearCostAug) ;
-                    SIND_CopyActualToLast (stcActualYearCostSep , ;
-                    stcLastYearCostSep) ;
-                    SIND_CopyActualToLast (stcActualYearCostOct , ;
-                    stcLastYearCostOct) ;
-                    SIND_CopyActualToLast (stcActualYearCostNov , ;
-                    stcLastYearCostNov) ;
-                    SIND_CopyActualToLast (stcActualYearCostDec , ;
-                    stcLastYearCostDec) ;
+              SIND_CopyActualToLast (stcActualYearCostJan, ; Actual Value
+                     stcLastYearCostJan)         ; Last Value
+              SIND_CopyActualToLast (stcActualYearCostFeb, ;
+                     stcLastYearCostFeb)         ;
+              SIND_CopyActualToLast (stcActualYearCostMar, ;
+                     stcLastYearCostMar)         ;
+              SIND_CopyActualToLast (stcActualYearCostApr, ;
+                     stcLastYearCostApr)         ;
+              SIND_CopyActualToLast (stcActualYearCostMay, ;
+                     stcLastYearCostMay)         ;
+              SIND_CopyActualToLast (stcActualYearCostJun, ;
+                     stcLastYearCostJun)         ;
+              SIND_CopyActualToLast (stcActualYearCostJul, ;
+                     stcLastYearCostJul)         ;
+              SIND_CopyActualToLast (stcActualYearCostAug, ;
+                     stcLastYearCostAug)         ;
+              SIND_CopyActualToLast (stcActualYearCostSep, ;
+                     stcLastYearCostSep)         ;
+              SIND_CopyActualToLast (stcActualYearCostOct, ;
+                     stcLastYearCostOct)         ;
+              SIND_CopyActualToLast (stcActualYearCostNov, ;
+                     stcLastYearCostNov)         ;
+              SIND_CopyActualToLast (stcActualYearCostDec, ;
+                     stcLastYearCostDec)         ;              
 ;             ------------------------------------
-                    SIND_MonthAddition(stcLastYearEnergyJan , ;
-                    stcLastYearEnergyFeb , ;
-                    stcLastYearEnergyMar , ;
-                    stcLastYearEnergyApr , ;
-                    stcLastYearEnergyMay , ;
-                    stcLastYearEnergyJun , ;
-                    stcLastYearEnergyJul , ;
-                    stcLastYearEnergyAug , ;
-                    stcLastYearEnergySep , ;
-                    stcLastYearEnergyOct , ;
-                    stcLastYearEnergyNov , ;
-                    stcLastYearEnergyDec , ;
-                    sLastTotalEnergy)   ;
+              SIND_MonthAddition(stcLastYearEnergyJan, ;
+              stcLastYearEnergyFeb,            ;
+              stcLastYearEnergyMar,            ;
+              stcLastYearEnergyApr,            ;
+              stcLastYearEnergyMay,            ;
+              stcLastYearEnergyJun,            ;
+              stcLastYearEnergyJul,            ;
+              stcLastYearEnergyAug,            ;
+              stcLastYearEnergySep,            ;
+              stcLastYearEnergyOct,            ;
+              stcLastYearEnergyNov,            ;
+              stcLastYearEnergyDec,            ;
+              sLastTotalEnergy)               ;
 ;             ------------------------------------
-                    SIND_MonthAddition(stcLastYearCostJan , ;
-                    stcLastYearCostFeb , ;
-                    stcLastYearCostMar , ;
-                    stcLastYearCostApr , ;
-                    stcLastYearCostMay , ;
-                    stcLastYearCostJun , ;
-                    stcLastYearCostJul , ;
-                    stcLastYearCostAug , ;
-                    stcLastYearCostSep , ;
-                    stcLastYearCostOct , ;
-                    stcLastYearCostNov , ;
-                    stcLastYearCostDec , ;
-                    sLastTotalCost)     ;
+              SIND_MonthAddition(stcLastYearCostJan, ;
+              stcLastYearCostFeb,              ;
+              stcLastYearCostMar,              ;
+              stcLastYearCostApr,              ;
+              stcLastYearCostMay,              ;
+              stcLastYearCostJun,              ;
+              stcLastYearCostJul,              ;
+              stcLastYearCostAug,              ;
+              stcLastYearCostSep,              ;
+              stcLastYearCostOct,              ;
+              stcLastYearCostNov,              ;
+              stcLastYearCostDec,              ;
+              sLastTotalCost)                 ;
 ;             ------------------------------------
 lNothingYear:
 ;             ------------------------------------
-             CMP    sActualMonth        ;
-                    sLastMonth          ;
-             JR     EQ lNothingMonth    ;
-             COPY   sActualMonth        ;
-                    sLastMonth          ;
-             COPY   inEnergy            ;
-                    stcLastEnergy       ;
+              CMP    sActualMonth                ;
+                     sLastMonth                  ;
+              JR     EQ lNothingMonth            ;
+              COPY   sActualMonth                ;
+                     sLastMonth                  ;
+              COPY   inEnergy                    ;
+                     stcLastEnergy               ;              
 ;             ------------------------------------
 lNothingMonth:
 ;             ------------------------------------
-             CMP    sActualMonth        ;
-                    K 1                 ;
-             JR     NE lMonth1          ;
-                    SIND_CalcMonthEnergy (inEnergy , ; Actual Energy Val
-                    stcLastEnergy ,     ; Last Energy Value
-                    stcActualYearEnergyJan , ; Energy of the Month
-                    stcPrice ,          ; Actual Price
-                    stcActualYearCostJan) ; Cost of the Month
-             JR     lMonthEnd           ;
-;             ------------------------------------
+              CMP    sActualMonth                ;
+                     K 1                         ;
+              JR     NE lMonth1                  ;
+              SIND_CalcMonthEnergy (inEnergy,    ; Actual Energy Val
+                     stcLastEnergy,              ; Last Energy Value
+                     stcActualYearEnergyJan,     ; Energy of the Month
+                     stcPrice,                   ; Actual Price
+                     stcActualYearCostJan)       ; Cost of the Month
+              JR     lMonthEnd                   ;
+;             ------------------------------------ 
 lMonth1:
 ;             ------------------------------------
-             CMP    sActualMonth        ;
-                    K 2                 ;
-             JR     NE lMonth2          ;
-                    SIND_CalcMonthEnergy (inEnergy , ; Actual Energy Val
-                    stcLastEnergy ,     ; Last Energy Value
-                    stcActualYearEnergyFeb , ; Energy of the Month
-                    stcPrice ,          ; Actual Price
-                    stcActualYearCostFeb) ; Cost of the Month
-             JR     lMonthEnd           ;
-;             ------------------------------------
+              CMP    sActualMonth                ;
+                     K 2                         ;
+              JR     NE lMonth2                  ;
+              SIND_CalcMonthEnergy (inEnergy,    ; Actual Energy Val
+                     stcLastEnergy,              ; Last Energy Value
+                     stcActualYearEnergyFeb,     ; Energy of the Month
+                     stcPrice,                   ; Actual Price
+                     stcActualYearCostFeb)       ; Cost of the Month
+              JR     lMonthEnd                   ;
+;             ------------------------------------ 
 lMonth2:
 ;             ------------------------------------
-             CMP    sActualMonth        ;
-                    K 3                 ;
-             JR     NE lMonth3          ;
-                    SIND_CalcMonthEnergy (inEnergy , ; Actual Energy Val
-                    stcLastEnergy ,     ; Last Energy Value
-                    stcActualYearEnergyMar , ; Energy of the Month
-                    stcPrice ,          ; Actual Price
-                    stcActualYearCostMar) ; Cost of the Month
-             JR     lMonthEnd           ;
-;             ------------------------------------
+              CMP    sActualMonth                ;
+                     K 3                         ;
+              JR     NE lMonth3                  ;
+              SIND_CalcMonthEnergy (inEnergy,    ; Actual Energy Val
+                     stcLastEnergy,              ; Last Energy Value
+                     stcActualYearEnergyMar,     ; Energy of the Month
+                     stcPrice,                   ; Actual Price
+                     stcActualYearCostMar)       ; Cost of the Month
+              JR     lMonthEnd                   ;
+;             ------------------------------------ 
 lMonth3:
 ;             ------------------------------------
-             CMP    sActualMonth        ;
-                    K 4                 ;
-             JR     NE lMonth4          ;
-                    SIND_CalcMonthEnergy (inEnergy , ; Actual Energy Val
-                    stcLastEnergy ,     ; Last Energy Value
-                    stcActualYearEnergyApr , ; Energy of the Month
-                    stcPrice ,          ; Actual Price
-                    stcActualYearCostApr) ; Cost of the Month
-             JR     lMonthEnd           ;
-;             ------------------------------------
+              CMP    sActualMonth                ;
+                     K 4                         ;
+              JR     NE lMonth4                  ;
+              SIND_CalcMonthEnergy (inEnergy,    ; Actual Energy Val
+                     stcLastEnergy,              ; Last Energy Value
+                     stcActualYearEnergyApr,     ; Energy of the Month
+                     stcPrice,                   ; Actual Price
+                     stcActualYearCostApr)       ; Cost of the Month
+              JR     lMonthEnd                   ;
+;             ------------------------------------ 
 lMonth4:
 ;             ------------------------------------
-             CMP    sActualMonth        ;
-                    K 5                 ;
-             JR     NE lMonth5          ;
-                    SIND_CalcMonthEnergy (inEnergy , ; Actual Energy Val
-                    stcLastEnergy ,     ; Last Energy Value
-                    stcActualYearEnergyMay , ; Energy of the Month
-                    stcPrice ,          ; Actual Price
-                    stcActualYearCostMay) ; Cost of the Month
-             JR     lMonthEnd           ;
-;             ------------------------------------
+              CMP    sActualMonth                ;
+                     K 5                         ;
+              JR     NE lMonth5                  ;
+              SIND_CalcMonthEnergy (inEnergy,    ; Actual Energy Val
+                     stcLastEnergy,              ; Last Energy Value
+                     stcActualYearEnergyMay,     ; Energy of the Month
+                     stcPrice,                   ; Actual Price
+                     stcActualYearCostMay)       ; Cost of the Month
+              JR     lMonthEnd                   ;
+;             ------------------------------------ 
 lMonth5:
 ;             ------------------------------------
-             CMP    sActualMonth        ;
-                    K 6                 ;
-             JR     NE lMonth6          ;
-                    SIND_CalcMonthEnergy (inEnergy , ; Actual Energy Val
-                    stcLastEnergy ,     ; Last Energy Value
-                    stcActualYearEnergyJun , ; Energy of the Month
-                    stcPrice ,          ; Actual Price
-                    stcActualYearCostJun) ; Cost of the Month
-             JR     lMonthEnd           ;
-;             ------------------------------------
+              CMP    sActualMonth                ;
+                     K 6                         ;
+              JR     NE lMonth6                  ;
+              SIND_CalcMonthEnergy (inEnergy,    ; Actual Energy Val
+                     stcLastEnergy,              ; Last Energy Value
+                     stcActualYearEnergyJun,     ; Energy of the Month
+                     stcPrice,                   ; Actual Price
+                     stcActualYearCostJun)       ; Cost of the Month
+              JR     lMonthEnd                   ;
+;             ------------------------------------ 
 lMonth6:
 ;             ------------------------------------
-             CMP    sActualMonth        ;
-                    K 7                 ;
-             JR     NE lMonth7          ;
-                    SIND_CalcMonthEnergy (inEnergy , ; Actual Energy Val
-                    stcLastEnergy ,     ; Last Energy Value
-                    stcActualYearEnergyJul , ; Energy of the Month
-                    stcPrice ,          ; Actual Price
-                    stcActualYearCostJul) ; Cost of the Month
-             JR     lMonthEnd           ;
-;             ------------------------------------
+              CMP    sActualMonth                ;
+                     K 7                         ;
+              JR     NE lMonth7                  ;
+              SIND_CalcMonthEnergy (inEnergy,    ; Actual Energy Val
+                     stcLastEnergy,              ; Last Energy Value
+                     stcActualYearEnergyJul,     ; Energy of the Month
+                     stcPrice,                   ; Actual Price
+                     stcActualYearCostJul)       ; Cost of the Month
+              JR     lMonthEnd                   ;
+;             ------------------------------------ 
 lMonth7:
 ;             ------------------------------------
-             CMP    sActualMonth        ;
-                    K 8                 ;
-             JR     NE lMonth8          ;
-                    SIND_CalcMonthEnergy (inEnergy , ; Actual Energy Val
-                    stcLastEnergy ,     ; Last Energy Value
-                    stcActualYearEnergyAug , ; Energy of the Month
-                    stcPrice ,          ; Actual Price
-                    stcActualYearCostAug) ; Cost of the Month
-             JR     lMonthEnd           ;
-;             ------------------------------------
+              CMP    sActualMonth                ;
+                     K 8                         ;
+              JR     NE lMonth8                  ;
+              SIND_CalcMonthEnergy (inEnergy,    ; Actual Energy Val
+                     stcLastEnergy,              ; Last Energy Value
+                     stcActualYearEnergyAug,     ; Energy of the Month
+                     stcPrice,                   ; Actual Price
+                     stcActualYearCostAug)       ; Cost of the Month
+              JR     lMonthEnd                   ;
+;             ------------------------------------ 
 lMonth8:
 ;             ------------------------------------
-             CMP    sActualMonth        ;
-                    K 9                 ;
-             JR     NE lMonth9          ;
-                    SIND_CalcMonthEnergy (inEnergy , ; Actual Energy Val
-                    stcLastEnergy ,     ; Last Energy Value
-                    stcActualYearEnergySep , ; Energy of the Month
-                    stcPrice ,          ; Actual Price
-                    stcActualYearCostSep) ; Cost of the Month
-             JR     lMonthEnd           ;
-;             ------------------------------------
+              CMP    sActualMonth                ;
+                     K 9                         ;
+              JR     NE lMonth9                  ;
+              SIND_CalcMonthEnergy (inEnergy,    ; Actual Energy Val
+                     stcLastEnergy,              ; Last Energy Value
+                     stcActualYearEnergySep,     ; Energy of the Month
+                     stcPrice,                   ; Actual Price
+                     stcActualYearCostSep)       ; Cost of the Month
+              JR     lMonthEnd                   ;
+;             ------------------------------------ 
 lMonth9:
 ;             ------------------------------------
-             CMP    sActualMonth        ;
-                    K 10                ;
-             JR     NE lMonth10         ;
-                    SIND_CalcMonthEnergy (inEnergy , ; Actual Energy Val
-                    stcLastEnergy ,     ; Last Energy Value
-                    stcActualYearEnergyOct , ; Energy of the Month
-                    stcPrice ,          ; Actual Price
-                    stcActualYearCostOct) ; Cost of the Month
-             JR     lMonthEnd           ;
-;             ------------------------------------
+              CMP    sActualMonth                ;
+                     K 10                        ;
+              JR     NE lMonth10                 ;
+              SIND_CalcMonthEnergy (inEnergy,    ; Actual Energy Val
+                     stcLastEnergy,              ; Last Energy Value
+                     stcActualYearEnergyOct,     ; Energy of the Month
+                     stcPrice,                   ; Actual Price
+                     stcActualYearCostOct)       ; Cost of the Month
+              JR     lMonthEnd                   ;
+;             ------------------------------------ 
 lMonth10:
 ;             ------------------------------------
-             CMP    sActualMonth        ;
-                    K 11                ;
-             JR     NE lMonth11         ;
-                    SIND_CalcMonthEnergy (inEnergy , ; Actual Energy Val
-                    stcLastEnergy ,     ; Last Energy Value
-                    stcActualYearEnergyNov , ; Energy of the Month
-                    stcPrice ,          ; Actual Price
-                    stcActualYearCostNov) ; Cost of the Month
-             JR     lMonthEnd           ;
-;             ------------------------------------
+              CMP    sActualMonth                ;
+                     K 11                        ;
+              JR     NE lMonth11                 ;
+              SIND_CalcMonthEnergy (inEnergy,    ; Actual Energy Val
+                     stcLastEnergy,              ; Last Energy Value
+                     stcActualYearEnergyNov,     ; Energy of the Month
+                     stcPrice,                   ; Actual Price
+                     stcActualYearCostNov)       ; Cost of the Month
+              JR     lMonthEnd                   ;
+;             ------------------------------------ 
 lMonth11:
 ;             ------------------------------------
-             CMP    sActualMonth        ;
-                    K 12                ;
-             JR     NE lMonthEnd        ;
-                    SIND_CalcMonthEnergy (inEnergy , ; Actual Energy Val
-                    stcLastEnergy ,     ; Last Energy Value
-                    stcActualYearEnergyDec , ; Energy of the Month
-                    stcPrice ,          ; Actual Price
-                    stcActualYearCostDec) ; Cost of the Month
-;             ------------------------------------
+              CMP    sActualMonth                ;
+                     K 12                        ;
+              JR     NE lMonthEnd                ;
+              SIND_CalcMonthEnergy (inEnergy,    ; Actual Energy Val
+                     stcLastEnergy,              ; Last Energy Value
+                     stcActualYearEnergyDec,     ; Energy of the Month
+                     stcPrice,                   ; Actual Price
+                     stcActualYearCostDec)       ; Cost of the Month
+;             ------------------------------------ 
 lMonthEnd:
 ;             ------------------------------------
-             COPY   sLastTotalEnergy    ;
-                    outLastYearEnergy   ;
-             COPY   sLastTotalCost      ;
-                    outLastYearCost     ;
+              COPY   sLastTotalEnergy            ;
+                     outLastYearEnergy           ;
+              COPY   sLastTotalCost              ;
+                     outLastYearCost             ;
 ;             ------------------------------------
-                    SIND_MonthAddition(stcActualYearEnergyJan , ;
-                    stcActualYearEnergyFeb , ;
-                    stcActualYearEnergyMar , ;
-                    stcActualYearEnergyApr , ;
-                    stcActualYearEnergyMay , ;
-                    stcActualYearEnergyJun , ;
-                    stcActualYearEnergyJul , ;
-                    stcActualYearEnergyAug , ;
-                    stcActualYearEnergySep , ;
-                    stcActualYearEnergyOct , ;
-                    stcActualYearEnergyNov , ;
-                    stcActualYearEnergyDec , ;
-                    outActualYearEnergy) ;
+              SIND_MonthAddition(stcActualYearEnergyJan, ;
+              stcActualYearEnergyFeb,            ;
+              stcActualYearEnergyMar,            ;
+              stcActualYearEnergyApr,            ;
+              stcActualYearEnergyMay,            ;
+              stcActualYearEnergyJun,            ;
+              stcActualYearEnergyJul,            ;
+              stcActualYearEnergyAug,            ;
+              stcActualYearEnergySep,            ;
+              stcActualYearEnergyOct,            ;
+              stcActualYearEnergyNov,            ;
+              stcActualYearEnergyDec,            ;
+              outActualYearEnergy)               ;
 ;             ------------------------------------
-                    SIND_MonthAddition(stcActualYearCostJan , ;
-                    stcActualYearCostFeb , ;
-                    stcActualYearCostMar , ;
-                    stcActualYearCostApr , ;
-                    stcActualYearCostMay , ;
-                    stcActualYearCostJun , ;
-                    stcActualYearCostJul , ;
-                    stcActualYearCostAug , ;
-                    stcActualYearCostSep , ;
-                    stcActualYearCostOct , ;
-                    stcActualYearCostNov , ;
-                    stcActualYearCostDec , ;
-                    outActualYearCost)  ;
+              SIND_MonthAddition(stcActualYearCostJan, ;
+              stcActualYearCostFeb,              ;
+              stcActualYearCostMar,              ;
+              stcActualYearCostApr,              ;
+              stcActualYearCostMay,              ;
+              stcActualYearCostJun,              ;
+              stcActualYearCostJul,              ;
+              stcActualYearCostAug,              ;
+              stcActualYearCostSep,              ;
+              stcActualYearCostOct,              ;
+              stcActualYearCostNov,              ;
+              stcActualYearCostDec,              ;
+              outActualYearCost)                 ;
 ;             ------------------------------------
+lEnd:
+
+;;__END_MACROCODE__
+ENDM
+
+;;************************************************************
+;; WorkHours
+;;************************************************************
+SIND_WORKHOURS MACRO  Vers,                 ; Version number
+                   inEnable,             ; 
+                   outHours,             ; 
+                   outCount,             ; 
+                   dynRegister,          ; 
+                   stcHours,             ; 
+                   stcCount,             ; 
+                   stcRegister,          ; 
+                   stcFlags,             ; 
+                   adjCount,             ; 
+                   adjHours,             ; 
+                   Name                  ; FBox Name
+;;__BEGIN_MACROCODE_
+
+$SKIP
+;;*******************************************************************************
+;; WorkingHour FBox | v0.1.1 | 22.02.2021 20:59Z
+;; Copyright (C) 2020 Marina Egner <info@sheepindustries.de>
+;; Author: Marina Egner
+;;
+;; This program is free software: you can redistribute it and/or modify it
+;; under the terms of the GNU General Public License as published by the
+;; Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+;;
+;; This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+;; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+;; See the GNU General Public License for more details.
+;;
+;; You should have received a copy of the GNU General Public License along with this program.
+;; If not, see <https://www.gnu.org/licenses/>.
+;; *******************************************************************************
+;;
+;; REVISION HISTORY
+;; v0.1.0  22.02.2021 - M.Egner | Initial edit;
+;; v0.1.1  22.02.2021 - M.Egner | Skip Program after Init;
+;;
+;; DESCRIPTION
+;; The Fbox counts every switch on and counts the working time
+$ENDSKIP
+
+; Check if Firmware version in DC is new enought, cause special condition codes where in use
+$IF S.CPU.MinFWVersion < 12000
+$FATAL SindFamily: Configured Firmware in Device Configurator is too Old! FBox needs min 1.20.00.
+$ENDIF
+$IFNB <name#vers> ; Not in use
+$ENDIF
+
+$IFNDEF _HEAVAC._VERS._HEAVAC
+$FATAL Bitte zuerst Heavac-Init FBox platzieren!
+$ENDIF
+;            ###################################################################
+;             ==================================== Init constants
+;cWaitingTime  EQU    K 3600                      ; Time of 1/10 Hour
+;             ------------------------------------
+;;dNeedModify   LEQU   dyn_Flag                  ; Indicate if Modify need to be Change
+;             ------------------------------------ Init dynamic Register
+;dResult       LEQU   dynRegister                 ; Temp Var for Result
+;             ------------------------------------ Init dynamic Flags
+sDynEdge      LEQU   stcFlags                    ; Flag for rising Edge detektion
+;             ------------------------------------ Init static Register
+sStartTime    LEQU   stcRegister                 ; Time since enable has set
+sWaitingTime  LEQU   stcRegister+1               ; Time of 1/10 Hour
+;             ------------------------------------
+;            ###################################################################
+
+
+;             ==================================== Init if Heavac Init is activ
+              STH    _HEAVAC._RESET._EXEC        ;
+              JR     L RUN                       ;
+;             ------------------------------------              
+INIT:
+;             ==================================== Init Vars
+              ACC    H                           ;
+              RES    sDynEdge                    ;
+;             ------------------------------------ 
+              LD     stcHours                    ;
+                     adjHours                    ;
+              LD     stcCount                    ;
+                     adjCount                    ;
+              LD     sWaitingTime                ;
+                     360000                      ;
+              JR     lEnd                        ; End Init Skip Program                     
+;             ------------------------------------
+RUN:
+;             ------------------------------------
+              STH    inEnable                    ; if Input is high
+              DYN    sDynEdge                    ; and is rising edge
+              JR     L lNext                     ; else go next 
+              INC    stcCount                    ; then increment counter
+;             ------------------------------------
+lStartTimer:
+;             ------------------------------------ after edge detection or timer is elapsed
+              SYSRD  K 7000                      ; Read System Counter
+                     sStartTime                  ;
+;             ------------------------------------
+lNext:
+;             ------------------------------------
+              STL    inEnable                    ; if Input is low
+              JR     H lEnd                      ; then nothing to do
+              SYSCMP sStartTime                  ; compare System Counter to StartTime
+                     sWaitingTime                ; + Waiting Time
+              JR     H lEnd                      ; if lower the goto the end
+              INC    stcHours                    ; else increment Hour counter
+              JR     lStartTimer                 ; then start timer again
+;             ------------------------------------
+lEnd:
+;             ------------------------------------
+              COPY   stcHours                    ; copy hours
+                     outHours                    ; to output
+              COPY   stcCount                    ; copy counter
+                     outCount                    ; to output
+;             ====================================              
+
+;;__END_MACROCODE__
+ENDM
+
+;;************************************************************
+;; EnergyDaily
+;;************************************************************
+SIND_ENERGYDAILY MACRO  Vers,                 ; Version number
+                   inTotalEnergy,        ; 
+                   outActDayEnergy,      ; 
+                   outLastDayEnergy,     ; 
+                   stcFlags,             ; 
+                   stcRegister,          ; 
+                   stcActDayEnergy,      ; 
+                   stcLastDayEnergy,     ; 
+                   stcLastTotalEnergy,   ; 
+                   adjLastDayEnergy,     ; 
+                   adjLastTotalEnergy,   ; 
+                   Name                  ; FBox Name
+;;__BEGIN_MACROCODE_
+
+$SKIP
+;;*******************************************************************************
+;; EnergyDaily FBox | v0.0.2 | 22.02.2021 22:01Z
+;; Copyright (C) 2020 Marina Egner <info@sheepindustries.de>
+;; Author: Marina Egner
+;;
+;; This program is free software: you can redistribute it and/or modify it
+;; under the terms of the GNU General Public License as published by the
+;; Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+;;
+;; This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+;; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+;; See the GNU General Public License for more details.
+;;
+;; You should have received a copy of the GNU General Public License along with this program.
+;; If not, see <https://www.gnu.org/licenses/>.
+;; *******************************************************************************
+;;
+;; REVISION HISTORY
+;; v0.1.0  22.02.2021 - M.Egner | Initial edit;
+;;
+;; DESCRIPTION
+;; The Fbox outputs the Energy of the actual and the last Day
+$ENDSKIP
+
+; Check if Firmware version in DC is new enought, cause special condition codes where in use
+$IF S.CPU.MinFWVersion < 12000
+$FATAL SindFamily: Configured Firmware in Device Configurator is too Old! FBox needs min 1.20.00.
+$ENDIF
+$IFNB <name#vers> ; Not in use
+$ENDIF
+
+$IFNDEF _HEAVAC._VERS._HEAVAC
+$FATAL Bitte zuerst Heavac-Init FBox platzieren!
+$ENDIF
+;            ###################################################################
+;             ==================================== Init constants
+;cWaitingTime  EQU    K 3600                      ; Time of 1/10 Hour
+;             ------------------------------------
+;;dNeedModify   LEQU   dyn_Flag                  ; Indicate if Modify need to be Change
+;             ------------------------------------ Init dynamic Register
+;dResult       LEQU   dynRegister                 ; Temp Var for Result
+;             ------------------------------------ Init dynamic Flags
+sDynEdge      LEQU   stcFlags                    ; Flag for rising Edge detektion
+;             ------------------------------------ Init static Register
+sHourMinute   LEQU   stcRegister                 ; Time Hour and Minutes HHMM
+;             ------------------------------------
+;            ###################################################################
+
+
+;             ==================================== Init if Heavac Init is activ
+              STH    _HEAVAC._RESET._EXEC        ;
+              JR     L RUN                       ;
+;             ------------------------------------              
+INIT:
+;             ==================================== Init Vars
+              ACC    H                           ;
+              RES    sDynEdge                    ; Reset Value
+;             ------------------------------------ 
+              LD     stcLastDayEnergy            ;
+                     adjLastDayEnergy            ;
+              LD     stcLastTotalEnergy          ;
+                     adjLastTotalEnergy          ;
+              JR     lEnd                        ; End Init Skip Program                     
+;             ------------------------------------
+RUN:
+;             ------------------------------------ Calculate Day Consumtion
+              SUB    inTotalEnergy               ; Subtract Total Energy
+                     stcLastTotalEnergy          ; from Last total Energy
+                     stcActDayEnergy             ; to get day consumtion
+              SYSRD  K 7054                      ; Read actual Hour and Minute
+                     sHourMinute                 ;        
+              CMP    sHourMinute                 ; if Minute is
+                     K 0                         ; Zero
+              ACC    Z                           ; then detecting Edge
+              DYN    sDynEdge                    ; store and compare last state
+              JR     L lEnd                      ; if no rising edge goto end
+;             ------------------------------------ else save last Energy values
+              COPY   stcActDayEnergy             ; copy Day Energy
+                     stcLastDayEnergy            ; to last Day Energy
+              COPY   inTotalEnergy               ; copy total Energy
+                     stcLastTotalEnergy          ; to last total Energy    
+;             ------------------------------------                     
+lEnd:
+;             ------------------------------------
+              COPY   stcActDayEnergy             ; copy Energy
+                     outActDayEnergy             ; to output
+              COPY   stcLastDayEnergy            ; copy Energy
+                     outLastDayEnergy            ; to output
+;             ====================================              
 
 ;;__END_MACROCODE__
 ENDM

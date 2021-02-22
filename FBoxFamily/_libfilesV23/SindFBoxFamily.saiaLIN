@@ -1,11 +1,11 @@
 [Main]
 FileVersion=1
-Info=64D7A70A
+Info=BCDFB1FB
 
 [Library]
 ID=SIND_FBoxFamily
 Type=FBOX
-Version=B0.0.019
+Version=V0.2.007
 InstallDir=Usr
 Protection=0
 Author=Schäfer GmbH Anlagentechnik
@@ -47,9 +47,9 @@ File1=SindFBoxFamily_en.chm
 File2=Energy.def
 File3=Energy.lib
 File4=Energy.sxg
-Info0=2C7DF8E5
-Info1=CAA9C23F
-Info2=9BE9CE48
-Info3=541F5C53
+Info0=D04C7956
+Info1=1C86965C
+Info2=705B6EC4
+Info3=70721E74
 Info4=00000000
 

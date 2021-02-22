@@ -1,6 +1,6 @@
 [SIND_ENGYMONTH]
 Width=12
-Vers=001003
+Vers=001001
 Face=EngyMonthly
 IntNames=
 IntRefs=
@@ -10,7 +10,7 @@ Out=EngyLasY_I EngyActY_I CostLasY_I CostActY_I
 D=dynReg_R  
 S=Price_R actJan_R actFeb_R actMar_R actApr_R actMay_R actJun_R actJul_R actAug_R actSep_R actOct_R actNov_R actDec_R LastJan_R LastFeb_R LastMar_R LastApr_R LastMay_R LastJun_R LastJul_R LastAug_R LastSep_R LastOct_R LastNov_R LastDec_R aCostJan_R aCostFeb_R aCostMar_R aCostApr_R aCostMay_R aCostJun_R aCostJul_R aCostAug_R aCostSep_R aCostOct_R aCostNov_R aCostDec_R lCostJan_R lCostFeb_R lCostMar_R lCostApr_R lCostMay_R lCostJun_R lCostJul_R lCostAug_R lCostOct_R lCostSep_R lCostNov_R lCostDec_R sReg_6R lEnergy_R  
 av0=c Option
-av1=a Price 0 %2p =20:20  \wax=0
+av1=a Price 0 %2p =30:30  \wax=0
 av2=c ActVal
 av3=a actJan 0 %1p =0:0  \wax=0
 av4=a actFeb 0 %1p =0:0  \wax=0
@@ -119,4 +119,49 @@ VariableSta45=lCostOct Cost.LastYear.October;
 VariableSta46=lCostSep Cost.LastYear.September;
 VariableSta47=lCostNov Cost.LastYear.November;
 VariableSta48=lCostDec Cost.LastYear.December;
+
+[SIND_WORKHOURS]
+Width=8
+Vers=001001
+Face=Work
+IntNames=
+IntRefs=
+FacePosi=l
+In=En_EB  
+Out=Hrs_I Cnt_I 
+D=dynReg_R  
+S=sHours_R sCount_R sReg_2R sFlag_F  
+av0=c Label1
+av1=a sCount 0 %d =0:0  \wax=0
+av2=a sHours 0 %1p =0:0  \wax=0
+av3=c CopyE
+Init=y
+AcceptName=1
+aRef=0
+Folder=Working
+VariableSta0=sHours Hours;
+VariableSta1=sCount Count;
+
+[SIND_ENERGYDAILY]
+Width=10
+Vers=000002
+Face=EngyDaily
+IntNames=
+IntRefs=
+FacePosi=l
+In=Total_I  
+Out=actDay_I lastDay_I 
+S=stcFlag_F stcReg_R actDay_R lastDay_R lasTotal_R  
+av0=c Label1
+av1=v actDay 0 %1p 
+av2=a lastDay 0 %1p =0:0  \wax=0
+av3=a lasTotal 0 %1p =0:0  \wax=0
+av4=c CopyR
+Init=y
+AcceptName=1
+aRef=0
+Folder=Energy.Daily
+VariableSta0=actDay ActualDay;
+VariableSta1=lastDay LastDay;
+VariableSta2=lasTotal LastTotal;
 

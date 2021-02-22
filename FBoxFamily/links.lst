@@ -2,3 +2,4 @@
 >FAMILY == Energy:ID3
 EnergyMonthly == SIND_ENGYMONTH
 WorkHours == SIND_WORKHOURS
+EnergyDaily == SIND_ENERGYDAILY

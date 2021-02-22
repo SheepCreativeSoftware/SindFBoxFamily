@@ -1,4 +1,4 @@
-<LIB LANGUAGES="1" STRINGS="492" LANGSTR="LANG" ACTLANG="English" VERSION="2">
+<LIB LANGUAGES="1" STRINGS="531" LANGSTR="LANG" ACTLANG="English" VERSION="2">
 <REC ID="1">
  <LANG ID="0">
 English
@@ -56,22 +56,22 @@ kWh
 </REC>
 <REC ID="12">
  <LANG ID="0">
-[--- (C) by Marina Egner, Sheep Industries ---]
+[--- Copyright by Marina Egner, Sheep Industries ---]
  </LANG>
 </REC>
 <REC ID="13">
  <LANG ID="0">
-[--- (C) by Marina Egner, Sheep Industries ---]
+[--- Copyright by Marina Egner, Sheep Industries ---]
  </LANG>
 </REC>
 <REC ID="19">
  <LANG ID="0">
-20
+30
  </LANG>
 </REC>
 <REC ID="20">
  <LANG ID="0">
-20
+30
  </LANG>
 </REC>
 <REC ID="21">
@@ -2326,7 +2326,7 @@ Cost.LastYear.December
 </REC>
 <REC ID="504">
  <LANG ID="0">
-WorkHours
+Work
  </LANG>
 </REC>
 <REC ID="505">
@@ -2341,12 +2341,12 @@ En
 </REC>
 <REC ID="507">
  <LANG ID="0">
-Hours
+Hrs
  </LANG>
 </REC>
 <REC ID="508">
  <LANG ID="0">
-Count
+Cnt
  </LANG>
 </REC>
 <REC ID="509">
@@ -2457,6 +2457,201 @@ Count
 <REC ID="530">
  <LANG ID="0">
 
+ </LANG>
+</REC>
+<REC ID="531">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="532">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="533">
+ <LANG ID="0">
+EngyDaily
+ </LANG>
+</REC>
+<REC ID="534">
+ <LANG ID="0">
+EnergyDaily
+ </LANG>
+</REC>
+<REC ID="535">
+ <LANG ID="0">
+Total
+ </LANG>
+</REC>
+<REC ID="536">
+ <LANG ID="0">
+actDay
+ </LANG>
+</REC>
+<REC ID="537">
+ <LANG ID="0">
+lastDay
+ </LANG>
+</REC>
+<REC ID="539">
+ <LANG ID="0">
+stcFlag
+ </LANG>
+</REC>
+<REC ID="540">
+ <LANG ID="0">
+stcReg
+ </LANG>
+</REC>
+<REC ID="541">
+ <LANG ID="0">
+[--- Energy ---]
+ </LANG>
+</REC>
+<REC ID="542">
+ <LANG ID="0">
+[--- Energy ---]
+ </LANG>
+</REC>
+<REC ID="543">
+ <LANG ID="0">
+[--- Working Counter ---]
+ </LANG>
+</REC>
+<REC ID="544">
+ <LANG ID="0">
+[--- Working Counter ---]
+ </LANG>
+</REC>
+<REC ID="545">
+ <LANG ID="0">
+[--- Copyright by Marina Egner, Sheep Industries ---]
+ </LANG>
+</REC>
+<REC ID="546">
+ <LANG ID="0">
+[--- Copyright by Marina Egner, Sheep Industries ---]
+ </LANG>
+</REC>
+<REC ID="547">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="548">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="549">
+ <LANG ID="0">
+Actual Day Energy\R)1/10 kWh
+ </LANG>
+</REC>
+<REC ID="550">
+ <LANG ID="0">
+actDay
+ </LANG>
+</REC>
+<REC ID="551">
+ <LANG ID="0">
+Actual Day Energy\R)1/10 kWh
+ </LANG>
+</REC>
+<REC ID="552">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="553">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="554">
+ <LANG ID="0">
+Last Day Energy
+ </LANG>
+</REC>
+<REC ID="555">
+ <LANG ID="0">
+lastDay
+ </LANG>
+</REC>
+<REC ID="556">
+ <LANG ID="0">
+Last Day Energy
+ </LANG>
+</REC>
+<REC ID="557">
+ <LANG ID="0">
+ActualDay
+ </LANG>
+</REC>
+<REC ID="558">
+ <LANG ID="0">
+Energy.Daily
+ </LANG>
+</REC>
+<REC ID="559">
+ <LANG ID="0">
+LastDay
+ </LANG>
+</REC>
+<REC ID="560">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="561">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="562">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="563">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="564">
+ <LANG ID="0">
+Last Total Energy
+ </LANG>
+</REC>
+<REC ID="565">
+ <LANG ID="0">
+lasTotal
+ </LANG>
+</REC>
+<REC ID="566">
+ <LANG ID="0">
+Last Total Energy
+ </LANG>
+</REC>
+<REC ID="567">
+ <LANG ID="0">
+LastTotal
+ </LANG>
+</REC>
+<REC ID="568">
+ <LANG ID="0">
+Sind Family.Energy
+ </LANG>
+</REC>
+<REC ID="569">
+ <LANG ID="0">
+[--- Copyright by Marina Egner, Sheep Industries ---]
+ </LANG>
+</REC>
+<REC ID="570">
+ <LANG ID="0">
+[--- Copyright by Marina Egner, Sheep Industries ---]
  </LANG>
 </REC>
 </LIB>
