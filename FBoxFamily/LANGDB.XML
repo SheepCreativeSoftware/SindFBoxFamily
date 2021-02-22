@@ -1,4 +1,4 @@
-<LIB LANGUAGES="1" STRINGS="531" LANGSTR="LANG" ACTLANG="English" VERSION="2">
+<LIB LANGUAGES="1" STRINGS="530" LANGSTR="LANG" ACTLANG="English" VERSION="2">
 <REC ID="1">
  <LANG ID="0">
 English
@@ -2347,11 +2347,6 @@ Hrs
 <REC ID="508">
  <LANG ID="0">
 Cnt
- </LANG>
-</REC>
-<REC ID="509">
- <LANG ID="0">
-dynReg
  </LANG>
 </REC>
 <REC ID="510">

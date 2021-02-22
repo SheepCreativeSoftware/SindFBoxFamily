@@ -7,7 +7,7 @@ $skip
           PROGRAM         Macro Library for the Energy Family
           FILENAME        Energy
           AUTHOR          Schäfer GmbH Anlagentechnik , Schäfer GmbH Anlagentechnik
-          VERSION         2006
+          VERSION         2007
 
 ************************************************************
 
@@ -24,7 +24,7 @@ HISTORY
 $endskip
 
 $IFNDEF _LIBVERS_.SIND_FBoxFamily
-   _LIBVERS_.SIND_FBoxFamily EQU 0002007 ;SindFBoxFamily Library Version
+   _LIBVERS_.SIND_FBoxFamily EQU 0002008 ;SindFBoxFamily Library Version
 $ENDIF
 
 $SKIP
@@ -763,7 +763,6 @@ SIND_WORKHOURS MACRO  Vers,                 ; Version number
                    inEnable,             ; 
                    outHours,             ; 
                    outCount,             ; 
-                   dynRegister,          ; 
                    stcHours,             ; 
                    stcCount,             ; 
                    stcRegister,          ; 

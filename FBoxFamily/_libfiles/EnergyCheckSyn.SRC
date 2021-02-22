@@ -65,7 +65,6 @@ SIND_ENGYMONTHstcLastEnergy    EQU    R [1]
 SIND_WORKHOURSinEnable    EQU    F
 SIND_WORKHOURSoutHours    EQU    R
 SIND_WORKHOURSoutCount    EQU    R
-SIND_WORKHOURSdynRegister    EQU    R [1]
 SIND_WORKHOURSstcHours    EQU    R [1]
 SIND_WORKHOURSstcCount    EQU    R [1]
 SIND_WORKHOURSstcRegister    EQU    R [2]
@@ -198,11 +197,10 @@ SIND_ENGYMONTH(1001,
      0,                        ;; lEnergy 0
     GiveNameSIND_ENGYMONTH)    ;; Name
 __fbl_C000001_00_001___SG_COB_0 EQU $ ;Mark FBox
-SIND_WORKHOURS(1001,
+SIND_WORKHOURS(1002,
     SIND_WORKHOURSinEnable,    ;; inEnable
     SIND_WORKHOURSoutHours,    ;; outHours
     SIND_WORKHOURSoutCount,    ;; outCount
-    SIND_WORKHOURSdynRegister, ;; dynRegister
     SIND_WORKHOURSstcHours,    ;; stcHours
     SIND_WORKHOURSstcCount,    ;; stcCount
     SIND_WORKHOURSstcRegister, ;; stcRegister

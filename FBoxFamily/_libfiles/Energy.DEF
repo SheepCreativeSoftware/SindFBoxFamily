@@ -122,14 +122,13 @@ VariableSta48=lCostDec Cost.LastYear.December;
 
 [SIND_WORKHOURS]
 Width=8
-Vers=001001
+Vers=001002
 Face=Work
 IntNames=
 IntRefs=
 FacePosi=l
 In=En_EB  
 Out=Hrs_I Cnt_I 
-D=dynReg_R  
 S=sHours_R sCount_R sReg_2R sFlag_F  
 av0=c Label1
 av1=a sCount 0 %d =0:0  \wax=0
