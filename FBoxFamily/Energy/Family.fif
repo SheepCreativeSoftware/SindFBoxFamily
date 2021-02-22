@@ -12,6 +12,7 @@ TargetFile=Energy
 DescID=0
 
 [BLOCKS]
-COUNT=1
+COUNT=2
 Block1=EnergyMonthly
+Block2=WorkHours
 

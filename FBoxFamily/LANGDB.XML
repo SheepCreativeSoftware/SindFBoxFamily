@@ -1,4 +1,4 @@
-<LIB LANGUAGES="1" STRINGS="465" LANGSTR="LANG" ACTLANG="English" VERSION="2">
+<LIB LANGUAGES="1" STRINGS="492" LANGSTR="LANG" ACTLANG="English" VERSION="2">
 <REC ID="1">
  <LANG ID="0">
 English
@@ -2320,6 +2320,141 @@ Cost.LastYear.December
  </LANG>
 </REC>
 <REC ID="503">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="504">
+ <LANG ID="0">
+WorkHours
+ </LANG>
+</REC>
+<REC ID="505">
+ <LANG ID="0">
+WorkHours
+ </LANG>
+</REC>
+<REC ID="506">
+ <LANG ID="0">
+En
+ </LANG>
+</REC>
+<REC ID="507">
+ <LANG ID="0">
+Hours
+ </LANG>
+</REC>
+<REC ID="508">
+ <LANG ID="0">
+Count
+ </LANG>
+</REC>
+<REC ID="509">
+ <LANG ID="0">
+dynReg
+ </LANG>
+</REC>
+<REC ID="510">
+ <LANG ID="0">
+sHours
+ </LANG>
+</REC>
+<REC ID="511">
+ <LANG ID="0">
+sCount
+ </LANG>
+</REC>
+<REC ID="512">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="513">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="514">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="515">
+ <LANG ID="0">
+Counter On/Off
+ </LANG>
+</REC>
+<REC ID="516">
+ <LANG ID="0">
+Counter On/Off
+ </LANG>
+</REC>
+<REC ID="517">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="518">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="519">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="520">
+ <LANG ID="0">
+Working Hours\R)in 1/10 Hours
+ </LANG>
+</REC>
+<REC ID="521">
+ <LANG ID="0">
+Working Hours\R)in 1/10 Hours
+ </LANG>
+</REC>
+<REC ID="522">
+ <LANG ID="0">
+sReg
+ </LANG>
+</REC>
+<REC ID="523">
+ <LANG ID="0">
+sFlag
+ </LANG>
+</REC>
+<REC ID="524">
+ <LANG ID="0">
+Working
+ </LANG>
+</REC>
+<REC ID="525">
+ <LANG ID="0">
+Sind Family.Energy
+ </LANG>
+</REC>
+<REC ID="526">
+ <LANG ID="0">
+Hours
+ </LANG>
+</REC>
+<REC ID="527">
+ <LANG ID="0">
+Count
+ </LANG>
+</REC>
+<REC ID="528">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="529">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="530">
  <LANG ID="0">
 
  </LANG>

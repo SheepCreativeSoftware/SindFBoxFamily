@@ -1,0 +1,10 @@
+$INIT
+; TODO : add FBOX initialization code here
+$ENDINIT
+
+
+$IFNB <vers>
+
+$ENDIF
+
+; TODO : add FBOX code here
