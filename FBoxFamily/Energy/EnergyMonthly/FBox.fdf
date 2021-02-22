@@ -1,6 +1,6 @@
 [BlockStatus]
 Enabled=-1
-Version=1001
+Version=1002
 Status=0
 HMIObject=0
 Type=0
@@ -927,7 +927,7 @@ CategoryValue=5
 
 [Adjust11]
 Visible=-1
-DINR=87061863
+DINR=0
 Type=2
 Label=actSep
 Index=0
@@ -950,7 +950,7 @@ SymbolName=adjActualYearEnergySep
 DefaultSymID=0
 HMIProp=0
 CategorySymbol=
-CategoryValue=5
+CategoryValue=0
 
 [Adjust12]
 Visible=-1

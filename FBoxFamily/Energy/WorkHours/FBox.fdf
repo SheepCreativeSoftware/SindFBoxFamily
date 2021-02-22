@@ -184,7 +184,7 @@ CategoryValue=205916160
 
 [Adjust2]
 Visible=-1
-DINR=-77855488
+DINR=0
 Type=2
 Label=sHours
 Index=0
@@ -207,7 +207,7 @@ SymbolName=adjHours
 DefaultSymID=0
 HMIProp=0
 CategorySymbol=
-CategoryValue=1174929433
+CategoryValue=0
 
 [Adjust3]
 Visible=-1

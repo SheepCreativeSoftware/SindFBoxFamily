@@ -1,6 +1,6 @@
 [SIND_ENGYMONTH]
 Width=12
-Vers=001001
+Vers=001002
 Face=EngyMonthly
 IntNames=
 IntRefs=
@@ -143,7 +143,7 @@ VariableSta1=sCount Count;
 
 [SIND_ENERGYDAILY]
 Width=10
-Vers=000002
+Vers=001000
 Face=EngyDaily
 IntNames=
 IntRefs=

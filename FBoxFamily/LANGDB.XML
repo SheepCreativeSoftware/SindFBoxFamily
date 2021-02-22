@@ -2071,7 +2071,7 @@ sReg
 </REC>
 <REC ID="453">
  <LANG ID="0">
-Last Energy Counter
+Last Month Energy Counter
  </LANG>
 </REC>
 <REC ID="454">
@@ -2081,7 +2081,7 @@ lEnergy
 </REC>
 <REC ID="455">
  <LANG ID="0">
-Last Energy Counter
+Last Month Energy Counter
  </LANG>
 </REC>
 <REC ID="456">
@@ -2501,12 +2501,12 @@ stcReg
 </REC>
 <REC ID="541">
  <LANG ID="0">
-[--- Energy ---]
+[--- Energy Daily ---]
  </LANG>
 </REC>
 <REC ID="542">
  <LANG ID="0">
-[--- Energy ---]
+[--- Energy Daily ---]
  </LANG>
 </REC>
 <REC ID="543">

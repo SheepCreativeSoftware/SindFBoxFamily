@@ -87,7 +87,7 @@ COB _TESTCOB
 
 ;;__BEGIN_CODE_SECTION_
 __fbl_C000001_00_000___SG_COB_0 EQU $ ;Mark FBox
-SIND_ENGYMONTH(1001,
+SIND_ENGYMONTH(1002,
     SIND_ENGYMONTHinEnergy,    ;; inEnergy
     SIND_ENGYMONTHoutLastYearEnergy, ;; outLastYearEnergy
     SIND_ENGYMONTHoutActualYearEnergy, ;; outActualYearEnergy
@@ -209,7 +209,7 @@ SIND_WORKHOURS(1002,
      0,                        ;; sHours 0
     GiveNameSIND_WORKHOURS)    ;; Name
 __fbl_C000001_00_002___SG_COB_0 EQU $ ;Mark FBox
-SIND_ENERGYDAILY(2,
+SIND_ENERGYDAILY(1000,
     SIND_ENERGYDAILYinTotalEnergy, ;; inTotalEnergy
     SIND_ENERGYDAILYoutActDayEnergy, ;; outActDayEnergy
     SIND_ENERGYDAILYoutLastDayEnergy, ;; outLastDayEnergy
