@@ -1,6 +1,6 @@
 $SKIP
 ;;*******************************************************************************
-;; BlockTime FBox | v0.0.9 | 11.03.2021 22:38Z
+;; BlockTime FBox | v0.1.0 | 11.03.2021 21:52Z
 ;; Copyright (C) 2020 Marina Egner <info@sheepindustries.de>
 ;; Author: Marina Egner
 ;;
@@ -17,6 +17,7 @@ $SKIP
 ;; *******************************************************************************
 ;;
 ;; REVISION HISTORY
+;; v0.1.0  11.03.2021 - M.Egner | First Release Version;
 ;; v0.0.1  11.03.2021 - M.Egner | Initial edit;
 ;;
 ;; DESCRIPTION

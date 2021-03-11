@@ -1,4 +1,4 @@
-<LIB LANGUAGES="1" STRINGS="692" LANGSTR="LANG" ACTLANG="English" VERSION="2">
+<LIB LANGUAGES="1" STRINGS="707" LANGSTR="LANG" ACTLANG="English" VERSION="2">
 <REC ID="1">
  <LANG ID="0">
 English
@@ -2691,7 +2691,7 @@ StartMin
 </REC>
 <REC ID="579">
  <LANG ID="0">
-
+Energy.BlockTime
  </LANG>
 </REC>
 <REC ID="580">
@@ -3457,6 +3457,81 @@ bTue
 <REC ID="775">
  <LANG ID="0">
 eTue
+ </LANG>
+</REC>
+<REC ID="776">
+ <LANG ID="0">
+Begin.Monday
+ </LANG>
+</REC>
+<REC ID="777">
+ <LANG ID="0">
+Begin.Tuesday
+ </LANG>
+</REC>
+<REC ID="778">
+ <LANG ID="0">
+Begin.Wednesday
+ </LANG>
+</REC>
+<REC ID="779">
+ <LANG ID="0">
+Begin.Thursday
+ </LANG>
+</REC>
+<REC ID="780">
+ <LANG ID="0">
+Begin.Friday
+ </LANG>
+</REC>
+<REC ID="781">
+ <LANG ID="0">
+Begin.Saturday
+ </LANG>
+</REC>
+<REC ID="782">
+ <LANG ID="0">
+Begin.Sunday
+ </LANG>
+</REC>
+<REC ID="783">
+ <LANG ID="0">
+End.Monday
+ </LANG>
+</REC>
+<REC ID="784">
+ <LANG ID="0">
+End.Tuesday
+ </LANG>
+</REC>
+<REC ID="785">
+ <LANG ID="0">
+End.Wednesday
+ </LANG>
+</REC>
+<REC ID="786">
+ <LANG ID="0">
+End.Thursday
+ </LANG>
+</REC>
+<REC ID="787">
+ <LANG ID="0">
+End.Friday
+ </LANG>
+</REC>
+<REC ID="788">
+ <LANG ID="0">
+End.Saturday
+ </LANG>
+</REC>
+<REC ID="789">
+ <LANG ID="0">
+End.Sunday
+ </LANG>
+</REC>
+<REC ID="790">
+ <LANG ID="0">
+
  </LANG>
 </REC>
 </LIB>

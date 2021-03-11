@@ -1,6 +1,6 @@
 [BlockStatus]
 Enabled=-1
-Version=9
+Version=1000
 Status=0
 HMIObject=0
 Type=0
@@ -121,7 +121,7 @@ Type=0
 [Static0]
 SymbolName=stcBeginMonday
 DisplayedName=657
-DefaultNameID=0
+DefaultNameID=776
 Comment=0
 State=0
 ArraySize=1
@@ -131,7 +131,7 @@ Type=0
 [Static1]
 SymbolName=stcBeginTuesday
 DisplayedName=774
-DefaultNameID=0
+DefaultNameID=777
 Comment=0
 State=0
 ArraySize=1
@@ -141,7 +141,7 @@ Type=0
 [Static2]
 SymbolName=stcBeginWednesday
 DisplayedName=699
-DefaultNameID=0
+DefaultNameID=778
 Comment=0
 State=0
 ArraySize=1
@@ -151,7 +151,7 @@ Type=0
 [Static3]
 SymbolName=stcBeginThursday
 DisplayedName=700
-DefaultNameID=0
+DefaultNameID=779
 Comment=0
 State=0
 ArraySize=1
@@ -161,7 +161,7 @@ Type=0
 [Static4]
 SymbolName=stcBeginFriday
 DisplayedName=702
-DefaultNameID=0
+DefaultNameID=780
 Comment=0
 State=0
 ArraySize=1
@@ -171,7 +171,7 @@ Type=0
 [Static5]
 SymbolName=stcBeginSaturday
 DisplayedName=703
-DefaultNameID=0
+DefaultNameID=781
 Comment=0
 State=0
 ArraySize=1
@@ -181,7 +181,7 @@ Type=0
 [Static6]
 SymbolName=stcBeginSunday
 DisplayedName=763
-DefaultNameID=0
+DefaultNameID=782
 Comment=0
 State=0
 ArraySize=1
@@ -191,7 +191,7 @@ Type=0
 [Static7]
 SymbolName=stcEndMonday
 DisplayedName=756
-DefaultNameID=0
+DefaultNameID=783
 Comment=0
 State=0
 ArraySize=1
@@ -201,7 +201,7 @@ Type=0
 [Static8]
 SymbolName=stcEndTuesday
 DisplayedName=775
-DefaultNameID=0
+DefaultNameID=784
 Comment=0
 State=0
 ArraySize=1
@@ -211,7 +211,7 @@ Type=0
 [Static9]
 SymbolName=stcEndWednesday
 DisplayedName=758
-DefaultNameID=0
+DefaultNameID=785
 Comment=0
 State=0
 ArraySize=1
@@ -221,7 +221,7 @@ Type=0
 [Static10]
 SymbolName=stcEndThursday
 DisplayedName=759
-DefaultNameID=0
+DefaultNameID=786
 Comment=0
 State=0
 ArraySize=1
@@ -231,7 +231,7 @@ Type=0
 [Static11]
 SymbolName=stcEndFriday
 DisplayedName=760
-DefaultNameID=0
+DefaultNameID=787
 Comment=0
 State=0
 ArraySize=1
@@ -241,7 +241,7 @@ Type=0
 [Static12]
 SymbolName=stcEndSaturday
 DisplayedName=761
-DefaultNameID=0
+DefaultNameID=788
 Comment=0
 State=0
 ArraySize=1
@@ -251,7 +251,7 @@ Type=0
 [Static13]
 SymbolName=stcEndSunday
 DisplayedName=762
-DefaultNameID=0
+DefaultNameID=789
 Comment=0
 State=0
 ArraySize=1
