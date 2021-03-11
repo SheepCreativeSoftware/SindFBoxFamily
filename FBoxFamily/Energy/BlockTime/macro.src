@@ -1,6 +1,6 @@
 $SKIP
 ;;*******************************************************************************
-;; BlockTime FBox | v0.0.6 | 11.03.2021 22:38Z
+;; BlockTime FBox | v0.0.7 | 11.03.2021 22:38Z
 ;; Copyright (C) 2020 Marina Egner <info@sheepindustries.de>
 ;; Author: Marina Egner
 ;;
@@ -64,9 +64,9 @@ lINIT:
 ;             ==================================== Init Vars
               ACC    H                           ;
               STH    inEnable                    ; if input is high
-              OUT    stcDynEdgePos               ; Save State Value
+              DYN    stcDynEdgePos               ; Save State Value
               STL    inEnable                    ; if input is low
-              OUT    stcDynEdgeNeg               ; Save State Value
+              DYN    stcDynEdgeNeg               ; Save State Value
 ;             ------------------------------------ 
               LD     stcBeginMonday              ;
                      adjBeginMonday              ;
