@@ -1,6 +1,6 @@
 $SKIP
 ;;*******************************************************************************
-;; BlockTime FBox | v0.0.3 | 11.03.2021 22:38Z
+;; BlockTime FBox | v0.0.6 | 11.03.2021 22:38Z
 ;; Copyright (C) 2020 Marina Egner <info@sheepindustries.de>
 ;; Author: Marina Egner
 ;;
@@ -63,8 +63,10 @@ stcDynEdgeNeg LEQU   stcFlag+1                   ; Flag for falling Edge detekti
 lINIT:
 ;             ==================================== Init Vars
               ACC    H                           ;
-              RES    stcDynEdgePos               ; Reset Value
-              RES    stcDynEdgeNeg               ; Reset Value
+              STH    inEnable                    ; if input is high
+              OUT    stcDynEdgePos               ; Save State Value
+              STL    inEnable                    ; if input is low
+              OUT    stcDynEdgeNeg               ; Save State Value
 ;             ------------------------------------ 
               LD     stcBeginMonday              ;
                      adjBeginMonday              ;
@@ -126,7 +128,7 @@ lRUN:
 ;             ------------------------------------
 lDay1End:
 ;             ------------------------------------
-              STL    dynSetBegin                 ; if not High
+              STL    dynSetEnd                   ; if not High
               JR     H lDay1Copy                 ; then jump to next
               COPY   dynHourMinute               ; else copy actual Time
                      stcEndMonday                ; to actual Day
@@ -151,7 +153,7 @@ lDay2:
 ;             ------------------------------------
 lDay2End:
 ;             ------------------------------------
-              STL    dynSetBegin                 ; if not High
+              STL    dynSetEnd                   ; if not High
               JR     H lDay2Copy                 ; then jump to next
               COPY   dynHourMinute               ; else copy actual Time
                      stcEndTuesday               ; to actual Day
@@ -176,7 +178,7 @@ lDay3:
 ;             ------------------------------------
 lDay3End:
 ;             ------------------------------------
-              STL    dynSetBegin                 ; if not High
+              STL    dynSetEnd                   ; if not High
               JR     H lDay3Copy                 ; then jump to next
               COPY   dynHourMinute               ; else copy actual Time
                      stcEndWednesday             ; to actual Day
@@ -201,7 +203,7 @@ lDay4:
 ;             ------------------------------------
 lDay4End:
 ;             ------------------------------------
-              STL    dynSetBegin                 ; if not High
+              STL    dynSetEnd                   ; if not High
               JR     H lDay4Copy                 ; then jump to next
               COPY   dynHourMinute               ; else copy actual Time
                      stcEndThursday              ; to actual Day
@@ -226,7 +228,7 @@ lDay5:
 ;             ------------------------------------
 lDay5End:
 ;             ------------------------------------
-              STL    dynSetBegin                 ; if not High
+              STL    dynSetEnd                   ; if not High
               JR     H lDay5Copy                 ; then jump to next
               COPY   dynHourMinute               ; else copy actual Time
                      stcEndFriday                ; to actual Day
@@ -251,7 +253,7 @@ lDay6:
 ;             ------------------------------------
 lDay6End:
 ;             ------------------------------------
-              STL    dynSetBegin                 ; if not High
+              STL    dynSetEnd                   ; if not High
               JR     H lDay6Copy                 ; then jump to next
               COPY   dynHourMinute               ; else copy actual Time
                      stcEndSaturday              ; to actual Day
