@@ -1,6 +1,6 @@
 $SKIP
 ;;*******************************************************************************
-;; BlockTime FBox | v0.0.8 | 11.03.2021 22:38Z
+;; BlockTime FBox | v0.0.9 | 11.03.2021 22:38Z
 ;; Copyright (C) 2020 Marina Egner <info@sheepindustries.de>
 ;; Author: Marina Egner
 ;;
@@ -278,7 +278,7 @@ lDay7:
 ;             ------------------------------------
 lDay7End:
 ;             ------------------------------------
-              STL    dynSetBegin                 ; if not High
+              STL    dynSetEnd                   ; if not High
               JR     H lDay7Copy                 ; then jump to next
               COPY   dynHourMinute               ; else copy actual Time
                      stcEndSunday                ; to actual Day
