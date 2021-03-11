@@ -1,6 +1,6 @@
 $SKIP
 ;;*******************************************************************************
-;; BlockTime FBox | v0.0.7 | 11.03.2021 22:38Z
+;; BlockTime FBox | v0.0.8 | 11.03.2021 22:38Z
 ;; Copyright (C) 2020 Marina Egner <info@sheepindustries.de>
 ;; Author: Marina Egner
 ;;
@@ -113,7 +113,7 @@ lRUN:
               DYN    stcDynEdgeNeg               ; and is positive Edge
               SET    dynSetBegin                 ; Store Edge Detection
 ;             ------------------------------------
-              SYSRD  7053                        ; Read Sytemtime hour and minute
+              SYSRD  7054                        ; Read Sytemtime hour and minute
                      dynHourMinute               ;
               SYSRD  7070                        ; Read Sytemtime Day of the Week
                      dynActualDayOW              ;
