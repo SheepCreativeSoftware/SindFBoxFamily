@@ -1,0 +1,310 @@
+$SKIP
+;;*******************************************************************************
+;; BlockTime FBox | v0.0.3 | 11.03.2021 22:38Z
+;; Copyright (C) 2020 Marina Egner <info@sheepindustries.de>
+;; Author: Marina Egner
+;;
+;; This program is free software: you can redistribute it and/or modify it
+;; under the terms of the GNU General Public License as published by the
+;; Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+;;
+;; This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+;; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+;; See the GNU General Public License for more details.
+;;
+;; You should have received a copy of the GNU General Public License along with this program.
+;; If not, see <https://www.gnu.org/licenses/>.
+;; *******************************************************************************
+;;
+;; REVISION HISTORY
+;; v0.0.1  11.03.2021 - M.Egner | Initial edit;
+;;
+;; DESCRIPTION
+;; The Fbox outputs the Energy of the actual and the last Day
+$ENDSKIP
+
+; Check if Firmware version in DC is new enought, cause special condition codes where in use
+$IF S.CPU.MinFWVersion < 12000
+$FATAL SindFamily: Configured Firmware in Device Configurator is too Old! FBox needs min 1.20.00.
+$ENDIF
+$IFNB <name#vers> ; Not in use
+$ENDIF
+
+$IFNDEF _HEAVAC._VERS._HEAVAC
+$FATAL Bitte zuerst Heavac-Init FBox platzieren!
+$ENDIF
+;            ###################################################################
+;             ==================================== Init constants
+;cWaitingTime  EQU    K 3600                      ; Time of 1/10 Hour
+;             ------------------------------------
+dynSetBegin   LEQU   dynFlag                     ; Indicate if Modify need to be Change
+dynSetEnd     LEQU   dynFlag+1                   ; Indicate if Modify need to be Change
+;             ------------------------------------ Init dynamic Register 
+dynHourMinute LEQU   dynRegister                 ; Time Hour and Minute
+dynHour       LEQU   dynRegister+1               ; Time Hour  
+dynMinute     LEQU   dynRegister+2               ; Time Minutes
+dynResult     LEQU   dynRegister+3               ; Temp Var for Result
+dynActualDayOW LEQU  dynRegister+4               ; Actual Day
+dynActualBegin LEQU  dynRegister+5               ; Begin on this Day
+dynActualEnd  LEQU   dynRegister+6               ; End on this Day
+;             ------------------------------------ Init dynamic Flags 
+stcDynEdgePos LEQU   stcFlag                     ; Flag for rising Edge detektion
+stcDynEdgeNeg LEQU   stcFlag+1                   ; Flag for falling Edge detektion
+;             ------------------------------------ Init static Register
+;sHourMinute   LEQU   stcRegister                 ; Time Hour and Minutes HHMM
+;             ------------------------------------
+;            ###################################################################
+
+
+;             ==================================== Init if Heavac Init is activ
+              STH    _HEAVAC._RESET._EXEC        ;
+              JR     L lRUN                      ;
+;             ------------------------------------              
+lINIT:
+;             ==================================== Init Vars
+              ACC    H                           ;
+              RES    stcDynEdgePos               ; Reset Value
+              RES    stcDynEdgeNeg               ; Reset Value
+;             ------------------------------------ 
+              LD     stcBeginMonday              ;
+                     adjBeginMonday              ;
+              LD     stcBeginTuesday             ;
+                     adjBeginTuesday             ;
+              LD     stcBeginWednesday           ;
+                     adjBeginWednesday           ;
+              LD     stcBeginThursday            ;
+                     adjBeginThursday            ;
+              LD     stcBeginFriday              ;
+                     adjBeginFriday              ;
+              LD     stcBeginSaturday            ;
+                     adjBeginSaturday            ;
+              LD     stcBeginSunday              ;
+                     adjBeginSunday              ;
+;             ------------------------------------
+              LD     stcEndMonday                ;
+                     adjEndMonday                ;
+              LD     stcEndTuesday               ;
+                     adjEndTuesday               ;
+              LD     stcEndWednesday             ;
+                     adjEndWednesday             ;
+              LD     stcEndThursday              ;
+                     adjEndThursday              ;
+              LD     stcEndFriday                ;
+                     adjEndFriday                ;
+              LD     stcEndSaturday              ;
+                     adjEndSaturday              ;
+              LD     stcEndSunday                ;
+                     adjEndSunday                ;
+;             ------------------------------------
+              JR     lEnd                        ; End Init Skip Program                     
+;             ------------------------------------
+lRUN:
+;             ------------------------------------ Check rising Edge
+              ACC    H                           ;
+              RES    dynSetBegin                 ; Reset Var
+              RES    dynSetEnd                   ; Reset Var
+              STH    inEnable                    ; if input is high 
+              DYN    stcDynEdgePos               ; and is positive Edge 
+              SET    dynSetEnd                   ; Store Edge detection
+;             ------------------------------------ Check falling edge
+              STL    inEnable                    ; if input is Low
+              DYN    stcDynEdgeNeg               ; and is positive Edge
+              SET    dynSetBegin                 ; Store Edge Detection
+;             ------------------------------------
+              SYSRD  7053                        ; Read Sytemtime hour and minute
+                     dynHourMinute               ;
+              SYSRD  7070                        ; Read Sytemtime Day of the Week
+                     dynActualDayOW              ;
+;             ------------------------------------
+              CMP    dynActualDayOW              ; If day is one
+                     K 1                         ; 
+              JR     NE lDay2                    ; else go next
+              STL    dynSetBegin                 ; if not High
+              JR     H lDay1End                  ; then jump to next
+              COPY   dynHourMinute               ; else copy actual Time
+                     stcBeginMonday              ; to actual Day
+;             ------------------------------------
+lDay1End:
+;             ------------------------------------
+              STL    dynSetBegin                 ; if not High
+              JR     H lDay1Copy                 ; then jump to next
+              COPY   dynHourMinute               ; else copy actual Time
+                     stcEndMonday                ; to actual Day
+;             ------------------------------------
+lDay1Copy: 
+;             ------------------------------------
+              COPY   stcBeginMonday              ; else copy actual End Time
+                     dynActualBegin              ; to var for the output
+              COPY   stcEndMonday                ; else copy actual End Time
+                     dynActualEnd                ; to var for the output
+              JR     lEnd                        ; go to the end
+;             ------------------------------------   
+lDay2:
+;             ------------------------------------
+              CMP    dynActualDayOW              ; If day is two
+                     K 2                         ;
+              JR     NE lDay3                    ; else go next
+              STL    dynSetBegin                 ; if not High
+              JR     H lDay2End                  ; then jump to next
+              COPY   dynHourMinute               ; else copy actual Time
+                     stcBeginTuesday             ; to actual Day
+;             ------------------------------------
+lDay2End:
+;             ------------------------------------
+              STL    dynSetBegin                 ; if not High
+              JR     H lDay2Copy                 ; then jump to next
+              COPY   dynHourMinute               ; else copy actual Time
+                     stcEndTuesday               ; to actual Day
+;             ------------------------------------
+lDay2Copy: 
+;             ------------------------------------
+              COPY   stcBeginTuesday             ; else copy actual End Time
+                     dynActualBegin              ; to var for the output
+              COPY   stcEndTuesday               ; else copy actual End Time
+                     dynActualEnd                ; to var for the output
+              JR     lEnd                        ; go to the end
+;             ------------------------------------
+lDay3:
+;             ------------------------------------
+              CMP    dynActualDayOW              ; If day is three
+                     K 3                         ;
+              JR     NE lDay4                    ; else go next
+              STL    dynSetBegin                 ; if not High
+              JR     H lDay3End                  ; then jump to next
+              COPY   dynHourMinute               ; else copy actual Time
+                     stcBeginWednesday           ; to actual Day
+;             ------------------------------------
+lDay3End:
+;             ------------------------------------
+              STL    dynSetBegin                 ; if not High
+              JR     H lDay3Copy                 ; then jump to next
+              COPY   dynHourMinute               ; else copy actual Time
+                     stcEndWednesday             ; to actual Day
+;             ------------------------------------
+lDay3Copy: 
+;             ------------------------------------
+              COPY   stcBeginWednesday           ; else copy actual End Time
+                     dynActualBegin              ; to var for the output
+              COPY   stcEndWednesday             ; else copy actual End Time
+                     dynActualEnd                ; to var for the output
+              JR     lEnd                        ; go to the end
+;             ------------------------------------
+lDay4:
+;             ------------------------------------
+              CMP    dynActualDayOW              ; If day is four
+                     K 4                         ;
+              JR     NE lDay5                    ; else go next
+              STL    dynSetBegin                 ; if not High
+              JR     H lDay4End                  ; then jump to next
+              COPY   dynHourMinute               ; else copy actual Time
+                     stcBeginThursday            ; to actual Day
+;             ------------------------------------
+lDay4End:
+;             ------------------------------------
+              STL    dynSetBegin                 ; if not High
+              JR     H lDay4Copy                 ; then jump to next
+              COPY   dynHourMinute               ; else copy actual Time
+                     stcEndThursday              ; to actual Day
+;             ------------------------------------
+lDay4Copy: 
+;             ------------------------------------
+              COPY   stcBeginThursday            ; else copy actual End Time
+                     dynActualBegin              ; to var for the output
+              COPY   stcEndThursday              ; else copy actual End Time
+                     dynActualEnd                ; to var for the output
+              JR     lEnd                        ; go to the end
+;             ------------------------------------
+lDay5:
+;             ------------------------------------
+              CMP    dynActualDayOW              ; If day is five
+                     K 5                         ;
+              JR     NE lDay6                    ; else go next
+              STL    dynSetBegin                 ; if not High
+              JR     H lDay5End                  ; then jump to next
+              COPY   dynHourMinute               ; else copy actual Time
+                     stcBeginFriday              ; to actual Day
+;             ------------------------------------
+lDay5End:
+;             ------------------------------------
+              STL    dynSetBegin                 ; if not High
+              JR     H lDay5Copy                 ; then jump to next
+              COPY   dynHourMinute               ; else copy actual Time
+                     stcEndFriday                ; to actual Day
+;             ------------------------------------
+lDay5Copy: 
+;             ------------------------------------
+              COPY   stcBeginFriday              ; else copy actual End Time
+                     dynActualBegin              ; to var for the output
+              COPY   stcEndFriday                ; else copy actual End Time
+                     dynActualEnd                ; to var for the output
+              JR     lEnd                        ; go to the end
+;             ------------------------------------
+lDay6:
+;             ------------------------------------
+              CMP    dynActualDayOW              ; If day is six
+                     K 6                         ;
+              JR     NE lDay7                    ; else go next
+              STL    dynSetBegin                 ; if not High
+              JR     H lDay6End                  ; then jump to next
+              COPY   dynHourMinute               ; else copy actual Time
+                     stcBeginSaturday            ; to actual Day
+;             ------------------------------------
+lDay6End:
+;             ------------------------------------
+              STL    dynSetBegin                 ; if not High
+              JR     H lDay6Copy                 ; then jump to next
+              COPY   dynHourMinute               ; else copy actual Time
+                     stcEndSaturday              ; to actual Day
+;             ------------------------------------
+lDay6Copy: 
+;             ------------------------------------
+              COPY   stcBeginSaturday            ; else copy actual End Time
+                     dynActualBegin              ; to var for the output
+              COPY   stcEndSaturday              ; else copy actual End Time
+                     dynActualEnd                ; to var for the output
+              JR     lEnd                        ; go to the end
+;             ------------------------------------
+lDay7:
+;             ------------------------------------
+              CMP    dynActualDayOW              ; If day is seven
+                     K 7                         ;
+              JR     NE lEnd                     ; else go next
+              STL    dynSetBegin                 ; if not High
+              JR     H lDay7End                  ; then jump to next
+              COPY   dynHourMinute               ; else copy actual Time
+                     stcBeginSunday              ; to actual Day
+;             ------------------------------------
+lDay7End:
+;             ------------------------------------
+              STL    dynSetBegin                 ; if not High
+              JR     H lDay7Copy                 ; then jump to next
+              COPY   dynHourMinute               ; else copy actual Time
+                     stcEndSunday                ; to actual Day
+;             ------------------------------------
+lDay7Copy: 
+;             ------------------------------------
+              COPY   stcBeginSunday              ; else copy actual End Time
+                     dynActualBegin              ; to var for the output
+              COPY   stcEndSunday                ; else copy actual End Time
+                     dynActualEnd                ; to var for the output
+;             ------------------------------------
+lEnd:
+;             ------------------------------------
+              COPY   dynActualBegin              ; copy Energy
+                     outStartTime                ; to output
+              COPY   dynActualEnd                ; copy Energy
+                     outEndTime                  ; to output
+;             ------------------------------------
+              DIV    dynActualBegin              ; Divide HHMM
+                     K 100                       ; by 100 to get
+                     dynHour                     ; Hour and
+                     dynMinute                   ; Minute separately
+              MUL    dynHour                     ; Multiply Hour
+                     K 60                        ; by 60 to get
+                     dynResult                   ; Minutes
+              ADD    dynResult                   ; Add Minutes from Hour
+                     dynMinute                   ; and Minutes
+                     dynResult                   ; to get Minute of the Day
+              COPY   dynResult                   ; copy Energy
+                     outStartMinute              ; to output
+;             ====================================            

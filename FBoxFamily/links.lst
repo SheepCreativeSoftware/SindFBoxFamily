@@ -3,3 +3,4 @@
 EnergyMonthly == SIND_ENGYMONTH
 WorkHours == SIND_WORKHOURS
 EnergyDaily == SIND_ENERGYDAILY
+BlockTime == SIND_BLOCKTIME

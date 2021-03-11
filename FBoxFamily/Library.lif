@@ -2,7 +2,7 @@
 NameID=2
 Enabled=0
 Status=0
-Version=2009
+Version=2014
 HelpID=0
 Internal=2
 HelpFileID=0
@@ -46,7 +46,8 @@ COUNT=1
 Fam1=Energy\
 
 [DOCUMENTS]
-COUNT=0
+COUNT=1
+File1=HEAVCLK.lib
 
 [INSTALL]
 COUNT=0

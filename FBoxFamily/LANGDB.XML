@@ -1,4 +1,4 @@
-<LIB LANGUAGES="1" STRINGS="530" LANGSTR="LANG" ACTLANG="English" VERSION="2">
+<LIB LANGUAGES="1" STRINGS="692" LANGSTR="LANG" ACTLANG="English" VERSION="2">
 <REC ID="1">
  <LANG ID="0">
 English
@@ -2647,6 +2647,816 @@ Sind Family.Energy
 <REC ID="570">
  <LANG ID="0">
 [--- Copyright by Marina Egner, Sheep Industries ---]
+ </LANG>
+</REC>
+<REC ID="571">
+ <LANG ID="0">
+BlockTime
+ </LANG>
+</REC>
+<REC ID="572">
+ <LANG ID="0">
+BlockTime
+ </LANG>
+</REC>
+<REC ID="573">
+ <LANG ID="0">
+En
+ </LANG>
+</REC>
+<REC ID="574">
+ <LANG ID="0">
+Start
+ </LANG>
+</REC>
+<REC ID="575">
+ <LANG ID="0">
+End
+ </LANG>
+</REC>
+<REC ID="576">
+ <LANG ID="0">
+StartMin
+ </LANG>
+</REC>
+<REC ID="577">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="578">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="579">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="580">
+ <LANG ID="0">
+Sind Family.Energy
+ </LANG>
+</REC>
+<REC ID="581">
+ <LANG ID="0">
+[--- Block Time Begin ---]
+ </LANG>
+</REC>
+<REC ID="582">
+ <LANG ID="0">
+[--- Block Time Begin ---]
+ </LANG>
+</REC>
+<REC ID="597">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="598">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="608">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="609">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="611">
+ <LANG ID="0">
+1200
+ </LANG>
+</REC>
+<REC ID="612">
+ <LANG ID="0">
+1200
+ </LANG>
+</REC>
+<REC ID="614">
+ <LANG ID="0">
+1200
+ </LANG>
+</REC>
+<REC ID="615">
+ <LANG ID="0">
+1200
+ </LANG>
+</REC>
+<REC ID="617">
+ <LANG ID="0">
+1200
+ </LANG>
+</REC>
+<REC ID="618">
+ <LANG ID="0">
+1200
+ </LANG>
+</REC>
+<REC ID="620">
+ <LANG ID="0">
+1200
+ </LANG>
+</REC>
+<REC ID="621">
+ <LANG ID="0">
+1200
+ </LANG>
+</REC>
+<REC ID="623">
+ <LANG ID="0">
+1200
+ </LANG>
+</REC>
+<REC ID="624">
+ <LANG ID="0">
+1200
+ </LANG>
+</REC>
+<REC ID="626">
+ <LANG ID="0">
+1200
+ </LANG>
+</REC>
+<REC ID="627">
+ <LANG ID="0">
+1200
+ </LANG>
+</REC>
+<REC ID="629">
+ <LANG ID="0">
+1200
+ </LANG>
+</REC>
+<REC ID="630">
+ <LANG ID="0">
+1200
+ </LANG>
+</REC>
+<REC ID="632">
+ <LANG ID="0">
+1200
+ </LANG>
+</REC>
+<REC ID="633">
+ <LANG ID="0">
+1200
+ </LANG>
+</REC>
+<REC ID="635">
+ <LANG ID="0">
+1200
+ </LANG>
+</REC>
+<REC ID="636">
+ <LANG ID="0">
+1200
+ </LANG>
+</REC>
+<REC ID="638">
+ <LANG ID="0">
+1200
+ </LANG>
+</REC>
+<REC ID="639">
+ <LANG ID="0">
+1200
+ </LANG>
+</REC>
+<REC ID="641">
+ <LANG ID="0">
+1200
+ </LANG>
+</REC>
+<REC ID="642">
+ <LANG ID="0">
+1200
+ </LANG>
+</REC>
+<REC ID="644">
+ <LANG ID="0">
+1200
+ </LANG>
+</REC>
+<REC ID="645">
+ <LANG ID="0">
+1200
+ </LANG>
+</REC>
+<REC ID="647">
+ <LANG ID="0">
+1200
+ </LANG>
+</REC>
+<REC ID="648">
+ <LANG ID="0">
+1200
+ </LANG>
+</REC>
+<REC ID="650">
+ <LANG ID="0">
+1200
+ </LANG>
+</REC>
+<REC ID="651">
+ <LANG ID="0">
+1200
+ </LANG>
+</REC>
+<REC ID="654">
+ <LANG ID="0">
+700
+ </LANG>
+</REC>
+<REC ID="655">
+ <LANG ID="0">
+700
+ </LANG>
+</REC>
+<REC ID="656">
+ <LANG ID="0">
+Monday
+ </LANG>
+</REC>
+<REC ID="657">
+ <LANG ID="0">
+bMon
+ </LANG>
+</REC>
+<REC ID="658">
+ <LANG ID="0">
+Monday
+ </LANG>
+</REC>
+<REC ID="659">
+ <LANG ID="0">
+700
+ </LANG>
+</REC>
+<REC ID="660">
+ <LANG ID="0">
+700
+ </LANG>
+</REC>
+<REC ID="661">
+ <LANG ID="0">
+Tuesday
+ </LANG>
+</REC>
+<REC ID="663">
+ <LANG ID="0">
+Tuesday
+ </LANG>
+</REC>
+<REC ID="664">
+ <LANG ID="0">
+700
+ </LANG>
+</REC>
+<REC ID="665">
+ <LANG ID="0">
+Sunday
+ </LANG>
+</REC>
+<REC ID="666">
+ <LANG ID="0">
+Sunday
+ </LANG>
+</REC>
+<REC ID="667">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="668">
+ <LANG ID="0">
+700
+ </LANG>
+</REC>
+<REC ID="669">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="670">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="671">
+ <LANG ID="0">
+700
+ </LANG>
+</REC>
+<REC ID="672">
+ <LANG ID="0">
+Saturday
+ </LANG>
+</REC>
+<REC ID="673">
+ <LANG ID="0">
+Saturday
+ </LANG>
+</REC>
+<REC ID="674">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="675">
+ <LANG ID="0">
+700
+ </LANG>
+</REC>
+<REC ID="676">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="677">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="678">
+ <LANG ID="0">
+700
+ </LANG>
+</REC>
+<REC ID="679">
+ <LANG ID="0">
+Friday
+ </LANG>
+</REC>
+<REC ID="680">
+ <LANG ID="0">
+Friday
+ </LANG>
+</REC>
+<REC ID="681">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="682">
+ <LANG ID="0">
+700
+ </LANG>
+</REC>
+<REC ID="683">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="684">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="685">
+ <LANG ID="0">
+700
+ </LANG>
+</REC>
+<REC ID="686">
+ <LANG ID="0">
+Thursday
+ </LANG>
+</REC>
+<REC ID="687">
+ <LANG ID="0">
+Thursday
+ </LANG>
+</REC>
+<REC ID="688">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="689">
+ <LANG ID="0">
+700
+ </LANG>
+</REC>
+<REC ID="690">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="691">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="692">
+ <LANG ID="0">
+700
+ </LANG>
+</REC>
+<REC ID="693">
+ <LANG ID="0">
+Wednesday
+ </LANG>
+</REC>
+<REC ID="694">
+ <LANG ID="0">
+Wednesday
+ </LANG>
+</REC>
+<REC ID="695">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="696">
+ <LANG ID="0">
+700
+ </LANG>
+</REC>
+<REC ID="697">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="698">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="699">
+ <LANG ID="0">
+bWed
+ </LANG>
+</REC>
+<REC ID="700">
+ <LANG ID="0">
+bThur
+ </LANG>
+</REC>
+<REC ID="702">
+ <LANG ID="0">
+bFri
+ </LANG>
+</REC>
+<REC ID="703">
+ <LANG ID="0">
+bSat
+ </LANG>
+</REC>
+<REC ID="705">
+ <LANG ID="0">
+[--- Block Time End ---]
+ </LANG>
+</REC>
+<REC ID="706">
+ <LANG ID="0">
+[--- Block Time End ---]
+ </LANG>
+</REC>
+<REC ID="707">
+ <LANG ID="0">
+700
+ </LANG>
+</REC>
+<REC ID="708">
+ <LANG ID="0">
+Monday
+ </LANG>
+</REC>
+<REC ID="709">
+ <LANG ID="0">
+Monday
+ </LANG>
+</REC>
+<REC ID="710">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="711">
+ <LANG ID="0">
+700
+ </LANG>
+</REC>
+<REC ID="712">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="713">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="714">
+ <LANG ID="0">
+700
+ </LANG>
+</REC>
+<REC ID="715">
+ <LANG ID="0">
+Thuesday
+ </LANG>
+</REC>
+<REC ID="716">
+ <LANG ID="0">
+Thuesday
+ </LANG>
+</REC>
+<REC ID="717">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="718">
+ <LANG ID="0">
+700
+ </LANG>
+</REC>
+<REC ID="719">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="720">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="721">
+ <LANG ID="0">
+700
+ </LANG>
+</REC>
+<REC ID="722">
+ <LANG ID="0">
+Wednesday
+ </LANG>
+</REC>
+<REC ID="723">
+ <LANG ID="0">
+Wednesday
+ </LANG>
+</REC>
+<REC ID="724">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="725">
+ <LANG ID="0">
+700
+ </LANG>
+</REC>
+<REC ID="726">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="727">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="728">
+ <LANG ID="0">
+700
+ </LANG>
+</REC>
+<REC ID="729">
+ <LANG ID="0">
+Thursday
+ </LANG>
+</REC>
+<REC ID="730">
+ <LANG ID="0">
+Thursday
+ </LANG>
+</REC>
+<REC ID="731">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="732">
+ <LANG ID="0">
+700
+ </LANG>
+</REC>
+<REC ID="733">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="734">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="735">
+ <LANG ID="0">
+700
+ </LANG>
+</REC>
+<REC ID="736">
+ <LANG ID="0">
+Friday
+ </LANG>
+</REC>
+<REC ID="737">
+ <LANG ID="0">
+Friday
+ </LANG>
+</REC>
+<REC ID="738">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="739">
+ <LANG ID="0">
+700
+ </LANG>
+</REC>
+<REC ID="740">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="741">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="742">
+ <LANG ID="0">
+700
+ </LANG>
+</REC>
+<REC ID="743">
+ <LANG ID="0">
+Saturday
+ </LANG>
+</REC>
+<REC ID="744">
+ <LANG ID="0">
+Saturday
+ </LANG>
+</REC>
+<REC ID="745">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="746">
+ <LANG ID="0">
+700
+ </LANG>
+</REC>
+<REC ID="747">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="748">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="749">
+ <LANG ID="0">
+700
+ </LANG>
+</REC>
+<REC ID="750">
+ <LANG ID="0">
+Sunday
+ </LANG>
+</REC>
+<REC ID="751">
+ <LANG ID="0">
+Sunday
+ </LANG>
+</REC>
+<REC ID="752">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="753">
+ <LANG ID="0">
+700
+ </LANG>
+</REC>
+<REC ID="754">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="755">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="756">
+ <LANG ID="0">
+eMon
+ </LANG>
+</REC>
+<REC ID="758">
+ <LANG ID="0">
+eWed
+ </LANG>
+</REC>
+<REC ID="759">
+ <LANG ID="0">
+eThur
+ </LANG>
+</REC>
+<REC ID="760">
+ <LANG ID="0">
+eFri
+ </LANG>
+</REC>
+<REC ID="761">
+ <LANG ID="0">
+eSat
+ </LANG>
+</REC>
+<REC ID="762">
+ <LANG ID="0">
+eSun
+ </LANG>
+</REC>
+<REC ID="763">
+ <LANG ID="0">
+bSun
+ </LANG>
+</REC>
+<REC ID="764">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="765">
+ <LANG ID="0">
+[--- Copyright by Marina Egner, Sheep Industries ---]
+ </LANG>
+</REC>
+<REC ID="766">
+ <LANG ID="0">
+[--- Copyright by Marina Egner, Sheep Industries ---]
+ </LANG>
+</REC>
+<REC ID="767">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="768">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="769">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="770">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="771">
+ <LANG ID="0">
+dFlag
+ </LANG>
+</REC>
+<REC ID="772">
+ <LANG ID="0">
+dReg
+ </LANG>
+</REC>
+<REC ID="773">
+ <LANG ID="0">
+sFlag
+ </LANG>
+</REC>
+<REC ID="774">
+ <LANG ID="0">
+bTue
+ </LANG>
+</REC>
+<REC ID="775">
+ <LANG ID="0">
+eTue
  </LANG>
 </REC>
 </LIB>
