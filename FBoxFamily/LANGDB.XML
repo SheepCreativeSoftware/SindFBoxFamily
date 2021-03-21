@@ -1,4 +1,4 @@
-<LIB LANGUAGES="1" STRINGS="707" LANGSTR="LANG" ACTLANG="English" VERSION="2">
+<LIB LANGUAGES="1" STRINGS="972" LANGSTR="LANG" ACTLANG="English" VERSION="2">
 <REC ID="1">
  <LANG ID="0">
 English
@@ -3530,6 +3530,1331 @@ End.Sunday
  </LANG>
 </REC>
 <REC ID="790">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="791">
+ <LANG ID="0">
+EnergyALE3
+ </LANG>
+</REC>
+<REC ID="792">
+ <LANG ID="0">
+EnergyALE3
+ </LANG>
+</REC>
+<REC ID="793">
+ <LANG ID="0">
+En
+ </LANG>
+</REC>
+<REC ID="798">
+ <LANG ID="0">
+Unit
+ </LANG>
+</REC>
+<REC ID="799">
+ <LANG ID="0">
+ModbusClient
+ </LANG>
+</REC>
+<REC ID="800">
+ <LANG ID="0">
+Modbus.EnergyALE3_0
+ </LANG>
+</REC>
+<REC ID="801">
+ <LANG ID="0">
+LED static symbol
+ </LANG>
+</REC>
+<REC ID="802">
+ <LANG ID="0">
+LED
+ </LANG>
+</REC>
+<REC ID="803">
+ <LANG ID="0">
+T1
+ </LANG>
+</REC>
+<REC ID="804">
+ <LANG ID="0">
+T1part
+ </LANG>
+</REC>
+<REC ID="805">
+ <LANG ID="0">
+T2
+ </LANG>
+</REC>
+<REC ID="806">
+ <LANG ID="0">
+Tariff
+ </LANG>
+</REC>
+<REC ID="807">
+ <LANG ID="0">
+Error
+ </LANG>
+</REC>
+<REC ID="808">
+ <LANG ID="0">
+T2part
+ </LANG>
+</REC>
+<REC ID="809">
+ <LANG ID="0">
+[--- Communication Options ---]
+ </LANG>
+</REC>
+<REC ID="810">
+ <LANG ID="0">
+[--- Communication Options ---]
+ </LANG>
+</REC>
+<REC ID="811">
+ <LANG ID="0">
+1
+ </LANG>
+</REC>
+<REC ID="812">
+ <LANG ID="0">
+1
+ </LANG>
+</REC>
+<REC ID="813">
+ <LANG ID="0">
+Modbus Address
+ </LANG>
+</REC>
+<REC ID="814">
+ <LANG ID="0">
+Modbus Address
+ </LANG>
+</REC>
+<REC ID="815">
+ <LANG ID="0">
+100
+ </LANG>
+</REC>
+<REC ID="816">
+ <LANG ID="0">
+100
+ </LANG>
+</REC>
+<REC ID="817">
+ <LANG ID="0">
+Short reconnect time
+ </LANG>
+</REC>
+<REC ID="818">
+ <LANG ID="0">
+Short reconnect time
+ </LANG>
+</REC>
+<REC ID="819">
+ <LANG ID="0">
+300
+ </LANG>
+</REC>
+<REC ID="820">
+ <LANG ID="0">
+Long reconnect time
+ </LANG>
+</REC>
+<REC ID="821">
+ <LANG ID="0">
+Long reconnect time
+ </LANG>
+</REC>
+<REC ID="822">
+ <LANG ID="0">
+300
+ </LANG>
+</REC>
+<REC ID="823">
+ <LANG ID="0">
+1
+ </LANG>
+</REC>
+<REC ID="824">
+ <LANG ID="0">
+1
+ </LANG>
+</REC>
+<REC ID="825">
+ <LANG ID="0">
+Reconnect now\1)Reconnect
+ </LANG>
+</REC>
+<REC ID="826">
+ <LANG ID="0">
+ModVar2
+ </LANG>
+</REC>
+<REC ID="827">
+ <LANG ID="0">
+Reconnect now
+ </LANG>
+</REC>
+<REC ID="828">
+ <LANG ID="0">
+1
+ </LANG>
+</REC>
+<REC ID="829">
+ <LANG ID="0">
+1
+ </LANG>
+</REC>
+<REC ID="830">
+ <LANG ID="0">
+Request Counter\1)Clear
+ </LANG>
+</REC>
+<REC ID="833">
+ <LANG ID="0">
+Request Counter
+ </LANG>
+</REC>
+<REC ID="834">
+ <LANG ID="0">
+1
+ </LANG>
+</REC>
+<REC ID="835">
+ <LANG ID="0">
+Error Counter\1)Clear
+ </LANG>
+</REC>
+<REC ID="836">
+ <LANG ID="0">
+Error Counter
+ </LANG>
+</REC>
+<REC ID="837">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="838">
+ <LANG ID="0">
+1
+ </LANG>
+</REC>
+<REC ID="839">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="840">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="841">
+ <LANG ID="0">
+ModVar1
+ </LANG>
+</REC>
+<REC ID="844">
+ <LANG ID="0">
+[--- General ---]
+ </LANG>
+</REC>
+<REC ID="845">
+ <LANG ID="0">
+[--- General ---]
+ </LANG>
+</REC>
+<REC ID="846">
+ <LANG ID="0">
+Reactive power total [kvar]
+ </LANG>
+</REC>
+<REC ID="847">
+ <LANG ID="0">
+Reactive power total [kvar]
+ </LANG>
+</REC>
+<REC ID="848">
+ <LANG ID="0">
+Apparent power total  [kVA]
+ </LANG>
+</REC>
+<REC ID="849">
+ <LANG ID="0">
+Apparent power total  [kVA]
+ </LANG>
+</REC>
+<REC ID="850">
+ <LANG ID="0">
+[--- Counter ---]
+ </LANG>
+</REC>
+<REC ID="851">
+ <LANG ID="0">
+[--- Counter ---]
+ </LANG>
+</REC>
+<REC ID="852">
+ <LANG ID="0">
+Tariff 1 total  [kWh]
+ </LANG>
+</REC>
+<REC ID="853">
+ <LANG ID="0">
+Tariff 1 total  [kWh]
+ </LANG>
+</REC>
+<REC ID="854">
+ <LANG ID="0">
+Tariff 1 partial [kWh]
+ </LANG>
+</REC>
+<REC ID="855">
+ <LANG ID="0">
+Tariff 1 partial [kWh]
+ </LANG>
+</REC>
+<REC ID="856">
+ <LANG ID="0">
+Tariff 2 total [kWh]
+ </LANG>
+</REC>
+<REC ID="857">
+ <LANG ID="0">
+Tariff 2 total [kWh]
+ </LANG>
+</REC>
+<REC ID="858">
+ <LANG ID="0">
+Tariff 2 partial [kWh]
+ </LANG>
+</REC>
+<REC ID="859">
+ <LANG ID="0">
+Tariff 2 partial [kWh]
+ </LANG>
+</REC>
+<REC ID="860">
+ <LANG ID="0">
+Voltage [V]
+ </LANG>
+</REC>
+<REC ID="861">
+ <LANG ID="0">
+Voltage [V]
+ </LANG>
+</REC>
+<REC ID="862">
+ <LANG ID="0">
+Current [A]
+ </LANG>
+</REC>
+<REC ID="863">
+ <LANG ID="0">
+Current [A]
+ </LANG>
+</REC>
+<REC ID="864">
+ <LANG ID="0">
+True power  [kW]
+ </LANG>
+</REC>
+<REC ID="865">
+ <LANG ID="0">
+True power  [kW]
+ </LANG>
+</REC>
+<REC ID="866">
+ <LANG ID="0">
+Apparent power [kVA]
+ </LANG>
+</REC>
+<REC ID="867">
+ <LANG ID="0">
+Apparent power [kVA]
+ </LANG>
+</REC>
+<REC ID="868">
+ <LANG ID="0">
+Reactive power [kvar]
+ </LANG>
+</REC>
+<REC ID="869">
+ <LANG ID="0">
+Reactive power [kvar]
+ </LANG>
+</REC>
+<REC ID="870">
+ <LANG ID="0">
+Cosine phi
+ </LANG>
+</REC>
+<REC ID="871">
+ <LANG ID="0">
+Cosine phi
+ </LANG>
+</REC>
+<REC ID="872">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="873">
+ <LANG ID="0">
+Voltage [V]
+ </LANG>
+</REC>
+<REC ID="874">
+ <LANG ID="0">
+Voltage [V]
+ </LANG>
+</REC>
+<REC ID="875">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="876">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="877">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="878">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="879">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="880">
+ <LANG ID="0">
+Current [A]
+ </LANG>
+</REC>
+<REC ID="881">
+ <LANG ID="0">
+Current [A]
+ </LANG>
+</REC>
+<REC ID="882">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="883">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="884">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="885">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="886">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="887">
+ <LANG ID="0">
+True power [kW]
+ </LANG>
+</REC>
+<REC ID="888">
+ <LANG ID="0">
+True power [kW]
+ </LANG>
+</REC>
+<REC ID="889">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="890">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="891">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="892">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="893">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="894">
+ <LANG ID="0">
+Apparent power [kVA]
+ </LANG>
+</REC>
+<REC ID="895">
+ <LANG ID="0">
+Apparent power [kVA]
+ </LANG>
+</REC>
+<REC ID="896">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="897">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="898">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="899">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="900">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="901">
+ <LANG ID="0">
+Reactive power [kvar]
+ </LANG>
+</REC>
+<REC ID="902">
+ <LANG ID="0">
+Reactive power [kvar]
+ </LANG>
+</REC>
+<REC ID="903">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="904">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="905">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="906">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="907">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="908">
+ <LANG ID="0">
+Cosine phi
+ </LANG>
+</REC>
+<REC ID="909">
+ <LANG ID="0">
+Cosine phi
+ </LANG>
+</REC>
+<REC ID="910">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="911">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="912">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="913">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="914">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="915">
+ <LANG ID="0">
+Voltage [V]
+ </LANG>
+</REC>
+<REC ID="916">
+ <LANG ID="0">
+Voltage [V]
+ </LANG>
+</REC>
+<REC ID="917">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="918">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="919">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="920">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="921">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="922">
+ <LANG ID="0">
+Current [A]
+ </LANG>
+</REC>
+<REC ID="923">
+ <LANG ID="0">
+Current [A]
+ </LANG>
+</REC>
+<REC ID="924">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="925">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="926">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="927">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="928">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="929">
+ <LANG ID="0">
+True power [kW]
+ </LANG>
+</REC>
+<REC ID="930">
+ <LANG ID="0">
+True power [kW]
+ </LANG>
+</REC>
+<REC ID="931">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="932">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="933">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="934">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="935">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="936">
+ <LANG ID="0">
+Apparent power [kVA]
+ </LANG>
+</REC>
+<REC ID="937">
+ <LANG ID="0">
+Apparent power [kVA]
+ </LANG>
+</REC>
+<REC ID="938">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="939">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="940">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="941">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="942">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="943">
+ <LANG ID="0">
+Reactive power [kvar]
+ </LANG>
+</REC>
+<REC ID="944">
+ <LANG ID="0">
+Reactive power [kvar]
+ </LANG>
+</REC>
+<REC ID="945">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="946">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="947">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="948">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="949">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="950">
+ <LANG ID="0">
+Cosine phi
+ </LANG>
+</REC>
+<REC ID="951">
+ <LANG ID="0">
+Cosine phi
+ </LANG>
+</REC>
+<REC ID="952">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="953">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="954">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="955">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="956">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="957">
+ <LANG ID="0">
+[--- Phase 3 ---]
+ </LANG>
+</REC>
+<REC ID="958">
+ <LANG ID="0">
+[--- Phase 3 ---]
+ </LANG>
+</REC>
+<REC ID="959">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="960">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="961">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="962">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="963">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="964">
+ <LANG ID="0">
+[--- Phase 2 ---]
+ </LANG>
+</REC>
+<REC ID="965">
+ <LANG ID="0">
+[--- Phase 2 ---]
+ </LANG>
+</REC>
+<REC ID="966">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="967">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="968">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="969">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="970">
+ <LANG ID="0">
+[--- Copyright by Marina Egner, Sheep Industries ---]
+ </LANG>
+</REC>
+<REC ID="971">
+ <LANG ID="0">
+[--- Copyright by Marina Egner, Sheep Industries ---]
+ </LANG>
+</REC>
+<REC ID="972">
+ <LANG ID="0">
+Error message\0)No Error\1)Error Phase 1\2)Error Phase 2\3)Error Phase 1+2\4)Error Phase 3\5)Error Phase 1+3\6)Error Phase 2+3\7)Error Phase All
+ </LANG>
+</REC>
+<REC ID="973">
+ <LANG ID="0">
+Error message
+ </LANG>
+</REC>
+<REC ID="974">
+ <LANG ID="0">
+Tariff\0)Tariff 1\4)Tariff 2
+ </LANG>
+</REC>
+<REC ID="975">
+ <LANG ID="0">
+Tariff
+ </LANG>
+</REC>
+<REC ID="976">
+ <LANG ID="0">
+Power total [kW]
+ </LANG>
+</REC>
+<REC ID="977">
+ <LANG ID="0">
+Power total [kW]
+ </LANG>
+</REC>
+<REC ID="978">
+ <LANG ID="0">
+[--- Phase 1 ---]
+ </LANG>
+</REC>
+<REC ID="979">
+ <LANG ID="0">
+[--- Phase 1 ---]
+ </LANG>
+</REC>
+<REC ID="980">
+ <LANG ID="0">
+ErrMsg
+ </LANG>
+</REC>
+<REC ID="981">
+ <LANG ID="0">
+Tariff
+ </LANG>
+</REC>
+<REC ID="982">
+ <LANG ID="0">
+PwrTot
+ </LANG>
+</REC>
+<REC ID="983">
+ <LANG ID="0">
+AppTot
+ </LANG>
+</REC>
+<REC ID="984">
+ <LANG ID="0">
+ReacTot
+ </LANG>
+</REC>
+<REC ID="985">
+ <LANG ID="0">
+Tar1tot
+ </LANG>
+</REC>
+<REC ID="986">
+ <LANG ID="0">
+Tar1par
+ </LANG>
+</REC>
+<REC ID="987">
+ <LANG ID="0">
+Tar2tot
+ </LANG>
+</REC>
+<REC ID="988">
+ <LANG ID="0">
+Tar2par
+ </LANG>
+</REC>
+<REC ID="989">
+ <LANG ID="0">
+P1U
+ </LANG>
+</REC>
+<REC ID="990">
+ <LANG ID="0">
+P1I
+ </LANG>
+</REC>
+<REC ID="991">
+ <LANG ID="0">
+P1P
+ </LANG>
+</REC>
+<REC ID="992">
+ <LANG ID="0">
+P1S
+ </LANG>
+</REC>
+<REC ID="993">
+ <LANG ID="0">
+P1Q
+ </LANG>
+</REC>
+<REC ID="994">
+ <LANG ID="0">
+P1cos
+ </LANG>
+</REC>
+<REC ID="995">
+ <LANG ID="0">
+P2U
+ </LANG>
+</REC>
+<REC ID="996">
+ <LANG ID="0">
+P2I
+ </LANG>
+</REC>
+<REC ID="997">
+ <LANG ID="0">
+P2P
+ </LANG>
+</REC>
+<REC ID="998">
+ <LANG ID="0">
+P2S
+ </LANG>
+</REC>
+<REC ID="999">
+ <LANG ID="0">
+P2Q
+ </LANG>
+</REC>
+<REC ID="1000">
+ <LANG ID="0">
+P2cos
+ </LANG>
+</REC>
+<REC ID="1001">
+ <LANG ID="0">
+P3U
+ </LANG>
+</REC>
+<REC ID="1002">
+ <LANG ID="0">
+P3I
+ </LANG>
+</REC>
+<REC ID="1003">
+ <LANG ID="0">
+P3P
+ </LANG>
+</REC>
+<REC ID="1004">
+ <LANG ID="0">
+P3S
+ </LANG>
+</REC>
+<REC ID="1005">
+ <LANG ID="0">
+P3Q
+ </LANG>
+</REC>
+<REC ID="1006">
+ <LANG ID="0">
+P3cos
+ </LANG>
+</REC>
+<REC ID="1007">
+ <LANG ID="0">
+ModVar3
+ </LANG>
+</REC>
+<REC ID="1008">
+ <LANG ID="0">
+Function
+ </LANG>
+</REC>
+<REC ID="1009">
+ <LANG ID="0">
+Function
+ </LANG>
+</REC>
+<REC ID="1010">
+ <LANG ID="0">
+Remote Address
+ </LANG>
+</REC>
+<REC ID="1011">
+ <LANG ID="0">
+Remote Address
+ </LANG>
+</REC>
+<REC ID="1012">
+ <LANG ID="0">
+Number of Elements
+ </LANG>
+</REC>
+<REC ID="1013">
+ <LANG ID="0">
+Number of Elements
+ </LANG>
+</REC>
+<REC ID="1014">
+ <LANG ID="0">
+Exception response code
+ </LANG>
+</REC>
+<REC ID="1015">
+ <LANG ID="0">
+Exception response code
+ </LANG>
+</REC>
+<REC ID="1016">
+ <LANG ID="0">
+-1062731519
+ </LANG>
+</REC>
+<REC ID="1017">
+ <LANG ID="0">
+-1062731519
+ </LANG>
+</REC>
+<REC ID="1018">
+ <LANG ID="0">
+IP Address
+ </LANG>
+</REC>
+<REC ID="1019">
+ <LANG ID="0">
+IP Address
+ </LANG>
+</REC>
+<REC ID="1020">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1021">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1022">
+ <LANG ID="0">
+Offset 1-&gt;0\0)No\1)Yes
+ </LANG>
+</REC>
+<REC ID="1023">
+ <LANG ID="0">
+Offset 1-&gt;0
+ </LANG>
+</REC>
+<REC ID="1024">
+ <LANG ID="0">
+Clear
+ </LANG>
+</REC>
+<REC ID="1025">
+ <LANG ID="0">
+sTime
+ </LANG>
+</REC>
+<REC ID="1026">
+ <LANG ID="0">
+dFlag
+ </LANG>
+</REC>
+<REC ID="1027">
+ <LANG ID="0">
+dReg
+ </LANG>
+</REC>
+<REC ID="1028">
+ <LANG ID="0">
+sFlag
+ </LANG>
+</REC>
+<REC ID="1029">
+ <LANG ID="0">
+dBuff1
+ </LANG>
+</REC>
+<REC ID="1030">
+ <LANG ID="0">
+dBuff2
+ </LANG>
+</REC>
+<REC ID="1031">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1032">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1033">
+ <LANG ID="0">
+ConS
+ </LANG>
+</REC>
+<REC ID="1034">
+ <LANG ID="0">
+ConL
+ </LANG>
+</REC>
+<REC ID="1035">
+ <LANG ID="0">
+Counter.TotalT1
+ </LANG>
+</REC>
+<REC ID="1036">
+ <LANG ID="0">
+Counter.TotalPartT1
+ </LANG>
+</REC>
+<REC ID="1037">
+ <LANG ID="0">
+Counter.TotalPartT2
+ </LANG>
+</REC>
+<REC ID="1038">
+ <LANG ID="0">
+Counter.TotalT2
+ </LANG>
+</REC>
+<REC ID="1039">
+ <LANG ID="0">
+General.Status
+ </LANG>
+</REC>
+<REC ID="1040">
+ <LANG ID="0">
+General.Tariff
+ </LANG>
+</REC>
+<REC ID="1041">
+ <LANG ID="0">
+Total.Power
+ </LANG>
+</REC>
+<REC ID="1042">
+ <LANG ID="0">
+Total.ApparentPower
+ </LANG>
+</REC>
+<REC ID="1043">
+ <LANG ID="0">
+Total.ReactivePower
+ </LANG>
+</REC>
+<REC ID="1044">
+ <LANG ID="0">
+Phase1.Voltage
+ </LANG>
+</REC>
+<REC ID="1045">
+ <LANG ID="0">
+Phase1.Current
+ </LANG>
+</REC>
+<REC ID="1046">
+ <LANG ID="0">
+Phase1.Power
+ </LANG>
+</REC>
+<REC ID="1047">
+ <LANG ID="0">
+Phase1.ApparentPower
+ </LANG>
+</REC>
+<REC ID="1048">
+ <LANG ID="0">
+Phase1.ReactivePower
+ </LANG>
+</REC>
+<REC ID="1049">
+ <LANG ID="0">
+Phase1.Cosine
+ </LANG>
+</REC>
+<REC ID="1050">
+ <LANG ID="0">
+Phase2.Cosine
+ </LANG>
+</REC>
+<REC ID="1051">
+ <LANG ID="0">
+Phase3.Cosine
+ </LANG>
+</REC>
+<REC ID="1052">
+ <LANG ID="0">
+Phase3.ReactivePower
+ </LANG>
+</REC>
+<REC ID="1053">
+ <LANG ID="0">
+Phase2.ReactivePower
+ </LANG>
+</REC>
+<REC ID="1054">
+ <LANG ID="0">
+Phase2.ApparentPower
+ </LANG>
+</REC>
+<REC ID="1055">
+ <LANG ID="0">
+Phase3.ApparentPower
+ </LANG>
+</REC>
+<REC ID="1056">
+ <LANG ID="0">
+Phase3.Power
+ </LANG>
+</REC>
+<REC ID="1057">
+ <LANG ID="0">
+Phase2.Power
+ </LANG>
+</REC>
+<REC ID="1058">
+ <LANG ID="0">
+Phase3.Current
+ </LANG>
+</REC>
+<REC ID="1059">
+ <LANG ID="0">
+Phase2.Current
+ </LANG>
+</REC>
+<REC ID="1060">
+ <LANG ID="0">
+Phase3.Voltage
+ </LANG>
+</REC>
+<REC ID="1061">
+ <LANG ID="0">
+Phase2.Voltage
+ </LANG>
+</REC>
+<REC ID="1062">
+ <LANG ID="0">
+Sind Family.Energy
+ </LANG>
+</REC>
+<REC ID="1063">
  <LANG ID="0">
 
  </LANG>

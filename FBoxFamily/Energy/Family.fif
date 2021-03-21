@@ -6,15 +6,16 @@ Version=0
 Opened=1
 HelpID=0
 HelpTopicID=0
-Internal=0
+Internal=2
 Shared=0
 TargetFile=Energy
 DescID=0
 
 [BLOCKS]
-COUNT=4
+COUNT=5
 Block1=EnergyMonthly
 Block2=WorkHours
 Block3=EnergyDaily
 Block4=BlockTime
+Block5=EnergyALE3
 

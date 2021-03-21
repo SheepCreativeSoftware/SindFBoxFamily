@@ -1,0 +1,414 @@
+$SKIP
+;;*******************************************************************************
+;; EnergyALE3 FBox | v0.1.5 | 21.03.2021 22:35Z
+;; Copyright (C) 2020 Marina Egner <info@sheepindustries.de>
+;; Author: Marina Egner
+;;
+;; This program is free software: you can redistribute it and/or modify it
+;; under the terms of the GNU General Public License as published by the
+;; Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+;;                                                                   
+;; This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+;; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+;; See the GNU General Public License for more details.
+;;
+;; You should have received a copy of the GNU General Public License along with this program.
+;; If not, see <https://www.gnu.org/licenses/>.
+;; *******************************************************************************
+;;
+;; REVISION HISTORY
+;; v0.0.2  21.03.2021 - M.Egner | Initial edit;
+;; v0.1.0  21.03.2021 - M.Egner | Release Version;
+;; v0.1.2  21.03.2021 - M.Egner | Corrected True Power;
+;; v0.1.5  21.03.2021 - M.Egner | Added Total Calculation;
+;;
+;; DESCRIPTION
+;; EnergyMonthly saves the monthly consumption of ernegy and show it.
+$ENDSKIP
+
+$REPORT SindFamily: EnergyALE3 | FBox v0.1.5
+; Check if Firmware version in DC is new enought, cause special condition codes where in use
+$IF S.CPU.MinFWVersion < 12000
+$FATAL SindFamily: Configured Firmware in Device Configurator is too Old! FBox needs min 1.20.00.
+$ENDIF
+
+$IFNB <Vers> ; Not in use
+$ENDIF
+
+;            ###################################################################
+;             ==================================== Init constants
+;cWaitingTime  EQU    K 3600                      ; Time of 1/10 Hour
+;             ------------------------------------
+dynActive     LEQU   dynFlag                     ; 
+dynError      LEQU   dynFlag+1                   ; 
+dynConS       LEQU   dynFlag+2                   ; 
+dynConL       LEQU   dynFlag+3                   ; 
+dynSamplePulse LEQU  dynFlag+4                   ; 
+dynErrorRead  LEQU   dynFlag+5                   ;
+;             ------------------------------------ Init dynamic Register 
+dynSampleTime LEQU   dynRegister                 ; Time Hour and Minute
+dynFloatPhU   LEQU   dynRegister+1
+dynFloatPhI   LEQU   dynRegister+2
+dynFloatPhQ   LEQU   dynRegister+3
+dynFloatPhS   LEQU   dynRegister+4
+dynFloatPhP   LEQU   dynRegister+5
+dynFloatPhcos LEQU   dynRegister+6
+dynResult     LEQU   dynRegister+7
+dynResult2    LEQU   dynRegister+8
+;             ------------------------------------ Init dynamic Flags 
+stcModClientLED LEQU stcFlag                     ; 
+stcModRead1LED LEQU  stcFlag+1                   ; 
+stcModRead2LED LEQU  stcFlag+2                   ; 
+stcModExecute LEQU   stcFlag+3                   ; 
+stcModExecute2 LEQU  stcFlag+4                   ; 
+;             ------------------------------------ Init static Register
+;sHourMinute   LEQU   stcRegister                 ; Time Hour and Minutes HHMM
+;             ------------------------------------
+;            ###################################################################
+
+lRUN:
+;             ------------------------------------ Init Modbus Client
+              ACC    H                           ;
+              _MODBUS_CLUNIT3 (2,                ; Version Indicator
+                     inEnable,                   ; Input #1 (Enable)
+                     inClear,                    ; Input #2 (Clear)
+                     dynActive,                  ; Output #1 (Active)
+                     dynError,                   ; Output #2 (Error)
+                     dynConS,                    ; Output #3 (ConS)
+                     dynConL,                    ; Output #4 (ConL)
+                     stcModbusVar1,              ; Flag [2]: Static Clear Request+0/Error+1 Counter
+                     stcModbusVar2,              ; Flag [1]: Static Reconnection now
+                     stcModbusVar3,              ; Register [6]: Static Request Counter+0 ; Error counter+1 ; Function +2 ; Remote address+3 ; Number of elements+4 Exception response code+5
+                     stcModClientLED,            ; Flag [1]: Static LED
+                     adjIPAdd,                   ; Adjust: Init IP Address
+                     adjModbusAddress,           ; Adjust: Init  Unit Identifier
+                     adjOffset,                  ; Adjust: Init  Offset 0
+                     adjShortReconTime,          ; Adjust: Init  Short Recon Time
+                     adjLongReconTime,           ; Adjust: Init  Long Recon Time
+                     adjReconnect,               ; Adjust: Init  Recon now
+                     adjRequestCntClear,         ; Adjust: Init  Clear Request Counter
+                     adjErrorCntClear,           ; Adjust: Init  Clear Error Counter
+                     Name,                       ; uName Unit
+                     Ref)                        ; Ref ModbusClient
+;             ------------------------------------ 
+lBlink:
+;             ------------------------------------ Read Data only after 10 Seconds
+              ACC    H                           ;
+              LD     dynSampleTime               ; load Time for Read Data
+                     K 70                        ;
+;             ------------------------------------ Generate Pulse                     
+              STL    inEnable                    ; if Input is not High
+              JR     H lSampleDisable            ; then go to End
+              STL    stcSampleTimer              ; If timer is timed out
+              JR     L lSampleEnd                ; then go to the end
+                                                 ; else set Timer
+                     _FUPConv100msToTimer(dynSampleTime , stcSampleTimer) ;; make sure we are always executing in 100 ms.
+              JR     lSampleEnd                  ; and then got to the end and set output
+;             ------------------------------------
+lSampleDisable:
+;             ------------------------------------ Stopp Timer and got ot the End
+              LD     stcSampleTimer              ;
+                     0                           ;
+              ACC    L                           ; Set ACCU to Low for Output
+;             ------------------------------------
+lSampleEnd:
+;             ------------------------------------
+              OUT    dynSamplePulse              ; 
+;             ------------------------------------
+lReadFirst:
+;             ------------------------------------
+              _MODBUS_RXINT (1,                  ; Vers 1
+                     dynSamplePulse,             ; Input #1 (Enable)
+                     dynErrorRead,               ; Output #1 (Error)
+                     dynReadBuffer1,             ; Constant #1 Register for Read Buffer
+                     11,                         ; Constant #2 Number of Registers to Read
+                     stcModExecute,              ; Flag [1] Static Execute now
+                     stcModRead1LED,             ; Flag [1]: Static LED
+                     3,                          ; Adjust: Init (Function code) 3 Read Holding Register 
+                     2,                          ; Adjust: Init (Processing) 2=16 Bits Unsigned
+                     24,                         ; Adjust: Init (Remote base address)
+                     1,                          ; Adjust: Init (Execute now)
+                     Name)                       ; Ref Unit
+;             ------------------------------------
+lReadSecond:
+;             ------------------------------------
+              _MODBUS_RXINT (1,                  ; Vers 1
+                     dynSamplePulse,             ; Input #1 (Enable)
+                     dynErrorRead,               ; Output #1 (Error)
+                     dynReadBuffer2,             ; Constant #1 Register for Read Buffer
+                     17,                         ; Constant #2 Number of Registers to Read
+                     stcModExecute2,             ; Flag [1] Static Execute now
+                     stcModRead2LED,             ; Flag [1]: Static LED
+                     3,                          ; Adjust: Init (Function code) 3 Read Holding Register 
+                     1,                          ; Adjust: Init (Processing) 1=16 Bits Signed
+                     35,                         ; Adjust: Init (Remote base address)
+                     1,                          ; Adjust: Init (Execute now)
+                     Name)                       ; Ref Unit
+;             ------------------------------------
+lLoadBuffer1:
+;             ------------------------------------
+              STH    inEnable                    ; If High go on
+              JR     L lEnd                      ; else jump to the end    
+;             ------------------------------------ Copy Read Data to Static
+              COPY   dynReadBuffer1              ; Copy to
+                     stcErrorMessage             ; 
+              COPY   dynReadBuffer1+2            ; Copy to
+                     stcActualTariff             ; 
+;             ------------------------------------ Complete Low and High byte of Total Energy
+              MOV    dynReadBuffer1+3            ; Move from this source
+                     W 0                         ; the Word 0
+                     stcTariff1Total             ; to this destination
+                     W 1                         ; at Position Word 1
+              MOV    dynReadBuffer1+4            ; Move from this source
+                     W 0                         ; the Word 0
+                     stcTariff1Total             ; to this destination
+                     W 0                         ; at Position Word 0
+;             ------------------------------------ Complete Low and High byte of Total Energy Partial
+              MOV    dynReadBuffer1+5            ; Move from this source
+                     W 0                         ; the Word 0
+                     stcTariff1Part              ; to this destination
+                     W 1                         ; at Position Word 1
+              MOV    dynReadBuffer1+6            ; Move from this source
+                     W 0                         ; the Word 0
+                     stcTariff1Part              ; to this destination
+                     W 0                         ; at Position Word 0
+;             ------------------------------------ Complete Low and High byte of Total Energy 2
+              MOV    dynReadBuffer1+7            ; Move from this source
+                     W 0                         ; the Word 0
+                     stcTariff2Total             ; to this destination
+                     W 1                         ; at Position Word 1
+              MOV    dynReadBuffer1+8            ; Move from this source
+                     W 0                         ; the Word 0
+                     stcTariff2Total             ; to this destination
+                     W 0                         ; at Position Word 0
+;             ------------------------------------ Complete Low and High byte of Total Energy Partial 2
+              MOV    dynReadBuffer1+9            ; Move from this source
+                     W 0                         ; the Word 0
+                     stcTariff2Part              ; to this destination
+                     W 1                         ; at Position Word 1
+              MOV    dynReadBuffer1+10           ; Move from this source
+                     W 0                         ; the Word 0
+                     stcTariff2Part              ; to this destination
+                     W 0                         ; at Position Word 0
+;             ------------------------------------
+lLoadBuffer2:
+;             ------------------------------------ Copy Phase1
+              COPY   dynReadBuffer2              ; Copy to
+                     stcPh1U                     ; 
+              COPY   dynReadBuffer2+1            ; Copy to
+                     stcPh1I                     ; 
+              ;COPY   dynReadBuffer2+2            ; Copy to
+              ;       stcPh1P                     ; 
+              MUL    dynReadBuffer2+3            ; Multiply 
+                     K 10                        ; by 10
+                     stcPh1Q                     ; to get DEC.3
+              ;COPY   dynReadBuffer2+4            ; Copy to
+              ;       stcPh1cos                   ; 
+;             ------------------------------------ Calculate Values
+              COPY   stcPh1U                     ;
+                     dynFloatPhU                 ;
+              IFP    dynFloatPhU                 ; Convert to Float
+                     0                           ;
+              COPY   stcPh1I                     ;
+                     dynFloatPhI                 ;
+              IFP    dynFloatPhI                 ; Convert to Float
+                     -1                          ;
+              COPY   stcPh1Q                     ;
+                     dynFloatPhQ                 ;
+              IFP    dynFloatPhQ                 ; Convert to Float
+                     0                           ;
+              FMUL   dynFloatPhU                 ; Multiply Voltage
+                     dynFloatPhI                 ; by Current
+                     dynFloatPhS                 ; to get Apparent Power 93
+;             ------------------------------------ S=squ(P²+Q²) -> squ(S²-Q²)=P
+              FMUL   dynFloatPhS                 ; Multiply 
+                     dynFloatPhS                 ; by self
+                     dynResult                   ; to get square
+              FMUL   dynFloatPhQ                 ; Multiply 
+                     dynFloatPhQ                 ; by self
+                     dynResult2                  ; to get square
+              FSUB   dynResult                   ; Subtract square of Apparent Power
+                     dynResult2                  ; by square of Reactive power 
+                     dynResult                   ; to get square of True power
+              FSQR   dynResult                   ; get square root
+                     dynFloatPhP                 ; True Power
+;             ------------------------------------ cos phi = P/S
+              FDIV   dynFloatPhP                 ;
+                     dynFloatPhS                 ;
+                     dynFloatPhcos               ;
+;             ------------------------------------ Convert Back to Integer
+              FPI    dynFloatPhS                 ; Convert to Integer
+                     0                           ; by 0 to get VA
+              COPY   dynFloatPhS                 ; Copy to Integer store value
+                     stcPh1S                     ;
+              FPI    dynFloatPhP                 ; Convert to Integer
+                     0                           ; by 0 to get W
+              COPY   dynFloatPhP                 ; Copy to Integer store value
+                     stcPh1P                     ;
+              FPI    dynFloatPhcos               ; Convert to Integer
+                     2                           ; by 0 to get W
+              COPY   dynFloatPhcos               ; Copy to Integer store value
+                     stcPh1cos                   ;
+;             ------------------------------------ Copy Phase2
+              COPY   dynReadBuffer2+5            ; Copy to
+                     stcPh2U                     ; 
+              COPY   dynReadBuffer2+6            ; Copy to
+                     stcPh2I                     ; 
+              ;COPY   dynReadBuffer2+7            ; Copy to
+              ;       stcPh2P                     ; 
+              MUL    dynReadBuffer2+8            ; Multiply 
+                     K 10                        ; by 10
+                     stcPh2Q                     ; to get DEC.3
+              ;COPY   dynReadBuffer2+9            ; Copy to
+              ;       stcPh2cos                   ; 
+;             ------------------------------------ Calculate Values
+              COPY   stcPh2U                     ;
+                     dynFloatPhU                 ;
+              IFP    dynFloatPhU                 ; Convert to Float
+                     0                           ;
+              COPY   stcPh2I                     ;
+                     dynFloatPhI                 ;
+              IFP    dynFloatPhI                 ; Convert to Float
+                     -1                          ;
+              COPY   stcPh2Q                     ;
+                     dynFloatPhQ                 ;
+              IFP    dynFloatPhQ                 ; Convert to Float
+                     0                           ;
+              FMUL   dynFloatPhU                 ; Multiply Voltage
+                     dynFloatPhI                 ; by Current
+                     dynFloatPhS                 ; to get Apparent Power
+;             ------------------------------------ S=squ(P²+Q²) -> squ(S²-Q²)=P
+              FMUL   dynFloatPhS                 ; Multiply 
+                     dynFloatPhS                 ; by self
+                     dynResult                   ; to get square
+              FMUL   dynFloatPhQ                 ; Multiply 
+                     dynFloatPhQ                 ; by self
+                     dynResult2                  ; to get square
+              FSUB   dynResult                   ; Subtract square of Apparent Power
+                     dynResult2                  ; by square of Reactive power 
+                     dynResult                   ; to get square of True power
+              FSQR   dynResult                   ; get square root
+                     dynFloatPhP                 ; True Power
+;             ------------------------------------ cos phi = P/S
+              FDIV   dynFloatPhP                 ;
+                     dynFloatPhS                 ;
+                     dynFloatPhcos               ;
+;             ------------------------------------ Convert Back to Integer
+              FPI    dynFloatPhS                 ; Convert to Integer
+                     0                           ; by 0 to get VA
+              COPY   dynFloatPhS                 ; Copy to Integer store value
+                     stcPh2S                     ;
+              FPI    dynFloatPhP                 ; Convert to Integer
+                     0                           ; by 0 to get W
+              COPY   dynFloatPhP                 ; Copy to Integer store value
+                     stcPh2P                     ;
+              FPI    dynFloatPhcos               ; Convert to Integer
+                     2                           ; by 0 to get W
+              COPY   dynFloatPhcos               ; Copy to Integer store value
+                     stcPh2cos                   ;
+;             ------------------------------------ Copy Phase3
+              COPY   dynReadBuffer2+10           ; Copy to
+                     stcPh3U                     ; 
+              COPY   dynReadBuffer2+11           ; Copy to
+                     stcPh3I                     ; 
+              ;COPY   dynReadBuffer2+12           ; Copy to
+              ;       stcPh3P                     ; 
+              MUL    dynReadBuffer2+13            ; Multiply 
+                     K 10                        ; by 10
+                     stcPh3Q                     ; to get DEC.3
+              ;COPY   dynReadBuffer2+14           ; Copy to
+              ;       stcPh3cos                   ; 
+;             ------------------------------------ Calculate Values
+              COPY   stcPh3U                     ;
+                     dynFloatPhU                 ;
+              IFP    dynFloatPhU                 ; Convert to Float
+                     0                           ;
+              COPY   stcPh3I                     ;
+                     dynFloatPhI                 ;
+              IFP    dynFloatPhI                 ; Convert to Float
+                     -1                          ;
+              COPY   stcPh3Q                     ;
+                     dynFloatPhQ                 ;
+              IFP    dynFloatPhQ                 ; Convert to Float
+                     0                           ;
+              FMUL   dynFloatPhU                 ; Multiply Voltage
+                     dynFloatPhI                 ; by Current
+                     dynFloatPhS                 ; to get Apparent Power
+;             ------------------------------------ S=squ(P²+Q²) -> squ(S²-Q²)=P
+              FMUL   dynFloatPhS                 ; Multiply 
+                     dynFloatPhS                 ; by self
+                     dynResult                   ; to get square
+              FMUL   dynFloatPhQ                 ; Multiply 
+                     dynFloatPhQ                 ; by self
+                     dynResult2                  ; to get square
+              FSUB   dynResult                   ; Subtract square of Apparent Power
+                     dynResult2                  ; by square of Reactive power 
+                     dynResult                   ; to get square of True power
+              FSQR   dynResult                   ; get square root
+                     dynFloatPhP                 ; True Power
+;             ------------------------------------ cos phi = P/S
+              FDIV   dynFloatPhP                 ;
+                     dynFloatPhS                 ;
+                     dynFloatPhcos               ;
+;             ------------------------------------ Convert Back to Integer
+              FPI    dynFloatPhS                 ; Convert to Integer
+                     0                           ; by 0 to get VA
+              COPY   dynFloatPhS                 ; Copy to Integer store value
+                     stcPh3S                     ;
+              FPI    dynFloatPhP                 ; Convert to Integer
+                     0                           ; by 0 to get W
+              COPY   dynFloatPhP                 ; Copy to Integer store value
+                     stcPh3P                     ;
+              FPI    dynFloatPhcos               ; Convert to Integer
+                     2                           ; by 0 to get W
+              COPY   dynFloatPhcos               ; Copy to Integer store value
+                     stcPh3cos                   ;
+;             ------------------------------------
+              ;MUL    dynReadBuffer2+15           ; 
+              ;       K 10                        ;
+              ;       stcTruePowerTotal           ; 
+              MUL    dynReadBuffer2+16           ; Copy to
+                     K 10                        ;
+                     stcReactivePowerTotal       ; 
+;             ------------------------------------
+              ADD    stcPh1P                     ;
+                     stcPh2P                     ;
+                     dynResult                   ;
+              ADD    dynResult                   ;
+                     stcPh3P                     ;
+                     stcTruePowerTotal           ; 
+;             ------------------------------------
+              ADD    stcPh1S                     ;
+                     stcPh2S                     ;
+                     dynResult                   ;
+              ADD    dynResult                   ;
+                     stcPh3S                     ;
+                     stcApparentPowerTotal       ;
+;             ------------------------------------
+lEnd:
+;             ------------------------------------ 
+              COPY   stcTariff1Total             ; Copy to
+                     outTotal1                   ; Output
+              COPY   stcTariff1Part              ; Copy to
+                     outTotal1Part               ; Output
+              COPY   stcTariff2Total             ; Copy to
+                     outTotal2                   ; Output
+              COPY   stcTariff2Part              ; Copy to
+                     outTotal2Part               ; Output
+              CMP    stcActualTariff             ; Copy to
+                     K 4                         ; Output
+              ACC    EQ                          ;
+              OUT    outTariff                   ;
+              COPY   stcErrorMessage             ; Copy to
+                     outError                    ; Output
+              STH    dynConS                     ; 
+              OUT    outConS                     ;
+              STH    dynConL                     ; 
+              OUT    outConL                     ;
+;             ------------------------------------
+              STH    stcModClientLED             ;
+              ORH    stcModRead1LED              ;
+              ORH    stcModRead2LED              ;
+              OUT    LED                         ;
+;             ------------------------------------
+;TheEnd
