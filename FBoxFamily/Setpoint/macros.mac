@@ -1,0 +1,89 @@
+$SKIP
+;;*******************************************************************************
+;; Energy MACRO Library | v0.0.1 | 07.05.2021 19:17Z
+;; Copyright (C) 2020 Marina Egner <info@sheepindustries.de>
+;; Author: Marina Egner
+;;
+;; This program is free software: you can redistribute it and/or modify it
+;; under the terms of the GNU General Public License as published by the
+;; Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+;;
+;; This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+;; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+;; See the GNU General Public License for more details.
+;;
+;; You should have received a copy of the GNU General Public License along with this program.
+;; If not, see <https://www.gnu.org/licenses/>.
+;; *******************************************************************************
+;;
+;; REVISION HISTORY
+;; v0.0.1  07.05.2021 - M.Egner | Initial edit;
+;;
+;; DESCRIPTION
+;; EnergyLibrary.
+$ENDSKIP
+
+$SKIP
+;; ****************************************************************************
+;; Description:  Copy the Asjust Value to the Output and 
+;; to a Display Value for the Output
+;; ****************************************************************************
+$ENDSKIP
+;;macro definition 
+SIND_CopyAdjustToOutput MACRO sAdjustVal,        ; Adjust Val
+                     dOutputVal,                 ; Output Val
+                     sDisplayOutVal              ; Display Output Val
+
+;; ****************************************************************************
+;; MACRO code
+;; ****************************************************************************
+
+;             ==================================== 
+$IFNB <sDisplayOutVal>                           ; if parameter is supplied (not blank)
+              COPY   sAdjustVal                  ; then Copy Adjust Val
+                     sDisplayOutVal              ; to Display Output Val
+$ENDIF                                           ; 
+              COPY   sAdjustVal                  ; Copy Adjust Val
+                     dOutputVal                  ; to Output Val
+;             ------------------------------------
+;             ====================================
+              ENDM
+
+$SKIP
+;; ****************************************************************************
+;; Description:  Change Output between Input and Adjust according to Out of Service
+;; ****************************************************************************
+$ENDSKIP
+;;macro definition  
+SIND_CopyIfOutOfService MACRO sAdjustVal,        ; Adjust Val
+                     dInputVal,                  ; Input Val
+                     sOutOfService,              ; Out of Service
+                     dOutputVal,                 ; Output Val
+                     sDisplayOutVal              ; Display Output Val
+
+;; ****************************************************************************
+;; MACRO code
+;; ****************************************************************************
+
+;             ==================================== 
+              CMP    sOutOfService               ; If Value is
+                     K 1                         ; set to 1
+              JR     NE lNormal                  ; not set then Jump
+              COPY   sAdjustVal                  ; then else Copy Adjust Val
+                     dOutputVal                  ; to Display Output Val
+              JR     lEnd                        ; Then got to the end
+;             ------------------------------------ 
+lNormal:
+;             ------------------------------------ 
+              COPY   dInputVal                   ; Copy Adjust Val
+                     dOutputVal                  ; to Output Val
+;             ------------------------------------
+lEnd:
+;             ------------------------------------
+$IFNB <sDisplayOutVal>                           ; if parameter is supplied (not blank)
+              COPY   dOutputVal                  ; then Copy Adjust Val
+                     sDisplayOutVal              ; to Display Output Val
+$ENDIF                                           ;
+;             ====================================
+              ENDM
+		    		    

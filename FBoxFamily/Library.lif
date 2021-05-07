@@ -2,7 +2,7 @@
 NameID=2
 Enabled=0
 Status=0
-Version=2044
+Version=2066
 HelpID=0
 Internal=2
 HelpFileID=0
@@ -42,8 +42,9 @@ PG5_23=Yes
 PG5Libs=Usr
 
 [Families]
-COUNT=1
+COUNT=2
 Fam1=Energy\
+Fam2=Setpoint\
 
 [DOCUMENTS]
 COUNT=1

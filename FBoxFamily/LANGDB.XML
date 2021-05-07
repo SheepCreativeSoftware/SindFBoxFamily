@@ -1,4 +1,4 @@
-<LIB LANGUAGES="1" STRINGS="972" LANGSTR="LANG" ACTLANG="English" VERSION="2">
+<LIB LANGUAGES="1" STRINGS="1250" LANGSTR="LANG" ACTLANG="English" VERSION="2">
 <REC ID="1">
  <LANG ID="0">
 English
@@ -36,7 +36,7 @@ EnergyMonthly
 </REC>
 <REC ID="8">
  <LANG ID="0">
-Energy.Monthly
+Energy.Monthly?
  </LANG>
 </REC>
 <REC ID="9">
@@ -2421,7 +2421,7 @@ sFlag
 </REC>
 <REC ID="524">
  <LANG ID="0">
-Working
+WorkHours?
  </LANG>
 </REC>
 <REC ID="525">
@@ -2586,7 +2586,7 @@ ActualDay
 </REC>
 <REC ID="558">
  <LANG ID="0">
-Energy.Daily
+Energy.Daily?
  </LANG>
 </REC>
 <REC ID="559">
@@ -2691,7 +2691,7 @@ StartMin
 </REC>
 <REC ID="579">
  <LANG ID="0">
-Energy.BlockTime
+Energy.BlockTime?
  </LANG>
 </REC>
 <REC ID="580">
@@ -3561,7 +3561,7 @@ ModbusClient
 </REC>
 <REC ID="800">
  <LANG ID="0">
-Modbus.EnergyALE3_0
+Modbus.EnergyALE3_?
  </LANG>
 </REC>
 <REC ID="801">
@@ -4857,6 +4857,1396 @@ Sind Family.Energy
 <REC ID="1063">
  <LANG ID="0">
 
+ </LANG>
+</REC>
+<REC ID="1064">
+ <LANG ID="0">
+Setpoint
+ </LANG>
+</REC>
+<REC ID="1065">
+ <LANG ID="0">
+DEC.0
+ </LANG>
+</REC>
+<REC ID="1066">
+ <LANG ID="0">
+SetD0
+ </LANG>
+</REC>
+<REC ID="1067">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1068">
+ <LANG ID="0">
+[--- Options ---]
+ </LANG>
+</REC>
+<REC ID="1069">
+ <LANG ID="0">
+[--- Options ---]
+ </LANG>
+</REC>
+<REC ID="1070">
+ <LANG ID="0">
+[--- Copyright by Marina Egner, Sheep Industries ---]
+ </LANG>
+</REC>
+<REC ID="1071">
+ <LANG ID="0">
+[--- Copyright by Marina Egner, Sheep Industries ---]
+ </LANG>
+</REC>
+<REC ID="1072">
+ <LANG ID="0">
+Sind Family.Setpoint
+ </LANG>
+</REC>
+<REC ID="1073">
+ <LANG ID="0">
+Setpoint.DEC0_?
+ </LANG>
+</REC>
+<REC ID="1074">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1075">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1076">
+ <LANG ID="0">
+Value
+ </LANG>
+</REC>
+<REC ID="1077">
+ <LANG ID="0">
+Val
+ </LANG>
+</REC>
+<REC ID="1078">
+ <LANG ID="0">
+Value
+ </LANG>
+</REC>
+<REC ID="1079">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1080">
+ <LANG ID="0">
+Output
+ </LANG>
+</REC>
+<REC ID="1081">
+ <LANG ID="0">
+Output
+ </LANG>
+</REC>
+<REC ID="1082">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1083">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1084">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1085">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1086">
+ <LANG ID="0">
+Out
+ </LANG>
+</REC>
+<REC ID="1087">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1088">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1089">
+ <LANG ID="0">
+SetD1
+ </LANG>
+</REC>
+<REC ID="1090">
+ <LANG ID="0">
+SetD1
+ </LANG>
+</REC>
+<REC ID="1091">
+ <LANG ID="0">
+SetD1
+ </LANG>
+</REC>
+<REC ID="1092">
+ <LANG ID="0">
+DEC.1
+ </LANG>
+</REC>
+<REC ID="1093">
+ <LANG ID="0">
+Setpoint.DEC1_?
+ </LANG>
+</REC>
+<REC ID="1094">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1095">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1096">
+ <LANG ID="0">
+Sind Family.Setpoint
+ </LANG>
+</REC>
+<REC ID="1097">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1098">
+ <LANG ID="0">
+Val
+ </LANG>
+</REC>
+<REC ID="1099">
+ <LANG ID="0">
+Out
+ </LANG>
+</REC>
+<REC ID="1100">
+ <LANG ID="0">
+[--- Options ---]
+ </LANG>
+</REC>
+<REC ID="1101">
+ <LANG ID="0">
+[--- Options ---]
+ </LANG>
+</REC>
+<REC ID="1102">
+ <LANG ID="0">
+Value
+ </LANG>
+</REC>
+<REC ID="1103">
+ <LANG ID="0">
+Value
+ </LANG>
+</REC>
+<REC ID="1104">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1105">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1106">
+ <LANG ID="0">
+Output
+ </LANG>
+</REC>
+<REC ID="1107">
+ <LANG ID="0">
+Output
+ </LANG>
+</REC>
+<REC ID="1108">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1109">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1110">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1111">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1112">
+ <LANG ID="0">
+[--- Copyright by Marina Egner, Sheep Industries ---]
+ </LANG>
+</REC>
+<REC ID="1113">
+ <LANG ID="0">
+[--- Copyright by Marina Egner, Sheep Industries ---]
+ </LANG>
+</REC>
+<REC ID="1114">
+ <LANG ID="0">
+SetD2
+ </LANG>
+</REC>
+<REC ID="1115">
+ <LANG ID="0">
+SetD2
+ </LANG>
+</REC>
+<REC ID="1116">
+ <LANG ID="0">
+SetD2
+ </LANG>
+</REC>
+<REC ID="1117">
+ <LANG ID="0">
+DEC.2
+ </LANG>
+</REC>
+<REC ID="1118">
+ <LANG ID="0">
+Setpoint.DEC2_?
+ </LANG>
+</REC>
+<REC ID="1119">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1120">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1121">
+ <LANG ID="0">
+Sind Family.Setpoint
+ </LANG>
+</REC>
+<REC ID="1122">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1123">
+ <LANG ID="0">
+Val
+ </LANG>
+</REC>
+<REC ID="1124">
+ <LANG ID="0">
+Out
+ </LANG>
+</REC>
+<REC ID="1125">
+ <LANG ID="0">
+[--- Options ---]
+ </LANG>
+</REC>
+<REC ID="1126">
+ <LANG ID="0">
+[--- Options ---]
+ </LANG>
+</REC>
+<REC ID="1127">
+ <LANG ID="0">
+Value
+ </LANG>
+</REC>
+<REC ID="1128">
+ <LANG ID="0">
+Value
+ </LANG>
+</REC>
+<REC ID="1129">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1130">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1131">
+ <LANG ID="0">
+Output
+ </LANG>
+</REC>
+<REC ID="1132">
+ <LANG ID="0">
+Output
+ </LANG>
+</REC>
+<REC ID="1133">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1134">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1135">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1136">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1137">
+ <LANG ID="0">
+[--- Copyright by Marina Egner, Sheep Industries ---]
+ </LANG>
+</REC>
+<REC ID="1138">
+ <LANG ID="0">
+[--- Copyright by Marina Egner, Sheep Industries ---]
+ </LANG>
+</REC>
+<REC ID="1139">
+ <LANG ID="0">
+SetB
+ </LANG>
+</REC>
+<REC ID="1140">
+ <LANG ID="0">
+SetB
+ </LANG>
+</REC>
+<REC ID="1141">
+ <LANG ID="0">
+SetB
+ </LANG>
+</REC>
+<REC ID="1142">
+ <LANG ID="0">
+BIN
+ </LANG>
+</REC>
+<REC ID="1143">
+ <LANG ID="0">
+Setpoint.Binary?
+ </LANG>
+</REC>
+<REC ID="1144">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1145">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1146">
+ <LANG ID="0">
+Sind Family.Setpoint
+ </LANG>
+</REC>
+<REC ID="1147">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1148">
+ <LANG ID="0">
+Val
+ </LANG>
+</REC>
+<REC ID="1149">
+ <LANG ID="0">
+Out
+ </LANG>
+</REC>
+<REC ID="1150">
+ <LANG ID="0">
+[--- Options ---]
+ </LANG>
+</REC>
+<REC ID="1151">
+ <LANG ID="0">
+[--- Options ---]
+ </LANG>
+</REC>
+<REC ID="1152">
+ <LANG ID="0">
+Value
+ </LANG>
+</REC>
+<REC ID="1153">
+ <LANG ID="0">
+Value\0)Low\1)High
+ </LANG>
+</REC>
+<REC ID="1154">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1155">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1156">
+ <LANG ID="0">
+Output
+ </LANG>
+</REC>
+<REC ID="1157">
+ <LANG ID="0">
+Output\0)Low\1)High
+ </LANG>
+</REC>
+<REC ID="1158">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1159">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1160">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1161">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1162">
+ <LANG ID="0">
+[--- Copyright by Marina Egner, Sheep Industries ---]
+ </LANG>
+</REC>
+<REC ID="1163">
+ <LANG ID="0">
+[--- Copyright by Marina Egner, Sheep Industries ---]
+ </LANG>
+</REC>
+<REC ID="1164">
+ <LANG ID="0">
+SetIP
+ </LANG>
+</REC>
+<REC ID="1165">
+ <LANG ID="0">
+SetIP
+ </LANG>
+</REC>
+<REC ID="1166">
+ <LANG ID="0">
+SetIP
+ </LANG>
+</REC>
+<REC ID="1167">
+ <LANG ID="0">
+IPAdd
+ </LANG>
+</REC>
+<REC ID="1168">
+ <LANG ID="0">
+Setpoint.IPAddress?
+ </LANG>
+</REC>
+<REC ID="1169">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1170">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1171">
+ <LANG ID="0">
+Sind Family.Setpoint
+ </LANG>
+</REC>
+<REC ID="1172">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1173">
+ <LANG ID="0">
+Val
+ </LANG>
+</REC>
+<REC ID="1175">
+ <LANG ID="0">
+[--- Options ---]
+ </LANG>
+</REC>
+<REC ID="1176">
+ <LANG ID="0">
+[--- Options ---]
+ </LANG>
+</REC>
+<REC ID="1177">
+ <LANG ID="0">
+Value
+ </LANG>
+</REC>
+<REC ID="1178">
+ <LANG ID="0">
+Value
+ </LANG>
+</REC>
+<REC ID="1179">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1180">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1184">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1185">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1186">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1187">
+ <LANG ID="0">
+[--- Copyright by Marina Egner, Sheep Industries ---]
+ </LANG>
+</REC>
+<REC ID="1188">
+ <LANG ID="0">
+[--- Copyright by Marina Egner, Sheep Industries ---]
+ </LANG>
+</REC>
+<REC ID="1189">
+ <LANG ID="0">
+Value
+ </LANG>
+</REC>
+<REC ID="1190">
+ <LANG ID="0">
+Output
+ </LANG>
+</REC>
+<REC ID="1191">
+ <LANG ID="0">
+Value
+ </LANG>
+</REC>
+<REC ID="1192">
+ <LANG ID="0">
+Value
+ </LANG>
+</REC>
+<REC ID="1193">
+ <LANG ID="0">
+Value
+ </LANG>
+</REC>
+<REC ID="1194">
+ <LANG ID="0">
+Value
+ </LANG>
+</REC>
+<REC ID="1195">
+ <LANG ID="0">
+Output
+ </LANG>
+</REC>
+<REC ID="1196">
+ <LANG ID="0">
+Output
+ </LANG>
+</REC>
+<REC ID="1197">
+ <LANG ID="0">
+Output
+ </LANG>
+</REC>
+<REC ID="1198">
+ <LANG ID="0">
+InSetD0
+ </LANG>
+</REC>
+<REC ID="1199">
+ <LANG ID="0">
+InSetD0
+ </LANG>
+</REC>
+<REC ID="1200">
+ <LANG ID="0">
+InSetD0
+ </LANG>
+</REC>
+<REC ID="1201">
+ <LANG ID="0">
+InDEC.0
+ </LANG>
+</REC>
+<REC ID="1202">
+ <LANG ID="0">
+Setpoint.DEC0_?
+ </LANG>
+</REC>
+<REC ID="1203">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1204">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1205">
+ <LANG ID="0">
+Sind Family.Setpoint
+ </LANG>
+</REC>
+<REC ID="1206">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1207">
+ <LANG ID="0">
+Val
+ </LANG>
+</REC>
+<REC ID="1208">
+ <LANG ID="0">
+Value
+ </LANG>
+</REC>
+<REC ID="1209">
+ <LANG ID="0">
+Out
+ </LANG>
+</REC>
+<REC ID="1210">
+ <LANG ID="0">
+Output
+ </LANG>
+</REC>
+<REC ID="1211">
+ <LANG ID="0">
+[--- Options ---]
+ </LANG>
+</REC>
+<REC ID="1212">
+ <LANG ID="0">
+[--- Options ---]
+ </LANG>
+</REC>
+<REC ID="1213">
+ <LANG ID="0">
+Value
+ </LANG>
+</REC>
+<REC ID="1214">
+ <LANG ID="0">
+Value
+ </LANG>
+</REC>
+<REC ID="1215">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1216">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1217">
+ <LANG ID="0">
+Output
+ </LANG>
+</REC>
+<REC ID="1218">
+ <LANG ID="0">
+Output
+ </LANG>
+</REC>
+<REC ID="1219">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1220">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1221">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1222">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1223">
+ <LANG ID="0">
+[--- Copyright by Marina Egner, Sheep Industries ---]
+ </LANG>
+</REC>
+<REC ID="1224">
+ <LANG ID="0">
+[--- Copyright by Marina Egner, Sheep Industries ---]
+ </LANG>
+</REC>
+<REC ID="1225">
+ <LANG ID="0">
+InSetD1
+ </LANG>
+</REC>
+<REC ID="1226">
+ <LANG ID="0">
+InSetD1
+ </LANG>
+</REC>
+<REC ID="1227">
+ <LANG ID="0">
+InSetD1
+ </LANG>
+</REC>
+<REC ID="1228">
+ <LANG ID="0">
+InDEC.1
+ </LANG>
+</REC>
+<REC ID="1229">
+ <LANG ID="0">
+Setpoint.DEC1_?
+ </LANG>
+</REC>
+<REC ID="1230">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1231">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1232">
+ <LANG ID="0">
+Sind Family.Setpoint
+ </LANG>
+</REC>
+<REC ID="1233">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1234">
+ <LANG ID="0">
+Val
+ </LANG>
+</REC>
+<REC ID="1235">
+ <LANG ID="0">
+Value
+ </LANG>
+</REC>
+<REC ID="1236">
+ <LANG ID="0">
+Out
+ </LANG>
+</REC>
+<REC ID="1237">
+ <LANG ID="0">
+Output
+ </LANG>
+</REC>
+<REC ID="1238">
+ <LANG ID="0">
+[--- Options ---]
+ </LANG>
+</REC>
+<REC ID="1239">
+ <LANG ID="0">
+[--- Options ---]
+ </LANG>
+</REC>
+<REC ID="1240">
+ <LANG ID="0">
+Value
+ </LANG>
+</REC>
+<REC ID="1241">
+ <LANG ID="0">
+Value
+ </LANG>
+</REC>
+<REC ID="1242">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1243">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1244">
+ <LANG ID="0">
+Output
+ </LANG>
+</REC>
+<REC ID="1245">
+ <LANG ID="0">
+Output
+ </LANG>
+</REC>
+<REC ID="1246">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1247">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1248">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1249">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1250">
+ <LANG ID="0">
+[--- Copyright by Marina Egner, Sheep Industries ---]
+ </LANG>
+</REC>
+<REC ID="1251">
+ <LANG ID="0">
+[--- Copyright by Marina Egner, Sheep Industries ---]
+ </LANG>
+</REC>
+<REC ID="1252">
+ <LANG ID="0">
+InSetD2
+ </LANG>
+</REC>
+<REC ID="1253">
+ <LANG ID="0">
+InSetD2
+ </LANG>
+</REC>
+<REC ID="1254">
+ <LANG ID="0">
+InSetD2
+ </LANG>
+</REC>
+<REC ID="1255">
+ <LANG ID="0">
+DEC.2
+ </LANG>
+</REC>
+<REC ID="1256">
+ <LANG ID="0">
+Setpoint.DEC2_?
+ </LANG>
+</REC>
+<REC ID="1257">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1258">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1259">
+ <LANG ID="0">
+Sind Family.Setpoint
+ </LANG>
+</REC>
+<REC ID="1260">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1261">
+ <LANG ID="0">
+Val
+ </LANG>
+</REC>
+<REC ID="1262">
+ <LANG ID="0">
+Value
+ </LANG>
+</REC>
+<REC ID="1263">
+ <LANG ID="0">
+Out
+ </LANG>
+</REC>
+<REC ID="1264">
+ <LANG ID="0">
+Output
+ </LANG>
+</REC>
+<REC ID="1265">
+ <LANG ID="0">
+[--- Options ---]
+ </LANG>
+</REC>
+<REC ID="1266">
+ <LANG ID="0">
+[--- Options ---]
+ </LANG>
+</REC>
+<REC ID="1267">
+ <LANG ID="0">
+Value
+ </LANG>
+</REC>
+<REC ID="1268">
+ <LANG ID="0">
+Value
+ </LANG>
+</REC>
+<REC ID="1269">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1270">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1271">
+ <LANG ID="0">
+Output
+ </LANG>
+</REC>
+<REC ID="1272">
+ <LANG ID="0">
+Output
+ </LANG>
+</REC>
+<REC ID="1273">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1274">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1275">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1276">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1277">
+ <LANG ID="0">
+[--- Copyright by Marina Egner, Sheep Industries ---]
+ </LANG>
+</REC>
+<REC ID="1278">
+ <LANG ID="0">
+[--- Copyright by Marina Egner, Sheep Industries ---]
+ </LANG>
+</REC>
+<REC ID="1279">
+ <LANG ID="0">
+InSetB
+ </LANG>
+</REC>
+<REC ID="1280">
+ <LANG ID="0">
+InSetB
+ </LANG>
+</REC>
+<REC ID="1281">
+ <LANG ID="0">
+InSetB
+ </LANG>
+</REC>
+<REC ID="1282">
+ <LANG ID="0">
+InBIN
+ </LANG>
+</REC>
+<REC ID="1283">
+ <LANG ID="0">
+Setpoint.Binary?
+ </LANG>
+</REC>
+<REC ID="1284">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1285">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1286">
+ <LANG ID="0">
+Sind Family.Setpoint
+ </LANG>
+</REC>
+<REC ID="1287">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1288">
+ <LANG ID="0">
+Val
+ </LANG>
+</REC>
+<REC ID="1289">
+ <LANG ID="0">
+Value
+ </LANG>
+</REC>
+<REC ID="1290">
+ <LANG ID="0">
+Out
+ </LANG>
+</REC>
+<REC ID="1291">
+ <LANG ID="0">
+Output
+ </LANG>
+</REC>
+<REC ID="1292">
+ <LANG ID="0">
+[--- Options ---]
+ </LANG>
+</REC>
+<REC ID="1293">
+ <LANG ID="0">
+[--- Options ---]
+ </LANG>
+</REC>
+<REC ID="1294">
+ <LANG ID="0">
+Value
+ </LANG>
+</REC>
+<REC ID="1295">
+ <LANG ID="0">
+Value\0)Low\1)High
+ </LANG>
+</REC>
+<REC ID="1296">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1297">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1298">
+ <LANG ID="0">
+Output
+ </LANG>
+</REC>
+<REC ID="1299">
+ <LANG ID="0">
+Output\0)Low\1)High
+ </LANG>
+</REC>
+<REC ID="1300">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1301">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1302">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1303">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1304">
+ <LANG ID="0">
+[--- Copyright by Marina Egner, Sheep Industries ---]
+ </LANG>
+</REC>
+<REC ID="1305">
+ <LANG ID="0">
+[--- Copyright by Marina Egner, Sheep Industries ---]
+ </LANG>
+</REC>
+<REC ID="1306">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1307">
+ <LANG ID="0">
+dFlag
+ </LANG>
+</REC>
+<REC ID="1308">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1309">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1310">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1311">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1312">
+ <LANG ID="0">
+Out of Service\0)No\1)Yes
+ </LANG>
+</REC>
+<REC ID="1313">
+ <LANG ID="0">
+OutOfS
+ </LANG>
+</REC>
+<REC ID="1314">
+ <LANG ID="0">
+Out of Service
+ </LANG>
+</REC>
+<REC ID="1315">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1316">
+ <LANG ID="0">
+Out of Service\0)No\1)Yes
+ </LANG>
+</REC>
+<REC ID="1317">
+ <LANG ID="0">
+Out of Service
+ </LANG>
+</REC>
+<REC ID="1318">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1319">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1320">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1321">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1322">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1323">
+ <LANG ID="0">
+Out of Service\0)No\1)Yes
+ </LANG>
+</REC>
+<REC ID="1324">
+ <LANG ID="0">
+Out of Service
+ </LANG>
+</REC>
+<REC ID="1325">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1326">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1327">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1328">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1329">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1330">
+ <LANG ID="0">
+Out of Service\0)No\1)Yes
+ </LANG>
+</REC>
+<REC ID="1331">
+ <LANG ID="0">
+Out of Service
+ </LANG>
+</REC>
+<REC ID="1332">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1333">
+ <LANG ID="0">
+0
+ </LANG>
+</REC>
+<REC ID="1334">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1335">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1336">
+ <LANG ID="0">
+OutOfS
+ </LANG>
+</REC>
+<REC ID="1337">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1338">
+ <LANG ID="0">
+OutOfService
+ </LANG>
+</REC>
+<REC ID="1339">
+ <LANG ID="0">
+OutOfService
+ </LANG>
+</REC>
+<REC ID="1340">
+ <LANG ID="0">
+OutOfS
+ </LANG>
+</REC>
+<REC ID="1341">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1342">
+ <LANG ID="0">
+OutOfService
+ </LANG>
+</REC>
+<REC ID="1343">
+ <LANG ID="0">
+OutOfS
+ </LANG>
+</REC>
+<REC ID="1344">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1345">
+ <LANG ID="0">
+OutOfService
  </LANG>
 </REC>
 </LIB>
