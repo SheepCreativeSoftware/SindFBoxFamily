@@ -1,6 +1,6 @@
 [BlockStatus]
 Enabled=-1
-Version=100000
+Version=100005
 Status=0
 HMIObject=0
 Type=0
@@ -16,7 +16,7 @@ IntNames=
 IntRefs=
 
 [BlockInternal]
-MacroName=SIND_SETD1
+MacroName=SIND_SetDEC1
 AcceptName=1
 AcceptRef=0
 Exist=
@@ -46,7 +46,7 @@ FXPFile=
 Sources=0
 Tests=0
 HelpID=0
-CommentID=0
+CommentID=1391
 KeyWordID=0
 TopicID=0
 
@@ -62,7 +62,7 @@ Adjusts=4
 SymbolName=outValue
 DisplayedName=1097
 DefaultNameID=0
-Comment=0
+Comment=1382
 State=0
 ArraySize=1
 Media=4
@@ -72,7 +72,7 @@ Type=1
 SymbolName=stcValue
 DisplayedName=1098
 DefaultNameID=1192
-Comment=0
+Comment=1365
 State=0
 ArraySize=1
 Media=8
@@ -82,7 +82,7 @@ Type=0
 SymbolName=stcOutValue
 DisplayedName=1099
 DefaultNameID=1196
-Comment=0
+Comment=1368
 State=0
 ArraySize=1
 Media=8
@@ -135,7 +135,7 @@ ViewLabel=
 ViewIndex=0
 ViewFormat=1
 ViewUValue=0
-CommentID=0
+CommentID=1429
 SymbolName=adjValue
 DefaultSymID=0
 HMIProp=0
@@ -144,7 +144,7 @@ CategoryValue=0
 
 [Adjust2]
 Visible=-1
-DINR=78411111
+DINR=0
 Type=1
 Label=Out
 Index=0

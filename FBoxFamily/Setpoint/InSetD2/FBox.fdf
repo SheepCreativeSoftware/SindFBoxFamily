@@ -1,6 +1,6 @@
 [BlockStatus]
 Enabled=-1
-Version=100002
+Version=100005
 Status=0
 HMIObject=0
 Type=0
@@ -16,7 +16,7 @@ IntNames=
 IntRefs=
 
 [BlockInternal]
-MacroName=SIND_INSETD2
+MacroName=SIND_InSetDEC2
 AcceptName=1
 AcceptRef=0
 Exist=
@@ -46,7 +46,7 @@ FXPFile=
 Sources=0
 Tests=0
 HelpID=0
-CommentID=0
+CommentID=1397
 KeyWordID=0
 TopicID=0
 
@@ -54,15 +54,15 @@ TopicID=0
 Inputs=1
 Outputs=1
 Constants=0
-Dynamics=0
+Dynamics=1
 Statics=3
 Adjusts=5
 
 [Input0]
 SymbolName=inValue
-DisplayedName=0
+DisplayedName=1401
 DefaultNameID=0
-Comment=0
+Comment=1356
 State=0
 ArraySize=1
 Media=4
@@ -72,17 +72,27 @@ Type=1
 SymbolName=outValue
 DisplayedName=1260
 DefaultNameID=0
-Comment=0
+Comment=1387
 State=0
 ArraySize=1
 Media=4
 Type=1
 
+[Dynamic0]
+SymbolName=dynRegister
+DisplayedName=1346
+DefaultNameID=0
+Comment=0
+State=0
+ArraySize=1
+Media=8
+Type=0
+
 [Static0]
 SymbolName=stcValue
 DisplayedName=1261
 DefaultNameID=1262
-Comment=0
+Comment=1359
 State=0
 ArraySize=1
 Media=8
@@ -92,7 +102,7 @@ Type=0
 SymbolName=stcOutValue
 DisplayedName=1263
 DefaultNameID=1264
-Comment=0
+Comment=1373
 State=0
 ArraySize=1
 Media=8
@@ -105,7 +115,7 @@ DefaultNameID=1338
 Comment=1337
 State=0
 ArraySize=1
-Media=8
+Media=4
 Type=0
 
 [Adjust0]
@@ -137,7 +147,7 @@ CategoryValue=5
 
 [Adjust1]
 Visible=-1
-DINR=78411111
+DINR=0
 Type=2
 Label=Val
 Index=0
@@ -155,16 +165,16 @@ ViewLabel=
 ViewIndex=0
 ViewFormat=1
 ViewUValue=0
-CommentID=0
+CommentID=1435
 SymbolName=adjValue
 DefaultSymID=0
 HMIProp=0
 CategorySymbol=
-CategoryValue=5
+CategoryValue=0
 
 [Adjust2]
 Visible=-1
-DINR=78411111
+DINR=0
 Type=1
 Label=Out
 Index=0
@@ -191,7 +201,7 @@ CategoryValue=0
 
 [Adjust3]
 Visible=-1
-DINR=109409639
+DINR=0
 Type=2
 Label=OutOfS
 Index=0

@@ -1,4 +1,4 @@
-<LIB LANGUAGES="1" STRINGS="1250" LANGSTR="LANG" ACTLANG="English" VERSION="2">
+<LIB LANGUAGES="1" STRINGS="1344" LANGSTR="LANG" ACTLANG="English" VERSION="2">
 <REC ID="1">
  <LANG ID="0">
 English
@@ -156,7 +156,7 @@ kWh Price
 </REC>
 <REC ID="41">
  <LANG ID="0">
-Counter January
+Counter January\R)Energy Consumtion of the Month
  </LANG>
 </REC>
 <REC ID="42">
@@ -166,7 +166,7 @@ actJan
 </REC>
 <REC ID="43">
  <LANG ID="0">
-Counter January
+Counter January\R)Energy Consumtion of the Month
  </LANG>
 </REC>
 <REC ID="44">
@@ -456,12 +456,12 @@ Counter December
 </REC>
 <REC ID="102">
  <LANG ID="0">
-Counter January
+Counter January\R)Energy Consumption of the month from last year
  </LANG>
 </REC>
 <REC ID="103">
  <LANG ID="0">
-Counter January
+Counter January\R)Energy Consumption of the month from last year
  </LANG>
 </REC>
 <REC ID="104">
@@ -476,7 +476,7 @@ Counter January
 </REC>
 <REC ID="106">
  <LANG ID="0">
-
+Energy Consumption of the month from last year
  </LANG>
 </REC>
 <REC ID="107">
@@ -511,7 +511,7 @@ Counter February
 </REC>
 <REC ID="113">
  <LANG ID="0">
-
+for each month the same
  </LANG>
 </REC>
 <REC ID="114">
@@ -971,12 +971,12 @@ LastDec
 </REC>
 <REC ID="206">
  <LANG ID="0">
-Cost January
+Cost January\R)Energy Cost of the month
  </LANG>
 </REC>
 <REC ID="207">
  <LANG ID="0">
-Cost January
+Cost January\R)Energy Cost of the month
  </LANG>
 </REC>
 <REC ID="208">
@@ -991,7 +991,7 @@ Cost January
 </REC>
 <REC ID="210">
  <LANG ID="0">
-
+Energy Cost of the month
  </LANG>
 </REC>
 <REC ID="211">
@@ -1026,7 +1026,7 @@ Cost February
 </REC>
 <REC ID="217">
  <LANG ID="0">
-
+for each month the same
  </LANG>
 </REC>
 <REC ID="218">
@@ -1426,12 +1426,12 @@ Cost December
 </REC>
 <REC ID="297">
  <LANG ID="0">
-Cost January
+Cost January\R)Energy Cost of the month from last year
  </LANG>
 </REC>
 <REC ID="298">
  <LANG ID="0">
-Cost January
+Cost January\R)Energy Cost of the month from last year
  </LANG>
 </REC>
 <REC ID="299">
@@ -1446,7 +1446,7 @@ Cost January
 </REC>
 <REC ID="301">
  <LANG ID="0">
-
+Energy Cost of the month from last year
  </LANG>
 </REC>
 <REC ID="302">
@@ -1481,7 +1481,7 @@ Cost February
 </REC>
 <REC ID="308">
  <LANG ID="0">
-
+for each month the same
  </LANG>
 </REC>
 <REC ID="309">
@@ -2071,7 +2071,7 @@ sReg
 </REC>
 <REC ID="453">
  <LANG ID="0">
-Last Month Energy Counter
+Last Month Energy Counter\R)Energy Counter value from the last month
  </LANG>
 </REC>
 <REC ID="454">
@@ -2081,7 +2081,7 @@ lEnergy
 </REC>
 <REC ID="455">
  <LANG ID="0">
-Last Month Energy Counter
+Last Month Energy Counter\R)Energy Counter value from the last month
  </LANG>
 </REC>
 <REC ID="456">
@@ -4866,7 +4866,7 @@ Setpoint
 </REC>
 <REC ID="1065">
  <LANG ID="0">
-DEC.0
+
  </LANG>
 </REC>
 <REC ID="1066">
@@ -4876,7 +4876,7 @@ SetD0
 </REC>
 <REC ID="1067">
  <LANG ID="0">
-
+DEC.0
  </LANG>
 </REC>
 <REC ID="1068">
@@ -4921,7 +4921,7 @@ Setpoint.DEC0_?
 </REC>
 <REC ID="1076">
  <LANG ID="0">
-Value
+Value\R)Adjust Value
  </LANG>
 </REC>
 <REC ID="1077">
@@ -4931,7 +4931,7 @@ Val
 </REC>
 <REC ID="1078">
  <LANG ID="0">
-Value
+Value\R)Adjust Value
  </LANG>
 </REC>
 <REC ID="1079">
@@ -4941,12 +4941,12 @@ Value
 </REC>
 <REC ID="1080">
  <LANG ID="0">
-Output
+Output\R)Output Value
  </LANG>
 </REC>
 <REC ID="1081">
  <LANG ID="0">
-Output
+Output\R)Output Value
  </LANG>
 </REC>
 <REC ID="1082">
@@ -4961,7 +4961,7 @@ Output
 </REC>
 <REC ID="1084">
  <LANG ID="0">
-
+Output Value
  </LANG>
 </REC>
 <REC ID="1085">
@@ -5001,7 +5001,7 @@ SetD1
 </REC>
 <REC ID="1092">
  <LANG ID="0">
-DEC.1
+
  </LANG>
 </REC>
 <REC ID="1093">
@@ -5026,7 +5026,7 @@ Sind Family.Setpoint
 </REC>
 <REC ID="1097">
  <LANG ID="0">
-
+DEC.1
  </LANG>
 </REC>
 <REC ID="1098">
@@ -5051,12 +5051,12 @@ Out
 </REC>
 <REC ID="1102">
  <LANG ID="0">
-Value
+Value\R)Adjust Value
  </LANG>
 </REC>
 <REC ID="1103">
  <LANG ID="0">
-Value
+Value\R)Adjust Value
  </LANG>
 </REC>
 <REC ID="1104">
@@ -5071,17 +5071,17 @@ Value
 </REC>
 <REC ID="1106">
  <LANG ID="0">
-Output
+Output\R)Output Value
  </LANG>
 </REC>
 <REC ID="1107">
  <LANG ID="0">
-Output
+Output\R)Output Value
  </LANG>
 </REC>
 <REC ID="1108">
  <LANG ID="0">
-
+Output Value
  </LANG>
 </REC>
 <REC ID="1109">
@@ -5126,7 +5126,7 @@ SetD2
 </REC>
 <REC ID="1117">
  <LANG ID="0">
-DEC.2
+
  </LANG>
 </REC>
 <REC ID="1118">
@@ -5151,7 +5151,7 @@ Sind Family.Setpoint
 </REC>
 <REC ID="1122">
  <LANG ID="0">
-
+DEC.2
  </LANG>
 </REC>
 <REC ID="1123">
@@ -5176,12 +5176,12 @@ Out
 </REC>
 <REC ID="1127">
  <LANG ID="0">
-Value
+Value\R)Adjust Value
  </LANG>
 </REC>
 <REC ID="1128">
  <LANG ID="0">
-Value
+Value\R)Adjust Value
  </LANG>
 </REC>
 <REC ID="1129">
@@ -5196,17 +5196,17 @@ Value
 </REC>
 <REC ID="1131">
  <LANG ID="0">
-Output
+Output\R)Output Value
  </LANG>
 </REC>
 <REC ID="1132">
  <LANG ID="0">
-Output
+Output\R)Output Value
  </LANG>
 </REC>
 <REC ID="1133">
  <LANG ID="0">
-
+Output Value
  </LANG>
 </REC>
 <REC ID="1134">
@@ -5251,7 +5251,7 @@ SetB
 </REC>
 <REC ID="1142">
  <LANG ID="0">
-BIN
+
  </LANG>
 </REC>
 <REC ID="1143">
@@ -5276,7 +5276,7 @@ Sind Family.Setpoint
 </REC>
 <REC ID="1147">
  <LANG ID="0">
-
+BIN
  </LANG>
 </REC>
 <REC ID="1148">
@@ -5301,12 +5301,12 @@ Out
 </REC>
 <REC ID="1152">
  <LANG ID="0">
-Value
+Value\R)Adjust Value
  </LANG>
 </REC>
 <REC ID="1153">
  <LANG ID="0">
-Value\0)Low\1)High
+Value\R)Adjust Value\0)Low\1)High
  </LANG>
 </REC>
 <REC ID="1154">
@@ -5321,17 +5321,17 @@ Value\0)Low\1)High
 </REC>
 <REC ID="1156">
  <LANG ID="0">
-Output
+Output\R)Output Value
  </LANG>
 </REC>
 <REC ID="1157">
  <LANG ID="0">
-Output\0)Low\1)High
+Output\R)Output Value\0)Low\1)High
  </LANG>
 </REC>
 <REC ID="1158">
  <LANG ID="0">
-
+Output Value
  </LANG>
 </REC>
 <REC ID="1159">
@@ -5376,7 +5376,7 @@ SetIP
 </REC>
 <REC ID="1167">
  <LANG ID="0">
-IPAdd
+
  </LANG>
 </REC>
 <REC ID="1168">
@@ -5401,7 +5401,7 @@ Sind Family.Setpoint
 </REC>
 <REC ID="1172">
  <LANG ID="0">
-
+IPAdd
  </LANG>
 </REC>
 <REC ID="1173">
@@ -5421,12 +5421,12 @@ Val
 </REC>
 <REC ID="1177">
  <LANG ID="0">
-Value
+Value\R)Adjust Value
  </LANG>
 </REC>
 <REC ID="1178">
  <LANG ID="0">
-Value
+Value\R)Adjust Value
  </LANG>
 </REC>
 <REC ID="1179">
@@ -5526,7 +5526,7 @@ InSetD0
 </REC>
 <REC ID="1201">
  <LANG ID="0">
-InDEC.0
+
  </LANG>
 </REC>
 <REC ID="1202">
@@ -5551,7 +5551,7 @@ Sind Family.Setpoint
 </REC>
 <REC ID="1206">
  <LANG ID="0">
-
+DEC.0
  </LANG>
 </REC>
 <REC ID="1207">
@@ -5586,12 +5586,12 @@ Output
 </REC>
 <REC ID="1213">
  <LANG ID="0">
-Value
+Value\R)Adjust Value
  </LANG>
 </REC>
 <REC ID="1214">
  <LANG ID="0">
-Value
+Value\R)Adjust Value
  </LANG>
 </REC>
 <REC ID="1215">
@@ -5606,17 +5606,17 @@ Value
 </REC>
 <REC ID="1217">
  <LANG ID="0">
-Output
+Output\R)Output Value
  </LANG>
 </REC>
 <REC ID="1218">
  <LANG ID="0">
-Output
+Output\R)Output Value
  </LANG>
 </REC>
 <REC ID="1219">
  <LANG ID="0">
-
+Output Value
  </LANG>
 </REC>
 <REC ID="1220">
@@ -5661,7 +5661,7 @@ InSetD1
 </REC>
 <REC ID="1228">
  <LANG ID="0">
-InDEC.1
+
  </LANG>
 </REC>
 <REC ID="1229">
@@ -5686,7 +5686,7 @@ Sind Family.Setpoint
 </REC>
 <REC ID="1233">
  <LANG ID="0">
-
+DEC.1
  </LANG>
 </REC>
 <REC ID="1234">
@@ -5721,12 +5721,12 @@ Output
 </REC>
 <REC ID="1240">
  <LANG ID="0">
-Value
+Value\R)Adjust Value
  </LANG>
 </REC>
 <REC ID="1241">
  <LANG ID="0">
-Value
+Value\R)Adjust Value
  </LANG>
 </REC>
 <REC ID="1242">
@@ -5741,17 +5741,17 @@ Value
 </REC>
 <REC ID="1244">
  <LANG ID="0">
-Output
+Output\R)Output Value
  </LANG>
 </REC>
 <REC ID="1245">
  <LANG ID="0">
-Output
+Output\R)Output Value
  </LANG>
 </REC>
 <REC ID="1246">
  <LANG ID="0">
-
+Output Value
  </LANG>
 </REC>
 <REC ID="1247">
@@ -5796,7 +5796,7 @@ InSetD2
 </REC>
 <REC ID="1255">
  <LANG ID="0">
-DEC.2
+
  </LANG>
 </REC>
 <REC ID="1256">
@@ -5821,7 +5821,7 @@ Sind Family.Setpoint
 </REC>
 <REC ID="1260">
  <LANG ID="0">
-
+DEC.2
  </LANG>
 </REC>
 <REC ID="1261">
@@ -5856,12 +5856,12 @@ Output
 </REC>
 <REC ID="1267">
  <LANG ID="0">
-Value
+Value\R)Adjust Value
  </LANG>
 </REC>
 <REC ID="1268">
  <LANG ID="0">
-Value
+Value\R)Adjust Value
  </LANG>
 </REC>
 <REC ID="1269">
@@ -5876,17 +5876,17 @@ Value
 </REC>
 <REC ID="1271">
  <LANG ID="0">
-Output
+Output\R)Output Value
  </LANG>
 </REC>
 <REC ID="1272">
  <LANG ID="0">
-Output
+Output\R)Output Value
  </LANG>
 </REC>
 <REC ID="1273">
  <LANG ID="0">
-
+Output Value
  </LANG>
 </REC>
 <REC ID="1274">
@@ -5931,7 +5931,7 @@ InSetB
 </REC>
 <REC ID="1282">
  <LANG ID="0">
-InBIN
+
  </LANG>
 </REC>
 <REC ID="1283">
@@ -5956,7 +5956,7 @@ Sind Family.Setpoint
 </REC>
 <REC ID="1287">
  <LANG ID="0">
-
+BIN
  </LANG>
 </REC>
 <REC ID="1288">
@@ -5991,12 +5991,12 @@ Output
 </REC>
 <REC ID="1294">
  <LANG ID="0">
-Value
+Value\R)Adjust Value
  </LANG>
 </REC>
 <REC ID="1295">
  <LANG ID="0">
-Value\0)Low\1)High
+Value\R)Adjust Value\0)Low\1)High
  </LANG>
 </REC>
 <REC ID="1296">
@@ -6011,17 +6011,17 @@ Value\0)Low\1)High
 </REC>
 <REC ID="1298">
  <LANG ID="0">
-Output
+Output\R)Output Value
  </LANG>
 </REC>
 <REC ID="1299">
  <LANG ID="0">
-Output\0)Low\1)High
+Output\R)Output Value\0)Low\1)High
  </LANG>
 </REC>
 <REC ID="1300">
  <LANG ID="0">
-
+Output Value
  </LANG>
 </REC>
 <REC ID="1301">
@@ -6056,7 +6056,7 @@ Output\0)Low\1)High
 </REC>
 <REC ID="1307">
  <LANG ID="0">
-dFlag
+dReg
  </LANG>
 </REC>
 <REC ID="1308">
@@ -6081,7 +6081,7 @@ dFlag
 </REC>
 <REC ID="1312">
  <LANG ID="0">
-Out of Service\0)No\1)Yes
+Out of Service\R)Option to Change between Input and Internal Value\0)No\1)Yes
  </LANG>
 </REC>
 <REC ID="1313">
@@ -6091,7 +6091,7 @@ OutOfS
 </REC>
 <REC ID="1314">
  <LANG ID="0">
-Out of Service
+Out of Service\R)Option to Change between Input and Internal Value
  </LANG>
 </REC>
 <REC ID="1315">
@@ -6101,12 +6101,12 @@ Out of Service
 </REC>
 <REC ID="1316">
  <LANG ID="0">
-Out of Service\0)No\1)Yes
+Out of Service\R)Option to Change between Input and Internal Value\0)No\1)Yes
  </LANG>
 </REC>
 <REC ID="1317">
  <LANG ID="0">
-Out of Service
+Out of Service\R)Option to Change between Input and Internal Value
  </LANG>
 </REC>
 <REC ID="1318">
@@ -6121,7 +6121,7 @@ Out of Service
 </REC>
 <REC ID="1320">
  <LANG ID="0">
-
+Option to Change between Input and Internal Value
  </LANG>
 </REC>
 <REC ID="1321">
@@ -6136,12 +6136,12 @@ Out of Service
 </REC>
 <REC ID="1323">
  <LANG ID="0">
-Out of Service\0)No\1)Yes
+Out of Service\R)Option to Change between Input and Internal Value\0)No\1)Yes
  </LANG>
 </REC>
 <REC ID="1324">
  <LANG ID="0">
-Out of Service
+Out of Service\R)Option to Change between Input and Internal Value
  </LANG>
 </REC>
 <REC ID="1325">
@@ -6156,7 +6156,7 @@ Out of Service
 </REC>
 <REC ID="1327">
  <LANG ID="0">
-
+Option to Change between Input and Internal Value
  </LANG>
 </REC>
 <REC ID="1328">
@@ -6171,12 +6171,12 @@ Out of Service
 </REC>
 <REC ID="1330">
  <LANG ID="0">
-Out of Service\0)No\1)Yes
+Out of Service\R)Option to Change between Input and Internal Value\0)No\1)Yes
  </LANG>
 </REC>
 <REC ID="1331">
  <LANG ID="0">
-Out of Service
+Out of Service\R)Option to Change between Input and Internal Value
  </LANG>
 </REC>
 <REC ID="1332">
@@ -6191,7 +6191,7 @@ Out of Service
 </REC>
 <REC ID="1334">
  <LANG ID="0">
-
+Option to Change between Input and Internal Value
  </LANG>
 </REC>
 <REC ID="1335">
@@ -6206,7 +6206,7 @@ OutOfS
 </REC>
 <REC ID="1337">
  <LANG ID="0">
-
+Option to Change between Input and Internal Value
  </LANG>
 </REC>
 <REC ID="1338">
@@ -6226,7 +6226,7 @@ OutOfS
 </REC>
 <REC ID="1341">
  <LANG ID="0">
-
+Option to Change between Input and Internal Value
  </LANG>
 </REC>
 <REC ID="1342">
@@ -6241,12 +6241,485 @@ OutOfS
 </REC>
 <REC ID="1344">
  <LANG ID="0">
-
+Option to Change between Input and Internal Value
  </LANG>
 </REC>
 <REC ID="1345">
  <LANG ID="0">
 OutOfService
+ </LANG>
+</REC>
+<REC ID="1346">
+ <LANG ID="0">
+dynReg
+ </LANG>
+</REC>
+<REC ID="1347">
+ <LANG ID="0">
+dynReg
+ </LANG>
+</REC>
+<REC ID="1348">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1349">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1350">
+ <LANG ID="0">
+dynReg
+ </LANG>
+</REC>
+<REC ID="1351">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1352">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1353">
+ <LANG ID="0">
+dFlag
+ </LANG>
+</REC>
+<REC ID="1354">
+ <LANG ID="0">
+Internal Adjust Value
+ </LANG>
+</REC>
+<REC ID="1355">
+ <LANG ID="0">
+Internal Adjust Value
+ </LANG>
+</REC>
+<REC ID="1356">
+ <LANG ID="0">
+Input Value
+ </LANG>
+</REC>
+<REC ID="1357">
+ <LANG ID="0">
+Internal Adjust Value
+ </LANG>
+</REC>
+<REC ID="1358">
+ <LANG ID="0">
+Output Value
+ </LANG>
+</REC>
+<REC ID="1359">
+ <LANG ID="0">
+Internal Adjust Value
+ </LANG>
+</REC>
+<REC ID="1360">
+ <LANG ID="0">
+Internal Adjust Value
+ </LANG>
+</REC>
+<REC ID="1361">
+ <LANG ID="0">
+Input Value
+ </LANG>
+</REC>
+<REC ID="1362">
+ <LANG ID="0">
+Internal Adjust Value
+ </LANG>
+</REC>
+<REC ID="1363">
+ <LANG ID="0">
+Input Value
+ </LANG>
+</REC>
+<REC ID="1364">
+ <LANG ID="0">
+Internal Adjust Value
+ </LANG>
+</REC>
+<REC ID="1365">
+ <LANG ID="0">
+Internal Adjust Value
+ </LANG>
+</REC>
+<REC ID="1366">
+ <LANG ID="0">
+Internal Adjust Value
+ </LANG>
+</REC>
+<REC ID="1367">
+ <LANG ID="0">
+Output Value
+ </LANG>
+</REC>
+<REC ID="1368">
+ <LANG ID="0">
+Output Value
+ </LANG>
+</REC>
+<REC ID="1369">
+ <LANG ID="0">
+Output Value
+ </LANG>
+</REC>
+<REC ID="1370">
+ <LANG ID="0">
+Output Value
+ </LANG>
+</REC>
+<REC ID="1371">
+ <LANG ID="0">
+Output Value
+ </LANG>
+</REC>
+<REC ID="1372">
+ <LANG ID="0">
+Output Value
+ </LANG>
+</REC>
+<REC ID="1373">
+ <LANG ID="0">
+Output Value
+ </LANG>
+</REC>
+<REC ID="1374">
+ <LANG ID="0">
+Option to Change between Input and Internal Value
+ </LANG>
+</REC>
+<REC ID="1379">
+ <LANG ID="0">
+FBox to adjust single decimal values
+ </LANG>
+</REC>
+<REC ID="1380">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1381">
+ <LANG ID="0">
+Output Value
+ </LANG>
+</REC>
+<REC ID="1382">
+ <LANG ID="0">
+Output Value
+ </LANG>
+</REC>
+<REC ID="1383">
+ <LANG ID="0">
+Output Value
+ </LANG>
+</REC>
+<REC ID="1384">
+ <LANG ID="0">
+Output Value
+ </LANG>
+</REC>
+<REC ID="1385">
+ <LANG ID="0">
+Output Value
+ </LANG>
+</REC>
+<REC ID="1386">
+ <LANG ID="0">
+Output Value
+ </LANG>
+</REC>
+<REC ID="1387">
+ <LANG ID="0">
+Output Value
+ </LANG>
+</REC>
+<REC ID="1388">
+ <LANG ID="0">
+Output Value
+ </LANG>
+</REC>
+<REC ID="1389">
+ <LANG ID="0">
+Output Value
+ </LANG>
+</REC>
+<REC ID="1390">
+ <LANG ID="0">
+Input Value
+ </LANG>
+</REC>
+<REC ID="1391">
+ <LANG ID="0">
+FBox to adjust single decimal values
+ </LANG>
+</REC>
+<REC ID="1392">
+ <LANG ID="0">
+FBox to adjust single decimal values
+ </LANG>
+</REC>
+<REC ID="1393">
+ <LANG ID="0">
+FBox to adjust single binary values
+ </LANG>
+</REC>
+<REC ID="1394">
+ <LANG ID="0">
+FBox to adjust single IP Address values
+ </LANG>
+</REC>
+<REC ID="1395">
+ <LANG ID="0">
+FBox which normaly outputs the input value. With the internal option, you can set this connection out of service and choose an alternative output value
+ </LANG>
+</REC>
+<REC ID="1396">
+ <LANG ID="0">
+FBox which normaly outputs the input value. With the internal option, you can set this connection out of service and choose an alternative output value
+ </LANG>
+</REC>
+<REC ID="1397">
+ <LANG ID="0">
+FBox which normaly outputs the input value. With the internal option, you can set this connection out of service and choose an alternative output value
+ </LANG>
+</REC>
+<REC ID="1398">
+ <LANG ID="0">
+FBox which normaly outputs the input value. With the internal option, you can set this connection out of service and choose an alternative output value
+ </LANG>
+</REC>
+<REC ID="1399">
+ <LANG ID="0">
+In
+ </LANG>
+</REC>
+<REC ID="1400">
+ <LANG ID="0">
+In
+ </LANG>
+</REC>
+<REC ID="1401">
+ <LANG ID="0">
+In
+ </LANG>
+</REC>
+<REC ID="1402">
+ <LANG ID="0">
+In
+ </LANG>
+</REC>
+<REC ID="1403">
+ <LANG ID="0">
+Adjust Value
+ </LANG>
+</REC>
+<REC ID="1404">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1405">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1406">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1407">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1408">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1409">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1410">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1411">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1412">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1413">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1414">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1415">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1416">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1417">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1418">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1419">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1420">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1421">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1422">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1423">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1424">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1425">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1426">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1427">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1428">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1429">
+ <LANG ID="0">
+Adjust Value
+ </LANG>
+</REC>
+<REC ID="1430">
+ <LANG ID="0">
+Adjust Value
+ </LANG>
+</REC>
+<REC ID="1431">
+ <LANG ID="0">
+Adjust Value
+ </LANG>
+</REC>
+<REC ID="1432">
+ <LANG ID="0">
+Adjust Value
+ </LANG>
+</REC>
+<REC ID="1433">
+ <LANG ID="0">
+Adjust Value
+ </LANG>
+</REC>
+<REC ID="1434">
+ <LANG ID="0">
+Adjust Value
+ </LANG>
+</REC>
+<REC ID="1435">
+ <LANG ID="0">
+Adjust Value
+ </LANG>
+</REC>
+<REC ID="1436">
+ <LANG ID="0">
+Adjust Value
+ </LANG>
+</REC>
+<REC ID="1437">
+ <LANG ID="0">
+Option to Change between Input and Internal Value
+ </LANG>
+</REC>
+<REC ID="1438">
+ <LANG ID="0">
+Actual electricity price
+ </LANG>
+</REC>
+<REC ID="1439">
+ <LANG ID="0">
+Energy Counter value from the last month
+ </LANG>
+</REC>
+<REC ID="1440">
+ <LANG ID="0">
+Energy Consumtion of the Month
+ </LANG>
+</REC>
+<REC ID="1441">
+ <LANG ID="0">
+for each month the same
+ </LANG>
+</REC>
+<REC ID="1442">
+ <LANG ID="0">
+This FBox record the energy consuption and their cost for each month
+ </LANG>
+</REC>
+<REC ID="1443">
+ <LANG ID="0">
+The cost will be calculated with the actual price for the actual month.
+At the begining of a new month the consumption and cost will be saved.
+
+The last Energy counter value must be set to the actual ernergy counter value at the first time of use.
  </LANG>
 </REC>
 </LIB>

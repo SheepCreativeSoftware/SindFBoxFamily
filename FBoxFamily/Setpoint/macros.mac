@@ -1,6 +1,6 @@
 $SKIP
 ;;*******************************************************************************
-;; Energy MACRO Library | v0.0.1 | 07.05.2021 19:17Z
+;; Energy MACRO Library | v1.0.0 | 08.05.2021 13:54Z
 ;; Copyright (C) 2020 Marina Egner <info@sheepindustries.de>
 ;; Author: Marina Egner
 ;;
@@ -17,7 +17,7 @@ $SKIP
 ;; *******************************************************************************
 ;;
 ;; REVISION HISTORY
-;; v0.0.1  07.05.2021 - M.Egner | Initial edit;
+;; v1.0.0  08.05.2021 - M.Egner | Initial edit;
 ;;
 ;; DESCRIPTION
 ;; EnergyLibrary.
@@ -66,9 +66,8 @@ SIND_CopyIfOutOfService MACRO sAdjustVal,        ; Adjust Val
 ;; ****************************************************************************
 
 ;             ==================================== 
-              CMP    sOutOfService               ; If Value is
-                     K 1                         ; set to 1
-              JR     NE lNormal                  ; not set then Jump
+              STH    sOutOfService               ; If Value is
+              JR     L lNormal                   ; not set then Jump
               COPY   sAdjustVal                  ; then else Copy Adjust Val
                      dOutputVal                  ; to Display Output Val
               JR     lEnd                        ; Then got to the end

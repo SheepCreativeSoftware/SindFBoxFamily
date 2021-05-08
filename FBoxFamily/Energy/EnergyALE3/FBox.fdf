@@ -16,7 +16,7 @@ IntNames=
 IntRefs=
 
 [BlockInternal]
-MacroName=SIND_ENERGYALE3
+MacroName=SIND_EnergyALE3
 AcceptName=2
 AcceptRef=2
 Exist=

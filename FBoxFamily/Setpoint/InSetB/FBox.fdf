@@ -1,6 +1,6 @@
 [BlockStatus]
 Enabled=-1
-Version=100003
+Version=100005
 Status=0
 HMIObject=0
 Type=0
@@ -16,16 +16,16 @@ IntNames=
 IntRefs=
 
 [BlockInternal]
-MacroName=SIND_INSETB
+MacroName=SIND_InSetBIN
 AcceptName=1
 AcceptRef=0
 Exist=
 uNameID=1284
 RefID=1285
 GroupingID=1286
-ShortDescriptionID=0
+ShortDescriptionID=1404
 FolderID=1283
-Width=7
+Width=5
 FaceID=1282
 FacePosition=2
 MinStretch=0
@@ -45,24 +45,24 @@ DescrFile=Description.txt
 FXPFile=
 Sources=0
 Tests=0
-HelpID=0
-CommentID=0
-KeyWordID=0
+HelpID=1405
+CommentID=1398
+KeyWordID=1406
 TopicID=0
 
 [Symbols]
 Inputs=1
 Outputs=1
 Constants=0
-Dynamics=1
+Dynamics=2
 Statics=3
 Adjusts=5
 
 [Input0]
 SymbolName=inValue
-DisplayedName=0
+DisplayedName=1402
 DefaultNameID=0
-Comment=0
+Comment=1390
 State=0
 ArraySize=1
 Media=4
@@ -72,7 +72,7 @@ Type=0
 SymbolName=outValue
 DisplayedName=1287
 DefaultNameID=0
-Comment=0
+Comment=1389
 State=0
 ArraySize=1
 Media=4
@@ -84,38 +84,48 @@ DisplayedName=1307
 DefaultNameID=0
 Comment=0
 State=0
-ArraySize=1
+ArraySize=2
 Media=8
+Type=0
+
+[Dynamic1]
+SymbolName=dynFlag
+DisplayedName=1353
+DefaultNameID=0
+Comment=0
+State=0
+ArraySize=1
+Media=4
 Type=0
 
 [Static0]
 SymbolName=stcValue
 DisplayedName=1288
 DefaultNameID=1289
-Comment=0
+Comment=1360
 State=0
 ArraySize=1
-Media=8
+Media=4
 Type=0
 
 [Static1]
 SymbolName=stcOutValue
 DisplayedName=1290
 DefaultNameID=1291
-Comment=0
+Comment=1358
 State=0
 ArraySize=1
-Media=8
+Media=4
 Type=0
 
 [Static2]
 SymbolName=stcOutOfService
 DisplayedName=1313
 DefaultNameID=1339
-Comment=0
+Comment=1374
 State=0
 ArraySize=1
-Media=8
+Media=4
 Type=0
 
 [Adjust0]
@@ -147,7 +157,7 @@ CategoryValue=5
 
 [Adjust1]
 Visible=-1
-DINR=78411111
+DINR=0
 Type=2
 Label=Val
 Index=0
@@ -165,16 +175,16 @@ ViewLabel=
 ViewIndex=0
 ViewFormat=1
 ViewUValue=0
-CommentID=0
+CommentID=1436
 SymbolName=adjValue
 DefaultSymID=0
 HMIProp=0
 CategorySymbol=
-CategoryValue=5
+CategoryValue=0
 
 [Adjust2]
 Visible=-1
-DINR=78411111
+DINR=0
 Type=1
 Label=Out
 Index=0
@@ -201,7 +211,7 @@ CategoryValue=0
 
 [Adjust3]
 Visible=-1
-DINR=109409639
+DINR=0
 Type=2
 Label=OutOfS
 Index=0
@@ -219,12 +229,12 @@ ViewLabel=
 ViewIndex=0
 ViewFormat=1
 ViewUValue=0
-CommentID=0
+CommentID=1437
 SymbolName=adjOutOfService
 DefaultSymID=0
 HMIProp=0
 CategorySymbol=
-CategoryValue=5
+CategoryValue=0
 
 [Adjust4]
 Visible=-1

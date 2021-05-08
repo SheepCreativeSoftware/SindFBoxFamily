@@ -16,7 +16,7 @@ IntNames=
 IntRefs=
 
 [BlockInternal]
-MacroName=SIND_WORKHOURS
+MacroName=SIND_WorkHours
 AcceptName=1
 AcceptRef=0
 Exist=

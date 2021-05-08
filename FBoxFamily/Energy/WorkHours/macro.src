@@ -1,6 +1,6 @@
 $SKIP
 ;;*******************************************************************************
-;; WorkingHour FBox | v0.1.2 | 22.02.2021 22:35Z
+;; WorkingHour FBox | v1.0.0 | 08.05.2021 14:03Z
 ;; Copyright (C) 2020 Marina Egner <info@sheepindustries.de>
 ;; Author: Marina Egner
 ;;
@@ -19,12 +19,13 @@ $SKIP
 ;; REVISION HISTORY
 ;; v0.1.0  22.02.2021 - M.Egner | Initial edit;
 ;; v0.1.1  22.02.2021 - M.Egner | Skip Program after Init;
-;; v0.1.3  22.02.2021 - M.Egner | changed Adjust Parameters;
+;; v1.0.0  08.05.2021 - M.Egner | changed Adjust Parameters;
 ;;
 ;; DESCRIPTION
 ;; The Fbox counts every switch on and counts the working time
 $ENDSKIP
 
+$REPORT SindFamily: WorkHours | FBox v1.0.0
 ; Check if Firmware version in DC is new enought, cause special condition codes where in use
 $IF S.CPU.MinFWVersion < 12000
 $FATAL SindFamily: Configured Firmware in Device Configurator is too Old! FBox needs min 1.20.00.
@@ -97,3 +98,17 @@ lEnd:
               COPY   stcCount                    ; copy counter
                      outCount                    ; to output
 ;             ====================================              
+
+; ======================================================================
+; -------- Externe Funktionserweiterung
+; ======================================================================
+;
+; ---------------------------------------------------------
+$IFEXIST "<$DevDir>\AddOn\AddOn\AddOn_SIND_WorkHours.src"
+$INCLUDE "<$DevDir>\AddOn\AddOn\AddOn_SIND_WorkHours.src"
+$ELSE
+; ---------------------------------------------------------
+$IFEXIST "<$ProjDir>\AddOn\AddOn\AddOn_SIND_WorkHours.src"
+$INCLUDE "<$ProjDir>\AddOn\AddOn\AddOn_SIND_WorkHours.src"
+$ENDIF
+$ENDIF

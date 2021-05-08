@@ -1,6 +1,6 @@
 $SKIP
 ;;*******************************************************************************
-;; InSetpoint BIN FBox | v1.0.3 | 07.05.2021 19:17Z
+;; InSetpoint BIN FBox | v1.0.5 | 08.05.2021 13:54Z
 ;; Copyright (C) 2020 Marina Egner <info@sheepindustries.de>
 ;; Author: Marina Egner
 ;;
@@ -17,13 +17,13 @@ $SKIP
 ;; *******************************************************************************
 ;;
 ;; REVISION HISTORY
-;; v0.0.1  07.05.2021 - M.Egner | Initial edit;
+;; v1.0.5 | 08.05.2021 - M.Egner | Initial edit;
 ;;
 ;; DESCRIPTION
 ;; Copy Adjust Value to the Output
 $ENDSKIP
 
-$REPORT SindFamily: InSetpoint BIN | FBox v0.1.0
+$REPORT SindFamily: InSetpoint BIN | FBox v1.0.5
 
 $IF S.CPU.MinFWVersion < 12000
 $FATAL SindFamily: Configured Firmware in Device Configurator is too Old! FBox needs min 1.20.00.
@@ -32,7 +32,9 @@ $IFNB <name#vers> ; Not in use
 $ENDIF
 ;            ###################################################################
 ;             ====================================
-dynOutputVal  LEQU   dynRegister                 ; 
+dynAdjustVal  LEQU   dynRegister                 ; 
+dynOutputOfService LEQU dynRegister+1            ; 
+dynOutput     LEQU dynFlag                       ; 
 ;             ------------------------------------
 ;            ###################################################################
 
@@ -43,33 +45,48 @@ dynOutputVal  LEQU   dynRegister                 ;
 lINIT:
 ;             ==================================== Init Vars
               ACC    H                           ;
+;             ------------------------------------
+              LD     dynAdjustVal                ; load adjust val
+                     adjValue                    ;
+              BITO   1                           ;
+                     dynAdjustVal                ;
+                     stcValue                    ;
 ;             ------------------------------------ 
-              LD     stcValue                    ; 
-                     adjValue                    ; 
-              LD     stcOutOfService             ; 
-                     adjOutOfService             ; 
+              LD     dynOutputOfService          ; load adjust val
+                     adjOutOfService             ;
+              BITO   1                           ; convert it 
+                     dynOutputOfService          ;
+                     stcOutOfService             ; and copy it to stc val
 ;             ------------------------------------
 lRUN:
-;             ------------------------------------
-              CMP    stcOutOfService             ; If Value is
-                     K 1                         ; set to 1
-              JR     NE lNormal                  ; not set then Jump
-              COPY   stcValue                    ; then else Copy Adjust Val
-                     dynOutputVal                ; to Display Output Val
-              JR     lEnd                        ; Then got to the end
+;             ------------------------------------ 
+              STH    stcOutOfService             ; If OutOfService is aktiv
+              JR     L lNormal                   ; if not then Jump
+              STH    stcValue                    ; And if Adjust value is set too
+              OUT    outValue                    ; then set output
+              JR     lEnd                        ; Then got to the end 
 ;             ------------------------------------ 
 lNormal:
 ;             ------------------------------------ 
-              BITI   1                           ;
-                     inValue                     ; Copy Adjust Val
-                     dynOutputVal                ; to Output Val
+              STH    inValue                     ; if Input value is set
+              OUT    outValue                    ; then set output
 ;             ------------------------------------ 
 lEnd:
 ;             ------------------------------------ 
-              CMP    dynOutputVal                ; If Value is
-                     K 1                         ; set to 1
-              ACC    EQ                          ; then set
-              OUT    outValue                    ; Output Val
-              COPY   dynOutputVal                ; Adjust Value to
-                     stcOutValue                 ; Display Output Val 
+              STH    outValue                    ; If output is high
+              OUT    stcOutValue                 ; then set displkay value too
 ;             ==================================== 
+
+; ======================================================================
+; -------- Externe Funktionserweiterung
+; ======================================================================
+;
+; ---------------------------------------------------------
+$IFEXIST "<$DevDir>\AddOn\AddOn\AddOn_SIND_InSetBIN.src"
+$INCLUDE "<$DevDir>\AddOn\AddOn\AddOn_SIND_InSetBIN.src"
+$ELSE
+; ---------------------------------------------------------
+$IFEXIST "<$ProjDir>\AddOn\AddOn\AddOn_SIND_InSetBIN.src"
+$INCLUDE "<$ProjDir>\AddOn\AddOn\AddOn_SIND_InSetBIN.src"
+$ENDIF
+$ENDIF

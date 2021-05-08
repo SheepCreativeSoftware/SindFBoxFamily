@@ -1,6 +1,6 @@
 $SKIP
 ;;*******************************************************************************
-;; Setpoint DEC.1 FBox | v1.0.0 | 07.05.2021 19:17Z
+;; Setpoint DEC.1 FBox | v1.0.5 | 08.05.2021 13:54Z
 ;; Copyright (C) 2020 Marina Egner <info@sheepindustries.de>
 ;; Author: Marina Egner
 ;;
@@ -17,13 +17,13 @@ $SKIP
 ;; *******************************************************************************
 ;;
 ;; REVISION HISTORY
-;; v0.0.1  07.05.2021 - M.Egner | Initial edit;
+;; v1.0.5 | 08.05.2021 - M.Egner | Initial edit;
 ;;
 ;; DESCRIPTION
 ;; Copy Adjust Value to the Output
 $ENDSKIP
 
-$REPORT SindFamily: Setpoint DEC.1 | FBox v0.1.0
+$REPORT SindFamily: Setpoint DEC.1 | FBox v1.0.5
 
 $IF S.CPU.MinFWVersion < 12000
 $FATAL SindFamily: Configured Firmware in Device Configurator is too Old! FBox needs min 1.20.00.
@@ -49,3 +49,17 @@ SIND_CopyAdjustToOutput (stcValue,               ; Adjust Val
                      outValue,                   ; Output Val
                      stcOutValue)                ; Display Output Val
 ;             ====================================  
+
+; ======================================================================
+; -------- Externe Funktionserweiterung
+; ======================================================================
+;
+; ---------------------------------------------------------
+$IFEXIST "<$DevDir>\AddOn\AddOn\AddOn_SIND_SetDEC1.src"
+$INCLUDE "<$DevDir>\AddOn\AddOn\AddOn_SIND_SetDEC1.src"
+$ELSE
+; ---------------------------------------------------------
+$IFEXIST "<$ProjDir>\AddOn\AddOn\AddOn_SIND_SetDEC1.src"
+$INCLUDE "<$ProjDir>\AddOn\AddOn\AddOn_SIND_SetDEC1.src"
+$ENDIF
+$ENDIF

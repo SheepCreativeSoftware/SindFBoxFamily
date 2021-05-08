@@ -1,6 +1,6 @@
 [BlockStatus]
 Enabled=-1
-Version=100000
+Version=100005
 Status=0
 HMIObject=0
 Type=0
@@ -16,14 +16,14 @@ IntNames=
 IntRefs=
 
 [BlockInternal]
-MacroName=SIND_SETD0
+MacroName=SIND_SetDEC0
 AcceptName=1
 AcceptRef=0
 Exist=
 uNameID=1087
 RefID=1088
 GroupingID=1072
-ShortDescriptionID=0
+ShortDescriptionID=1417
 FolderID=1073
 Width=5
 FaceID=1065
@@ -45,9 +45,9 @@ DescrFile=Description.txt
 FXPFile=
 Sources=0
 Tests=0
-HelpID=0
-CommentID=0
-KeyWordID=0
+HelpID=1380
+CommentID=1379
+KeyWordID=1418
 TopicID=0
 
 [Symbols]
@@ -62,7 +62,7 @@ Adjusts=4
 SymbolName=outValue
 DisplayedName=1067
 DefaultNameID=0
-Comment=0
+Comment=1381
 State=0
 ArraySize=1
 Media=4
@@ -72,7 +72,7 @@ Type=1
 SymbolName=stcValue
 DisplayedName=1077
 DefaultNameID=1191
-Comment=0
+Comment=1357
 State=0
 ArraySize=1
 Media=8
@@ -82,7 +82,7 @@ Type=0
 SymbolName=stcOutValue
 DisplayedName=1086
 DefaultNameID=1197
-Comment=0
+Comment=1367
 State=0
 ArraySize=1
 Media=8
@@ -117,7 +117,7 @@ CategoryValue=5
 
 [Adjust1]
 Visible=-1
-DINR=78411111
+DINR=0
 Type=2
 Label=Val
 Index=0
@@ -135,12 +135,12 @@ ViewLabel=
 ViewIndex=0
 ViewFormat=1
 ViewUValue=0
-CommentID=0
+CommentID=1403
 SymbolName=adjValue
 DefaultSymID=0
 HMIProp=0
 CategorySymbol=
-CategoryValue=5
+CategoryValue=0
 
 [Adjust2]
 Visible=-1

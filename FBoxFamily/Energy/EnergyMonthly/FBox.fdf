@@ -16,7 +16,7 @@ IntNames=
 IntRefs=
 
 [BlockInternal]
-MacroName=SIND_ENGYMONTH
+MacroName=SIND_EnergyMonthly
 AcceptName=1
 AcceptRef=0
 Exist=
@@ -45,8 +45,8 @@ DescrFile=Description.txt
 FXPFile=
 Sources=0
 Tests=0
-HelpID=0
-CommentID=0
+HelpID=1443
+CommentID=1442
 KeyWordID=0
 TopicID=0
 
@@ -675,7 +675,7 @@ ViewLabel=
 ViewIndex=0
 ViewFormat=1
 ViewUValue=0
-CommentID=0
+CommentID=1438
 SymbolName=adjPrice
 DefaultSymID=0
 HMIProp=0
@@ -711,7 +711,7 @@ CategoryValue=0
 
 [Adjust3]
 Visible=-1
-DINR=87061863
+DINR=0
 Type=2
 Label=actJan
 Index=0
@@ -729,16 +729,16 @@ ViewLabel=
 ViewIndex=0
 ViewFormat=1
 ViewUValue=0
-CommentID=0
+CommentID=1440
 SymbolName=adjActualYearEnergyJan
 DefaultSymID=0
 HMIProp=0
 CategorySymbol=
-CategoryValue=5
+CategoryValue=0
 
 [Adjust4]
 Visible=-1
-DINR=87061863
+DINR=0
 Type=2
 Label=actFeb
 Index=0
@@ -756,12 +756,12 @@ ViewLabel=
 ViewIndex=0
 ViewFormat=1
 ViewUValue=0
-CommentID=0
+CommentID=1441
 SymbolName=adjActualYearEnergyFeb
 DefaultSymID=0
 HMIProp=0
 CategorySymbol=
-CategoryValue=5
+CategoryValue=0
 
 [Adjust5]
 Visible=-1
@@ -1062,7 +1062,7 @@ CategoryValue=0
 
 [Adjust16]
 Visible=-1
-DINR=87061863
+DINR=0
 Type=2
 Label=LastJan
 Index=0
@@ -1089,7 +1089,7 @@ CategoryValue=0
 
 [Adjust17]
 Visible=-1
-DINR=87061863
+DINR=0
 Type=2
 Label=LastFeb
 Index=0
@@ -1413,7 +1413,7 @@ CategoryValue=0
 
 [Adjust29]
 Visible=-1
-DINR=87061863
+DINR=0
 Type=2
 Label=aCostJan
 Index=0
@@ -1440,7 +1440,7 @@ CategoryValue=0
 
 [Adjust30]
 Visible=-1
-DINR=87061863
+DINR=0
 Type=2
 Label=aCostFeb
 Index=0
@@ -1791,7 +1791,7 @@ CategoryValue=0
 
 [Adjust43]
 Visible=-1
-DINR=87061863
+DINR=0
 Type=2
 Label=lCostFeb
 Index=0
@@ -2115,7 +2115,7 @@ CategoryValue=5
 
 [Adjust55]
 Visible=-1
-DINR=78411111
+DINR=0
 Type=2
 Label=lEnergy
 Index=0
@@ -2133,12 +2133,12 @@ ViewLabel=
 ViewIndex=0
 ViewFormat=1
 ViewUValue=0
-CommentID=0
+CommentID=1439
 SymbolName=adjLastEnergy
 DefaultSymID=0
 HMIProp=0
 CategorySymbol=
-CategoryValue=5
+CategoryValue=0
 
 [Adjust56]
 Visible=-1

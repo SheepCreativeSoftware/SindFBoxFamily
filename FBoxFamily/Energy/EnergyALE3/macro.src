@@ -1,6 +1,6 @@
 $SKIP
 ;;*******************************************************************************
-;; EnergyALE3 FBox | v0.1.5 | 21.03.2021 22:35Z
+;; EnergyALE3 FBox | v1.0.0 | 08.05.2021 14:03Z
 ;; Copyright (C) 2020 Marina Egner <info@sheepindustries.de>
 ;; Author: Marina Egner
 ;;
@@ -20,13 +20,13 @@ $SKIP
 ;; v0.0.2  21.03.2021 - M.Egner | Initial edit;
 ;; v0.1.0  21.03.2021 - M.Egner | Release Version;
 ;; v0.1.2  21.03.2021 - M.Egner | Corrected True Power;
-;; v0.1.5  21.03.2021 - M.Egner | Added Total Calculation;
+;; v1.0.0  08.05.2021 - M.Egner | Added Total Calculation;
 ;;
 ;; DESCRIPTION
 ;; EnergyMonthly saves the monthly consumption of ernegy and show it.
 $ENDSKIP
 
-$REPORT SindFamily: EnergyALE3 | FBox v0.1.5
+$REPORT SindFamily: EnergyALE3 | FBox v1.0.0
 ; Check if Firmware version in DC is new enought, cause special condition codes where in use
 $IF S.CPU.MinFWVersion < 12000
 $FATAL SindFamily: Configured Firmware in Device Configurator is too Old! FBox needs min 1.20.00.
@@ -412,3 +412,17 @@ lEnd:
               OUT    LED                         ;
 ;             ------------------------------------
 ;TheEnd
+
+; ======================================================================
+; -------- Externe Funktionserweiterung
+; ======================================================================
+;
+; ---------------------------------------------------------
+$IFEXIST "<$DevDir>\AddOn\AddOn\AddOn_SIND_EnergyALE3.src"
+$INCLUDE "<$DevDir>\AddOn\AddOn\AddOn_SIND_EnergyALE3.src"
+$ELSE
+; ---------------------------------------------------------
+$IFEXIST "<$ProjDir>\AddOn\AddOn\AddOn_SIND_EnergyALE3.src"
+$INCLUDE "<$ProjDir>\AddOn\AddOn\AddOn_SIND_EnergyALE3.src"
+$ENDIF
+$ENDIF

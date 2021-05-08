@@ -1,6 +1,6 @@
 $SKIP
 ;;*******************************************************************************
-;; Setpoint BIN FBox | v1.0.1 | 07.05.2021 19:17Z
+;; Setpoint BIN FBox | v1.0.5 | 08.05.2021 13:54Z
 ;; Copyright (C) 2020 Marina Egner <info@sheepindustries.de>
 ;; Author: Marina Egner
 ;;
@@ -17,13 +17,13 @@ $SKIP
 ;; *******************************************************************************
 ;;
 ;; REVISION HISTORY
-;; v0.0.1  07.05.2021 - M.Egner | Initial edit;
+;; v1.0.5 | 08.05.2021 - M.Egner | Initial edit;
 ;;
 ;; DESCRIPTION
 ;; Copy Adjust Value to the Output
 $ENDSKIP
 
-$REPORT SindFamily: Setpoint BIN | FBox v0.1.0
+$REPORT SindFamily: Setpoint BIN | FBox v1.0.5
 
 $IF S.CPU.MinFWVersion < 12000
 $FATAL SindFamily: Configured Firmware in Device Configurator is too Old! FBox needs min 1.20.00.
@@ -40,15 +40,29 @@ lINIT:
 ;             ==================================== Init Vars 
               ACC    H                           ;
 ;             ------------------------------------ 
-              LD     stcValue                    ;
+              LD     dynAdjustVal                ; load adjust val
                      adjValue                    ;
+              BITO   1                           ; convert it
+                     dynAdjustVal                ;
+                     stcValue                    ; and copy it to stc val
 ;             ------------------------------------
 lRUN:
 ;             ------------------------------------ 
-              CMP    stcValue                    ; If Value is
-                     K 1                         ; set to 1
-              ACC    EQ                          ; then set
-              OUT    outValue                    ; Output Val
-              COPY   stcValue                    ; Adjust Value to
-                     stcOutValue                 ; Display Output Val
+              STH    stcValue                    ; If Value is HIGH
+              OUT    outValue                    ; set Output Val
+              OUT    stcOutValue                 ; and set Display Output Val
 ;             ====================================  
+
+; ======================================================================
+; -------- Externe Funktionserweiterung
+; ======================================================================
+;
+; ---------------------------------------------------------
+$IFEXIST "<$DevDir>\AddOn\AddOn\AddOn_SIND_SetBIN.src"
+$INCLUDE "<$DevDir>\AddOn\AddOn\AddOn_SIND_SetBIN.src"
+$ELSE
+; ---------------------------------------------------------
+$IFEXIST "<$ProjDir>\AddOn\AddOn\AddOn_SIND_SetBIN.src"
+$INCLUDE "<$ProjDir>\AddOn\AddOn\AddOn_SIND_SetBIN.src"
+$ENDIF
+$ENDIF
