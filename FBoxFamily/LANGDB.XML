@@ -1,4 +1,4 @@
-<LIB LANGUAGES="1" STRINGS="1344" LANGSTR="LANG" ACTLANG="English" VERSION="2">
+<LIB LANGUAGES="1" STRINGS="1389" LANGSTR="LANG" ACTLANG="English" VERSION="2">
 <REC ID="1">
  <LANG ID="0">
 English
@@ -6720,6 +6720,231 @@ The cost will be calculated with the actual price for the actual month.
 At the begining of a new month the consumption and cost will be saved.
 
 The last Energy counter value must be set to the actual ernergy counter value at the first time of use.
+ </LANG>
+</REC>
+<REC ID="1444">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1445">
+ <LANG ID="0">
+ForceChg
+ </LANG>
+</REC>
+<REC ID="1446">
+ <LANG ID="0">
+ForceCharge
+ </LANG>
+</REC>
+<REC ID="1447">
+ <LANG ID="0">
+ActDay
+ </LANG>
+</REC>
+<REC ID="1448">
+ <LANG ID="0">
+LastDay
+ </LANG>
+</REC>
+<REC ID="1449">
+ <LANG ID="0">
+BlockT
+ </LANG>
+</REC>
+<REC ID="1450">
+ <LANG ID="0">
+start of block time in Min of the day format
+ </LANG>
+</REC>
+<REC ID="1451">
+ <LANG ID="0">
+energy consumption from last day
+ </LANG>
+</REC>
+<REC ID="1452">
+ <LANG ID="0">
+energy consumption from today
+ </LANG>
+</REC>
+<REC ID="1453">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1454">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1455">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1456">
+ <LANG ID="0">
+Active
+ </LANG>
+</REC>
+<REC ID="1457">
+ <LANG ID="0">
+Planned
+ </LANG>
+</REC>
+<REC ID="1458">
+ <LANG ID="0">
+Forced charging is active
+ </LANG>
+</REC>
+<REC ID="1459">
+ <LANG ID="0">
+Forced charging is planned
+ </LANG>
+</REC>
+<REC ID="1460">
+ <LANG ID="0">
+PlanTime
+ </LANG>
+</REC>
+<REC ID="1461">
+ <LANG ID="0">
+Time to forced charging in HH:MM
+ </LANG>
+</REC>
+<REC ID="1462">
+ <LANG ID="0">
+Power
+ </LANG>
+</REC>
+<REC ID="1463">
+ <LANG ID="0">
+AveragePower
+ </LANG>
+</REC>
+<REC ID="1464">
+ <LANG ID="0">
+[--- Actual Values ---]
+ </LANG>
+</REC>
+<REC ID="1465">
+ <LANG ID="0">
+[--- Actual Values ---]
+ </LANG>
+</REC>
+<REC ID="1466">
+ <LANG ID="0">
+[--- Options ---]
+ </LANG>
+</REC>
+<REC ID="1467">
+ <LANG ID="0">
+[--- Options ---]
+ </LANG>
+</REC>
+<REC ID="1468">
+ <LANG ID="0">
+50
+ </LANG>
+</REC>
+<REC ID="1469">
+ <LANG ID="0">
+50
+ </LANG>
+</REC>
+<REC ID="1470">
+ <LANG ID="0">
+Threshold [kWh]\R)Threshold of last day energy consumption to activate force charging
+ </LANG>
+</REC>
+<REC ID="1471">
+ <LANG ID="0">
+Thrhold
+ </LANG>
+</REC>
+<REC ID="1472">
+ <LANG ID="0">
+Threshold [kWh]\R)Threshold of last day energy consumption to activate force charging
+ </LANG>
+</REC>
+<REC ID="1473">
+ <LANG ID="0">
+Threshold of last day energy consumption to activate force charging
+ </LANG>
+</REC>
+<REC ID="1474">
+ <LANG ID="0">
+10
+ </LANG>
+</REC>
+<REC ID="1475">
+ <LANG ID="0">
+10
+ </LANG>
+</REC>
+<REC ID="1476">
+ <LANG ID="0">
+Hysteresis\R)Hysteresis for Threshold
+ </LANG>
+</REC>
+<REC ID="1477">
+ <LANG ID="0">
+hyster
+ </LANG>
+</REC>
+<REC ID="1478">
+ <LANG ID="0">
+Hysteresis\R)Hysteresis for Threshold
+ </LANG>
+</REC>
+<REC ID="1479">
+ <LANG ID="0">
+Required Energy [kWh]\R)Needed Energy before block time
+ </LANG>
+</REC>
+<REC ID="1480">
+ <LANG ID="0">
+need
+ </LANG>
+</REC>
+<REC ID="1481">
+ <LANG ID="0">
+Required Energy [kWh]\R)Needed Energy before block time
+ </LANG>
+</REC>
+<REC ID="1482">
+ <LANG ID="0">
+Needed Energy before block time
+ </LANG>
+</REC>
+<REC ID="1483">
+ <LANG ID="0">
+Hysteresis for Threshold
+ </LANG>
+</REC>
+<REC ID="1484">
+ <LANG ID="0">
+Time required to Charge [min]\R)Time required to Charge
+ </LANG>
+</REC>
+<REC ID="1485">
+ <LANG ID="0">
+minNeed
+ </LANG>
+</REC>
+<REC ID="1486">
+ <LANG ID="0">
+Time required to Charge [min]\R)Time required to Charge
+ </LANG>
+</REC>
+<REC ID="1487">
+ <LANG ID="0">
+Time required to Charge
+ </LANG>
+</REC>
+<REC ID="1488">
+ <LANG ID="0">
+dAdjV
  </LANG>
 </REC>
 </LIB>

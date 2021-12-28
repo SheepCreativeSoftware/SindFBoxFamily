@@ -1,0 +1,123 @@
+$SKIP
+;;*******************************************************************************
+;; ForceCharge FBox | v1.0.0 | 28.12.2021 14:03Z
+;; Copyright (C) 2020 Marina Egner <info@sheepindustries.de>
+;; Author: Marina Egner
+;;
+;; This program is free software: you can redistribute it and/or modify it
+;; under the terms of the GNU General Public License as published by the
+;; Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+;;
+;; This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+;; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+;; See the GNU General Public License for more details.
+;;
+;; You should have received a copy of the GNU General Public License along with this program.
+;; If not, see <https://www.gnu.org/licenses/>.
+;; *******************************************************************************
+;;
+;; REVISION HISTORY
+;; v1.0.0  28.12.2021 - M.Egner | Initial edit;
+;;
+;; DESCRIPTION
+;; ForceCharge saves the monthly consumption of ernegy and show it.
+$ENDSKIP
+
+$REPORT SindFamily: ForceCharge | FBox v1.0.0
+; Check if Firmware version in DC is new enought, cause special condition codes where in use
+$IF S.CPU.MinFWVersion < 12000
+$FATAL SindFamily: Configured Firmware in Device Configurator is too Old! FBox needs min 1.20.00.
+$ENDIF
+$IFNB <name#vers> ; Not in use
+$ENDIF
+
+$IFNDEF _HEAVAC._VERS._HEAVAC
+$FATAL Bitte zuerst Heavac-Init FBox platzieren!
+$ENDIF
+;            ###################################################################
+;             ==================================== Init constants
+;;cStartAddr    EQU    00H                       ; Start-Address EEPROM
+;             ------------------------------------
+;;dNeedModify   LEQU   dyn_Flag                  ; Indicate if Modify need to be Change
+;             ------------------------------------ Init dynamic Register
+dResult       LEQU   dynRegister                 ; Temp Var for Result
+;             ------------------------------------ Init dynamic Flags
+;;sReset        LEQU   stc_Flags                 ; Trigger to Reset Batt Max Limit (224)
+;             ------------------------------------ Init static Register
+sActualYear   LEQU   stcRegister                 ; Actual Year
+sActualMonth  LEQU   stcRegister+1               ; Actual Month
+sLastMonth    LEQU   stcRegister+2               ; Last Month
+sLastYear     LEQU   stcRegister+3               ; Last Year
+sLastTotalEnergy LEQU stcRegister+4              ; Total Energy Last Year
+sLastTotalCost LEQU  stcRegister+5               ; Total Cost Last Year
+;            ###################################################################
+
+
+;             ==================================== Init if Heavac Init is activ
+              STH    _HEAVAC._RESET._EXEC            ;
+              JR     L RUN                              ;
+;             ------------------------------------              
+INIT:
+;             ==================================== Init Vars 
+              ACC    H                           ; 
+              RES    stcSafeState                ;
+              LD     stcThresholdToForce         ;
+                     adjThresholdToForce         ;
+              LD     stcHysteresis               ;
+                     adjHysteresis               ;
+;             ------------------------------------
+RUN:          
+;             ====================================
+              ACC    H                           ;
+              SYSRD  7052                        ; Read Sytemtime hour
+                     dynHour                     ;
+              SYSRD  7051                        ; Read Sytemtime minute
+                     dynMinute                   ;
+              MUL    dynHour                     ; Multiply Hour
+                     K 60                        ; by 60 to get
+                     dynResult                   ; Minutes
+              ADD    dynResult                   ; Add Minutes from Hour
+                     dynMinute                   ; and Minutes
+                     dynMinOfDay                 ; to get Minute of the Day
+              CMP    inStartBlockTime            ; Check if block time is before
+                     dynMinOfDay                 ; actual min of the day
+              JR     LT lAfter                   ;
+;             ------------------------------------
+lBefore:
+;             ====================================
+              CMP    inLastDayEnergy             ; if greather than
+                     stcThresholdToForce         ;
+              ACC    GT                          ;
+              SET    stcSafeState                ; than safe and
+              JR     H lNext                     ; go next
+              SUB    stcThresholdToForce         ; else check if less than Hysteresis
+                     stcHysteresis               ;
+                     dynResult                   ;
+              CMP    inLastDayEnergy             ; 
+                     dynResult                   ;
+              ACC    LT                          ; if less than
+              RES    stcSafeState                ; safe state
+              JR     H lAfter                    ; and go to end
+;             ------------------------------------
+lNext:
+;             ====================================
+
+;             ------------------------------------
+lAfter:
+;             ====================================
+              ACC    H                           ;
+              RES    dynForceChargeActiv         ;
+              RES    dynForceChargePlanned       ;
+              LD     dynPlannedTimeToForce       ;
+                     0                           ;
+;             ------------------------------------
+lEnd:
+;             ==================================== copy dynamics to output every cycle
+              STH    dynForceChargeActiv         ;
+              OUT    outForceChargeActiv         ;
+              STH    dynForceChargePlanned       ;
+              OUT    outForceChargePlanned       ;
+              COPY   dynPlannedTimeToForce       ;
+                     outPlannedTimeToForce       ;       
+
+

@@ -3,8 +3,8 @@ ID=SIND_FBoxFamily
 Prt=0
 
 [About]
-Name=
-Version=V0.2.081,02081
+Name=SindFBoxFamily
+Version=V0.2.087,02087
 Distributed=Schäfer GmbH Anlagentechnik
 Author=Schäfer GmbH Anlagentechnik
 Picture=
@@ -16,7 +16,7 @@ Hierarchy=Single
 
 [Main]
 ID=SIND_FBoxFamily
-Name=
+Name=SindFBoxFamily
 
 [PG]
 PG5Libs=Usr

@@ -3,15 +3,10 @@ COUNT=1
 Lib1=FBoxFamily\
 
 [Opened]
-Block0=257001
-Block1=257002
-Block2=257003
-Block3=257004
-Block4=257005
-Block5=258001
-Block6=258006
-Block7=258007
-Block8=258008
-Block9=258009
-Number=10
+Block0=257002
+Block1=257005
+Block2=257006
+Block3=258004
+Block4=258009
+Number=5
 

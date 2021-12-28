@@ -5,6 +5,7 @@ WorkHours == SIND_WorkHours
 EnergyDaily == SIND_EnergyDaily
 BlockTime == SIND_BlockTime
 EnergyALE3 == SIND_EnergyALE3
+ForceCharge == SIND_FORCECHARGE
 >FAMILY == Setpoint:ID1064
 SetD0 == SIND_SetDEC0
 SetD1 == SIND_SetDEC1
