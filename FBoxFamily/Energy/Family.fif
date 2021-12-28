@@ -2,7 +2,7 @@
 Name=3
 Enabled=0
 Status=0
-Version=0
+Version=100000
 Opened=1
 HelpID=0
 HelpTopicID=0
@@ -12,10 +12,11 @@ TargetFile=Energy
 DescID=0
 
 [BLOCKS]
-COUNT=5
+COUNT=6
 Block1=EnergyMonthly
 Block2=WorkHours
 Block3=EnergyDaily
 Block4=BlockTime
 Block5=EnergyALE3
+Block6=ForceCharge
 

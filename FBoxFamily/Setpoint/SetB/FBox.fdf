@@ -1,6 +1,6 @@
 [BlockStatus]
 Enabled=-1
-Version=100005
+Version=100006
 Status=0
 HMIObject=0
 Type=0
@@ -54,7 +54,7 @@ TopicID=0
 Inputs=0
 Outputs=1
 Constants=0
-Dynamics=0
+Dynamics=1
 Statics=2
 Adjusts=4
 
@@ -66,6 +66,16 @@ Comment=1383
 State=0
 ArraySize=1
 Media=4
+Type=0
+
+[Dynamic0]
+SymbolName=dynAdjustVal
+DisplayedName=1488
+DefaultNameID=0
+Comment=0
+State=0
+ArraySize=1
+Media=8
 Type=0
 
 [Static0]

@@ -1,13 +1,13 @@
 $SKIP
 ;;*******************************************************************************
-;; Setpoint BIN FBox | v1.0.5 | 08.05.2021 13:54Z
+;; Setpoint BIN FBox | v1.0.6 | 28.12.2021 13:54Z
 ;; Copyright (C) 2020 Marina Egner <info@sheepindustries.de>
 ;; Author: Marina Egner
 ;;
 ;; This program is free software: you can redistribute it and/or modify it
 ;; under the terms of the GNU General Public License as published by the
 ;; Free Software Foundation, either version 3 of the License, or (at your option) any later version.
-;;                                                                   
+;;
 ;; This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
 ;; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ;; See the GNU General Public License for more details.
@@ -18,12 +18,13 @@ $SKIP
 ;;
 ;; REVISION HISTORY
 ;; v1.0.5 | 08.05.2021 - M.Egner | Initial edit;
+;; v1.0.6 | 28.12.2021 - M.Egner | Corrected dyn Var;
 ;;
 ;; DESCRIPTION
 ;; Copy Adjust Value to the Output
 $ENDSKIP
 
-$REPORT SindFamily: Setpoint BIN | FBox v1.0.5
+$REPORT SindFamily: Setpoint BIN | FBox v1.0.6
 
 $IF S.CPU.MinFWVersion < 12000
 $FATAL SindFamily: Configured Firmware in Device Configurator is too Old! FBox needs min 1.20.00.
