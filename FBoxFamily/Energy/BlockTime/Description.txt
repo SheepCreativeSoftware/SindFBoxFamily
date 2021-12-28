@@ -1,0 +1,1 @@
+Saves beginning and ending time on each day when there is approval or not from the energy supplier

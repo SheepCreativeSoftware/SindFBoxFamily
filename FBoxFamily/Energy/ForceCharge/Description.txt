@@ -1,0 +1,1 @@
+FBox to calculate a time on which the heating must be activated to have enough energy while block time

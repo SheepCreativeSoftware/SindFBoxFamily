@@ -4,12 +4,12 @@ Enabled=0
 Status=0
 Version=100000
 Opened=1
-HelpID=0
+HelpID=1510
 HelpTopicID=0
 Internal=2
 Shared=0
 TargetFile=Energy
-DescID=0
+DescID=1492
 
 [BLOCKS]
 COUNT=6

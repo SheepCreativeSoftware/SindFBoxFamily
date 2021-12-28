@@ -2,8 +2,8 @@
 NameID=2
 Enabled=0
 Status=0
-Version=2087
-HelpID=0
+Version=2103
+HelpID=1495
 Internal=2
 HelpFileID=0
 HelpTopicID=0
@@ -20,8 +20,8 @@ Copyright=by Marina Egner, Sheep Industries
 CreateDFF=1
 Grouping=0
 BuildStartASM=1
-DetailedHelp=0
-HelpAddLabels=0
+DetailedHelp=1
+HelpAddLabels=1
 BuildStartHelp=1
 TargetFile=SindFBoxFamily
 

@@ -4,12 +4,12 @@ Enabled=0
 Status=0
 Version=100000
 Opened=1
-HelpID=0
+HelpID=1511
 HelpTopicID=0
 Internal=2
 Shared=0
 TargetFile=Setpoint
-DescID=0
+DescID=1494
 
 [BLOCKS]
 COUNT=9

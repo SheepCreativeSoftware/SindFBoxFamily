@@ -1,6 +1,6 @@
 $SKIP
 ;;*******************************************************************************
-;; ForceCharge FBox | v1.0.0 | 28.12.2021 14:03Z
+;; ForceCharge FBox | v1.0.2 | 29.12.2021 00:03Z
 ;; Copyright (C) 2020 Marina Egner <info@sheepindustries.de>
 ;; Author: Marina Egner
 ;;
@@ -17,13 +17,13 @@ $SKIP
 ;; *******************************************************************************
 ;;
 ;; REVISION HISTORY
-;; v1.0.0  28.12.2021 - M.Egner | Initial edit;
+;; v1.0.2  29.12.2021 - M.Egner | Initial edit;
 ;;
 ;; DESCRIPTION
 ;; ForceCharge saves the monthly consumption of ernegy and show it.
 $ENDSKIP
 
-$REPORT SindFamily: ForceCharge | FBox v1.0.0
+$REPORT SindFamily: ForceCharge | FBox v1.0.2
 ; Check if Firmware version in DC is new enought, cause special condition codes where in use
 $IF S.CPU.MinFWVersion < 12000
 $FATAL SindFamily: Configured Firmware in Device Configurator is too Old! FBox needs min 1.20.00.
@@ -37,14 +37,21 @@ $ENDIF
 ;            ###################################################################
 ;             ==================================== Init constants
 ;;cStartAddr    EQU    00H                       ; Start-Address EEPROM
-;             ------------------------------------
-;;dNeedModify   LEQU   dyn_Flag                  ; Indicate if Modify need to be Change
-;             ------------------------------------ Init dynamic Register
-dResult       LEQU   dynRegister                 ; Temp Var for Result
 ;             ------------------------------------ Init dynamic Flags
-;;sReset        LEQU   stc_Flags                 ; Trigger to Reset Batt Max Limit (224)
+
+;             ------------------------------------ Init dynamic Register
+dynHour       LEQU   dynRegister                 ; Temp Var for Result
+dynMinute     LEQU   dynRegister+1               ; Temp Var for Result
+dynResult     LEQU   dynRegister+2               ; Temp Var for Result
+dynMinOfDay   LEQU   dynRegister+3               ; Temp Var for Result
+dynModulo     LEQU   dynRegister+4               ; Temp Var for Result
+dynTimeForceBegin LEQU dynRegister+5             ;
+;             ------------------------------------ Init static Flags
+stcForceChargeActiv LEQU stcFlag                 ; Temp Var for Result
+stcForceChargePlanned LEQU stcFlag+1             ; Temp Var for Result
+stcSafeState  LEQU   stcFlag+2                   ;
 ;             ------------------------------------ Init static Register
-sActualYear   LEQU   stcRegister                 ; Actual Year
+stcPlannedTimeToForce LEQU stcRegister           ; Temp Var for Result
 sActualMonth  LEQU   stcRegister+1               ; Actual Month
 sLastMonth    LEQU   stcRegister+2               ; Last Month
 sLastYear     LEQU   stcRegister+3               ; Last Year
@@ -87,7 +94,7 @@ lBefore:
 ;             ====================================
               CMP    inLastDayEnergy             ; if greather than
                      stcThresholdToForce         ;
-              ACC    GT                          ;
+              ACC    GE                          ;
               SET    stcSafeState                ; than safe and
               JR     H lNext                     ; go next
               SUB    stcThresholdToForce         ; else check if less than Hysteresis
@@ -95,29 +102,86 @@ lBefore:
                      dynResult                   ;
               CMP    inLastDayEnergy             ; 
                      dynResult                   ;
-              ACC    LT                          ; if less than
-              RES    stcSafeState                ; safe state
-              JR     H lAfter                    ; and go to end
+              ACC    LE                          ; if less than
+              RES    stcSafeState                ; safe state to low
+              STH    stcSafeState                ; if state is low
+              JR     L lAfter                    ; than go to end
 ;             ------------------------------------
 lNext:
-;             ====================================
-
+;             ==================================== 
+              DIV    inLastDayEnergy             ; divide energy consumption from last day
+                     K 2                         ; by two to get
+                     dynResult                   ; the energy needed for the half of the day
+                     dynModulo                   ;
+              SUB    dynResult                   ; subtract last half day consumption
+                     inActDayEnergy              ; by todays consumption
+                     stcNeededEnergy             ; to get what is needed
+              MUL    stcNeededEnergy             ; Multiply Energy
+                     K 60                        ; by 60 to get
+                     dynResult                   ; time by kWh
+              DIV    dynResult                   ; time by kWh
+                     inAveragePower              ; by Average Power
+                     stcMinutesForceCharge       ; to get time which is needed
+                     dynModulo                   ;
+;             ------------------------------------ 
+              CMP    stcMinutesForceCharge       ; compare calculated 
+                     inStartBlockTime            ; with start of block time
+              JR     GT lStartAtZero             ; if greather then, then start at 0 o'clock
+;             ------------------------------------ else use calculated value
+              SUB    inStartBlockTime            ; subtract start of block time
+                     stcMinutesForceCharge       ; with  minutes to force
+                     dynTimeForceBegin           ; to get time in minutes when forced charge should begin
+;             ------------------------------------
+              DIV    dynTimeForceBegin           ; divide  force begin
+                     K 60                        ; by 60
+                     dynResult                   ; to get hours
+                     dynModulo                   ; and minutes
+              MUL    dynResult                   ; multiply hour
+                     K 100                       ; by 100
+                     dynResult                   ; to push it to digits to the left
+              ADD    dynResult                   ; Add hours
+                     dynModulo                   ; and minutes
+                     stcPlannedTimeToForce       ; to get time in HHMM format
+;             ------------------------------------
+              CMP    dynTimeForceBegin           ; compare force beginn
+                     dynMinOfDay                 ; with actual min of the day
+              JR     LT lStartNow                ; then start force now
+              SET    stcForceChargePlanned       ; else planned force
+              JR     lEnd                        ; then go to end
+;             ------------------------------------              
+lStartAtZero:
+;             ====================================   
+              ACC    H                           ;
+              SET    stcForceChargeActiv         ; Set 
+              RES    stcForceChargePlanned       ;
+              LD     stcPlannedTimeToForce       ;
+                     0                           ;       
+              JR     lEnd                        ; then go to end
+;             ------------------------------------
+lStartNow:
+;             ====================================   
+              ACC    H                           ;
+              SET    stcForceChargeActiv         ; Set 
+              RES    stcForceChargePlanned       ;     
+              JR     lEnd                        ; then go to end
 ;             ------------------------------------
 lAfter:
 ;             ====================================
               ACC    H                           ;
-              RES    dynForceChargeActiv         ;
-              RES    dynForceChargePlanned       ;
-              LD     dynPlannedTimeToForce       ;
+              RES    stcForceChargeActiv         ;
+              RES    stcForceChargePlanned       ;
+              LD     stcPlannedTimeToForce       ;
+                     0                           ;
+              LD     stcMinutesForceCharge       ;
                      0                           ;
 ;             ------------------------------------
 lEnd:
 ;             ==================================== copy dynamics to output every cycle
-              STH    dynForceChargeActiv         ;
+              STH    stcForceChargeActiv         ;
               OUT    outForceChargeActiv         ;
-              STH    dynForceChargePlanned       ;
+              STH    stcForceChargePlanned       ;
               OUT    outForceChargePlanned       ;
-              COPY   dynPlannedTimeToForce       ;
+              COPY   stcPlannedTimeToForce       ;
                      outPlannedTimeToForce       ;       
 
 

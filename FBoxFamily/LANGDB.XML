@@ -1,4 +1,4 @@
-<LIB LANGUAGES="1" STRINGS="1389" LANGSTR="LANG" ACTLANG="English" VERSION="2">
+<LIB LANGUAGES="1" STRINGS="1414" LANGSTR="LANG" ACTLANG="English" VERSION="2">
 <REC ID="1">
  <LANG ID="0">
 English
@@ -6779,7 +6779,7 @@ energy consumption from today
 </REC>
 <REC ID="1455">
  <LANG ID="0">
-
+Energy.ForceCharge?
  </LANG>
 </REC>
 <REC ID="1456">
@@ -6824,22 +6824,22 @@ AveragePower
 </REC>
 <REC ID="1464">
  <LANG ID="0">
-[--- Actual Values ---]
+[--- Actual Values ---]\R)Actual Values
  </LANG>
 </REC>
 <REC ID="1465">
  <LANG ID="0">
-[--- Actual Values ---]
+[--- Actual Values ---]\R)Actual Values
  </LANG>
 </REC>
 <REC ID="1466">
  <LANG ID="0">
-[--- Options ---]
+[--- Options ---]\R)Options
  </LANG>
 </REC>
 <REC ID="1467">
  <LANG ID="0">
-[--- Options ---]
+[--- Options ---]\R)Options
  </LANG>
 </REC>
 <REC ID="1468">
@@ -6884,7 +6884,7 @@ Threshold of last day energy consumption to activate force charging
 </REC>
 <REC ID="1476">
  <LANG ID="0">
-Hysteresis\R)Hysteresis for Threshold
+Hysteresis [kWh]\R)Hysteresis for Threshold
  </LANG>
 </REC>
 <REC ID="1477">
@@ -6894,7 +6894,7 @@ hyster
 </REC>
 <REC ID="1478">
  <LANG ID="0">
-Hysteresis\R)Hysteresis for Threshold
+Hysteresis [kWh]\R)Hysteresis for Threshold
  </LANG>
 </REC>
 <REC ID="1479">
@@ -6945,6 +6945,131 @@ Time required to Charge
 <REC ID="1488">
  <LANG ID="0">
 dAdjV
+ </LANG>
+</REC>
+<REC ID="1489">
+ <LANG ID="0">
+dReg
+ </LANG>
+</REC>
+<REC ID="1490">
+ <LANG ID="0">
+sReg
+ </LANG>
+</REC>
+<REC ID="1491">
+ <LANG ID="0">
+sFlag
+ </LANG>
+</REC>
+<REC ID="1492">
+ <LANG ID="0">
+Library from Sheep Industries
+ </LANG>
+</REC>
+<REC ID="1493">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1494">
+ <LANG ID="0">
+Library from Sheep Industries
+ </LANG>
+</REC>
+<REC ID="1495">
+ <LANG ID="0">
+Library from Sheep Insdustries
+ </LANG>
+</REC>
+<REC ID="1496">
+ <LANG ID="0">
+Stores each On/Off cycle and the time while enable is on.
+ </LANG>
+</REC>
+<REC ID="1497">
+ <LANG ID="0">
+Stores each On/Off cycle and the time while enable is on
+ </LANG>
+</REC>
+<REC ID="1498">
+ <LANG ID="0">
+Stores the energy consumption and costs for each month for the actual and last year
+ </LANG>
+</REC>
+<REC ID="1499">
+ <LANG ID="0">
+Stores the energy consumption form actual and last day
+ </LANG>
+</REC>
+<REC ID="1500">
+ <LANG ID="0">
+Saves beginning and ending time on each day when there is approval or not from the energy supplier
+ </LANG>
+</REC>
+<REC ID="1501">
+ <LANG ID="0">
+Reads out a ALE3 Modbus Energy meter
+ </LANG>
+</REC>
+<REC ID="1502">
+ <LANG ID="0">
+FBox to calculate a time on which the heating must be activated to have enough energy while block time
+ </LANG>
+</REC>
+<REC ID="1503">
+ <LANG ID="0">
+FBox to calculate a time on which the heating must be activated to have enough energy while block time
+ </LANG>
+</REC>
+<REC ID="1504">
+ <LANG ID="0">
+Sind Family.Energy
+ </LANG>
+</REC>
+<REC ID="1505">
+ <LANG ID="0">
+Threshold
+ </LANG>
+</REC>
+<REC ID="1506">
+ <LANG ID="0">
+Hysteresis
+ </LANG>
+</REC>
+<REC ID="1507">
+ <LANG ID="0">
+NeededEnergy
+ </LANG>
+</REC>
+<REC ID="1508">
+ <LANG ID="0">
+MinutesToForce
+ </LANG>
+</REC>
+<REC ID="1509">
+ <LANG ID="0">
+
+ </LANG>
+</REC>
+<REC ID="1510">
+ <LANG ID="0">
+Library from Sheep Industries
+ </LANG>
+</REC>
+<REC ID="1511">
+ <LANG ID="0">
+Library from Sheep Industries
+ </LANG>
+</REC>
+<REC ID="1512">
+ <LANG ID="0">
+[--- Copyright by Marina Egner, Sheep Industries ---]
+ </LANG>
+</REC>
+<REC ID="1513">
+ <LANG ID="0">
+[--- Copyright by Marina Egner, Sheep Industries ---]
  </LANG>
 </REC>
 </LIB>
